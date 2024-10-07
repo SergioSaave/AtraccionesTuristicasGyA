@@ -10,8 +10,17 @@ func SetupIndexRoutes() *mux.Router {
 	indexRouter := r.PathPrefix("/").Subrouter()
 	IndexRoute(indexRouter)
 
-	museumRouter := r.PathPrefix("/museos").Subrouter()
-	SetupMuseumsRoutes(museumRouter)
+	museosRouter := r.PathPrefix("/museos").Subrouter()
+	SetupMuseosRoutes(museosRouter)
+
+	iglesiasRouter := r.PathPrefix("/iglesias").Subrouter()
+	SetupIglesiasRoutes(iglesiasRouter)
+
+	monumentosRouter := r.PathPrefix("/monumentos").Subrouter()
+	SetupMonumentosRoutes(monumentosRouter)
+
+	parquesRouter := r.PathPrefix("/parques").Subrouter()
+	SetupParquesRoutes(parquesRouter)
 
 	return r
 }

@@ -6,6 +6,6 @@ import (
 	"github.com/gorilla/mux"
 )
 
-func SetupMuseumsRoutes(router *mux.Router) {
-	router.HandleFunc("/", controllers.MuseumsHandler).Methods("GET")
+func SetupMuseosRoutes(router *mux.Router) {
+	router.HandleFunc("/", controllers.MuseosHandler).Methods("GET")
 }

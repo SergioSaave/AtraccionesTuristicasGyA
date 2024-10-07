@@ -7,11 +7,7 @@ import (
 	"net/url"
 )
 
-func GetMuseum(w http.ResponseWriter, r *http.Request) {
-	w.Write([]byte("Welcome to the museum page."))
-}
-
-func MuseumsHandler(w http.ResponseWriter, r *http.Request) {
+func MonumentosHandler(w http.ResponseWriter, r *http.Request) {
 	// Define la URL base de Overpass API
 	baseURL := "https://overpass-api.de/api/interpreter"
 
@@ -54,6 +50,10 @@ func MuseumsHandler(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	// Imprime la respuesta JSON
+	// Configurar el tipo de contenido como JSON
+	w.Header().Set("Content-Type", "application/json")
+	w.WriteHeader(http.StatusOK)
+
+	// Enviar la respuesta JSON de Overpass API
 	w.Write(body)
 }
