@@ -7,7 +7,7 @@ import (
 	"gorm.io/gorm"
 )
 
-var dsn = "host=localhost user=postgres password=gorm dbname=gorm port=5432"
+var dsn = "host=localhost user=postgres password=password dbname=geodata port=5432"
 var db *gorm.DB
 
 func DBConnection() {

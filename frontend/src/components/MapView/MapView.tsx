@@ -13,7 +13,7 @@ interface Node {
     };
 }
 
-const overpassData: Overpass = data;
+const overpassData = data;
 
 export const MapView = () => {
 
