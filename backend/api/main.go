@@ -1,19 +1,19 @@
 package main
 
 import (
-	"log"
+	"api_rutas/connections"
+	"api_rutas/routes"
 	"net/http"
 
-	"api_buscador/elastic"
-	"api_buscador/routes"
+	"github.com/gorilla/mux"
 )
 
 func main() {
-	elastic.InitializeClient()
+	connections.DBConnection()
 
+	r := mux.NewRouter()
 
-	router := routes.SetupIndexRoutes()
-  
-	log.Println("Server running on port 4000")
-	log.Fatal(http.ListenAndServe(":4000", router))
+	r.HandleFunc("/", routes.HomeHandler)
+
+	http.ListenAndServe(":3000", r)
 }
