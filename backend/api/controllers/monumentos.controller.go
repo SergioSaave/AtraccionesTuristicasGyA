@@ -14,7 +14,7 @@ func MonumentosHandler(w http.ResponseWriter, r *http.Request) {
 	// Define la consulta con el bounding box y los filtros
 	query := `
 	[out:json][timeout:25];
-	nwr["tourism"="museum"](bbox);
+	nwr["historic"="monument"](bbox);
 	out geom;
 	`
 
@@ -27,7 +27,7 @@ func MonumentosHandler(w http.ResponseWriter, r *http.Request) {
 	// Reemplaza {{bbox}} con las coordenadas en la consulta
 	query = fmt.Sprintf(`
 	[out:json][timeout:25];
-	nwr["tourism"="museum"](%.6f,%.6f,%.6f,%.6f);
+	nwr["historic"="monument"](%.6f,%.6f,%.6f,%.6f);
 	out geom;
 	`, minLat, minLon, maxLat, maxLon)
 
