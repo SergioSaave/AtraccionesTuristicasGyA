@@ -1,37 +1,35 @@
 version: '3.7'
 
 services:
-  elasticsearch:
-    image: docker.elastic.co/elasticsearch/elasticsearch:7.13.4
-    container_name: elasticsearch
+  postgres:
+    image: postgis/postgis:13-3.1
+    container_name: postgres
     environment:
-      - discovery.type=single-node
-      - xpack.security.enabled=false
-      - ES_JAVA_OPTS=-Xms512m -Xmx512m
-      - network.host=0.0.0.0  
-      - http.host= 0.0.0.0
+      POSTGRES_DB: geodata
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: password
     ports:
-      - "9200:9200"
+      - "5432:5432"
     volumes:
-      - esdata:/usr/share/elasticsearch/data
+      - pgdata:/var/lib/postgresql/data
     healthcheck:
-      test: ["CMD", "curl", "-f", "http://localhost:9200"]
+      test: ["CMD-SHELL", "pg_isready -U postgres"]
       interval: 15s
       timeout: 5s
       retries: 3
 
-  load_data:
-    image: python:3.9-slim
-    container_name: load_data
-    depends_on:
-      elasticsearch:
-        condition: service_healthy
-    volumes:
-      - .:/usr/src/app
-    working_dir: /usr/src/app
-    command: >
-      sh -c "pip install -r requirements.txt && python load_data.py"
+  # load_data:
+  #   image: python:3.9-slim
+  #   container_name: load_data
+  #   depends_on:
+  #     postgres:
+  #       condition: service_healthy
+  #   volumes:
+  #     - .:/usr/src/app
+  #   working_dir: /usr/src/app
+  #   command: >
+  #     sh -c "pip install -r requirements.txt && python load_data.py"
 
 volumes:
-  esdata:
+  pgdata:
     driver: local
