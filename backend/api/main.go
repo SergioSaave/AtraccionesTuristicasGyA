@@ -3,17 +3,15 @@ package main
 import (
 	"api_rutas/connections"
 	"api_rutas/routes"
+	"log"
 	"net/http"
-
-	"github.com/gorilla/mux"
 )
 
 func main() {
 	connections.DBConnection()
 
-	r := mux.NewRouter()
+	router := routes.SetupIndexRoutes()
 
-	r.HandleFunc("/", routes.HomeHandler)
-
-	http.ListenAndServe(":3000", r)
+	log.Println("Server running on port 4000")
+	log.Fatal(http.ListenAndServe(":4000", router))
 }
