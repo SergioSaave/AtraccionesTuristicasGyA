@@ -1,2 +1,4 @@
-elasticsearch==7.13.4
-requests
+psycopg2-binary
+sqlalchemy
+geoalchemy2
+shapely

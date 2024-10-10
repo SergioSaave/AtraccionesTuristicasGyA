@@ -18,17 +18,17 @@ services:
       timeout: 5s
       retries: 3
 
-  # load_data:
-  #   image: python:3.9-slim
-  #   container_name: load_data
-  #   depends_on:
-  #     postgres:
-  #       condition: service_healthy
-  #   volumes:
-  #     - .:/usr/src/app
-  #   working_dir: /usr/src/app
-  #   command: >
-  #     sh -c "pip install -r requirements.txt && python load_data.py"
+  load_data:
+    image: python:3.9-slim
+    container_name: load_data
+    depends_on:
+      postgres:
+        condition: service_healthy
+    volumes:
+      - .:/usr/src/app
+    working_dir: /usr/src/app
+    command: >
+      sh -c "pip install -r requirements.txt && python load_geojson.py"
 
 volumes:
   pgdata:
