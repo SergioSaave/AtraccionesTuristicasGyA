@@ -1,41 +1,35 @@
-import { useEffect, useState } from "react";
-import { Marker, Popup } from "react-leaflet"
-import data from '../../../museos.json'
+import { Marker, Popup } from "react-leaflet";
+import { MarcadorIcon } from "../MarcadorIcon/MarcadorIcon";
 
 interface Node {
-    type: string;
     id: number;
     lat: number;
     lon: number;
-    tags: {
-        [key: string]: string | undefined;
-    };
+    tags: { [key: string]: string | undefined };
 }
 
-const overpassData = data;
+interface MarcadorProps {
+    nodes: Node[];
+    // getColor: (tags: { [key: string]: string | undefined }) => string;
+    color: string;
+}
 
-export const Marcador = () => {
-
-    const [nodes, setNodes] = useState<Node[]>([]);
-
-    useEffect(() => {
-        // Simulamos cargar los datos desde un archivo JSON
-        const nodesData = overpassData.elements.filter(element => element.type === 'node') as Node[];
-        setNodes(nodesData);
-    }, []);
-
+export const Marcador = ({ nodes, color }: MarcadorProps) => {
     return (
         <>
-            {
-                nodes.map((node) => (
-                    <Marker key={node.id} position={[node.lat, node.lon]}>
+            {nodes.map((node) => {
+                // const color = getColor(node.tags);
+                const icon = MarcadorIcon({ color });
+
+                return (
+                    <Marker key={node.id} position={[node.lat, node.lon]} icon={icon}>
                         <Popup>
                             <b>{node.tags?.name || 'Sin nombre'}</b><br />
-                            Amenity: {node.tags?.amenity || 'Desconocido'}
+                            Amenity: {node.tags?.description || 'Desconocido'}
                         </Popup>
                     </Marker>
-                ))
-            }
+                );
+            })}
         </>
-    )
-}
+    );
+};

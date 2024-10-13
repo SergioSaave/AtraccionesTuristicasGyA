@@ -3,51 +3,117 @@ import { useCallback, useEffect, useState } from 'react';
 import { MapContainer, TileLayer } from 'react-leaflet';
 import { Marcador } from '../Marcador/Marcador';
 import { calculateBBox } from '../../helper/calculateBbox';
+import { useUserStore } from '../../state/State';
+// import { LayersControlComponent } from '../LayersControl/LayersControlComponent';
 
-const center = [-33.447487, -70.673676] // Santiago
+const center = [-33.447487, -70.673676]; // Santiago
 const zoom = 12;
-// const zoom = 18;
+
+interface Node {
+    type: string;
+    id: number;
+    lat: number;
+    lon: number;
+    tags: { [key: string]: string | undefined };
+}
 
 function DisplayPosition({ map }: any) {
-    const [position, setPosition] = useState(() => map.getCenter())
+    const [position, setPosition] = useState(() => map.getCenter());
 
     const onClick = useCallback(() => {
-        map.setView(center, zoom)
-    }, [map])
+        map.setView(center, zoom);
+    }, [map]);
 
     const onMove = useCallback(() => {
-        // console.log(map.getCenter().lat)
-        // console.log(map.getCenter().lng)
         const { lat, lng } = map.getCenter();
-        console.log(calculateBBox(lat, lng, 0.01))
+        console.log(calculateBBox(lat, lng, 0.01));
 
-        setPosition(map.getCenter())
-    }, [map])
+        setPosition(map.getCenter());
+    }, [map]);
 
     useEffect(() => {
-        map.on('move', onMove)
+        map.on('move', onMove);
         return () => {
-            map.off('move', onMove)
-        }
-    }, [map, onMove])
+            map.off('move', onMove);
+        };
+    }, [map, onMove]);
 
     return (
         <p>
             latitude: {position.lat.toFixed(4)}, longitude: {position.lng.toFixed(4)}{' '}
             <button onClick={onClick}>reset</button>
         </p>
-    )
+    );
 }
 
 export const MapView = () => {
     const [map, setMap] = useState<L.Map | null>(null);
+    const [nodesMuseos, setNodesMuseos] = useState<Node[]>([]);
+    const [nodesMonumentos, setNodesMonumentos] = useState<Node[]>([]);
+    const [nodesIglesias, setNodesIglesias] = useState<Node[]>([]);
+    // const [nodesParques, setNodesParques] = useState<Node[]>([]);
+
+    const showMuseos = useUserStore((state) => state.showMuseos);
+    const showMonumentos = useUserStore((state) => state.showMonumentos);
+    const showIglesias = useUserStore((state) => state.showIglesias);
+
+    const getMuseos = async () => {
+        const response = await fetch('http://localhost:4000/museos/');
+        const data = await response.json();
+        console.log(data);
+        const nodesData = data.elements.filter((element: { type: string; }) => element.type === 'node') as Node[];
+        setNodesMuseos(nodesData);
+    }
+
+    const getMonumentos = async () => {
+        const response = await fetch('http://localhost:4000/monumentos/');
+        const data = await response.json();
+        console.log(data);
+        const nodesData = data.elements.filter((element: { type: string; }) => element.type === 'node') as Node[];
+        setNodesMonumentos(nodesData);
+    }
+
+    const getIglesias = async () => {
+        const response = await fetch('http://localhost:4000/iglesias/');
+        const data = await response.json();
+        console.log(data);
+        const nodesData = data.elements.filter((element: { type: string; }) => element.type === 'node') as Node[];
+        setNodesIglesias(nodesData);
+    }
+
+    // const getParques = async () => {
+    //     const response = await fetch('http://localhost:4000/parques/');
+    //     const data = await response.json();
+    //     console.log(data);
+    //     const nodesData = data.elements.filter((element: { type: string; }) => element.type === 'node') as Node[];
+    //     setNodesParques(nodesData);
+    // }
+
+    useEffect(() => {
+        getMuseos();
+        getMonumentos();
+        getIglesias();
+        // getParques();
+    }, []);
+
+    // Función para determinar el color según el tipo de lugar
+    // const getColor = (tags: { [key: string]: string | undefined }) => {
+    //     if (tags.amenity === 'cafe') {
+    //         return 'red';
+    //     } else if (tags.amenity === 'park') {
+    //         return 'green';
+    //     } else if (tags.tourism === 'museum') {
+    //         return 'orange';
+    //     }
+    //     return 'blue';
+    // };
 
     return (
         <>
             {map ? <DisplayPosition map={map} /> : null}
 
             <MapContainer
-                center={[-33.447487, -70.673676]}
+                center={[center[0], center[1]]}
                 zoom={zoom}
                 style={{ height: '100%', width: '100%' }}
                 scrollWheelZoom={true}
@@ -57,7 +123,17 @@ export const MapView = () => {
                     attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
                     url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
                 />
-                <Marcador />
+                {
+                    showMuseos ? <Marcador nodes={nodesMuseos} color={'blue'} /> : null
+                }
+                {
+                    showMonumentos ? <Marcador nodes={nodesMonumentos} color={'yellow'} /> : null
+                }
+                {
+                    showIglesias ? <Marcador nodes={nodesIglesias} color={'grey'} /> : null
+                }
+                {/* <Marcador nodes={nodesParques} color={'green'} /> */}
+                {/* <LayersControlComponent /> */}
             </MapContainer>
         </>
     );
