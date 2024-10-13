@@ -64,7 +64,7 @@ func MuseosHandler(w http.ResponseWriter, r *http.Request) {
 
 	// Enviar la respuesta JSON de Overpass API
 	// Inserta el GeoJSON en la base de datos usando GORM
-	err = saveGeoJSONToPostGIS(body)
+	// err = saveGeoJSONToPostGIS(body)
 	if err != nil {
 		http.Error(w, "Error al insertar GeoJSON en PostGIS", http.StatusInternalServerError)
 		fmt.Println("Error al insertar GeoJSON en PostGIS:", err)

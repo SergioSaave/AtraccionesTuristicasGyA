@@ -1,44 +1,64 @@
-import { useEffect, useState } from 'react';
-import { MapContainer, Marker, Popup, TileLayer } from 'react-leaflet';
-import { Overpass } from '../../interfaces/overpass.interface';
-import data from '../../../museos.json'
+import L from 'leaflet';
+import { useCallback, useEffect, useState } from 'react';
+import { MapContainer, TileLayer } from 'react-leaflet';
+import { Marcador } from '../Marcador/Marcador';
+import { calculateBBox } from '../../helper/calculateBbox';
 
-interface Node {
-    type: string;
-    id: number;
-    lat: number;
-    lon: number;
-    tags: {
-        [key: string]: string | undefined; // Etiquetas con campos opcionales
-    };
-}
+const center = [-33.447487, -70.673676] // Santiago
+const zoom = 12;
+// const zoom = 18;
 
-const overpassData = data;
+function DisplayPosition({ map }: any) {
+    const [position, setPosition] = useState(() => map.getCenter())
 
-export const MapView = () => {
+    const onClick = useCallback(() => {
+        map.setView(center, zoom)
+    }, [map])
 
-    const [nodes, setNodes] = useState<Node[]>([]);
+    const onMove = useCallback(() => {
+        // console.log(map.getCenter().lat)
+        // console.log(map.getCenter().lng)
+        const { lat, lng } = map.getCenter();
+        console.log(calculateBBox(lat, lng, 0.01))
+
+        setPosition(map.getCenter())
+    }, [map])
 
     useEffect(() => {
-        // Simulamos cargar los datos desde un archivo JSON
-        const nodesData = overpassData.elements.filter(element => element.type === 'node') as Node[];
-        setNodes(nodesData);
-    }, []);
+        map.on('move', onMove)
+        return () => {
+            map.off('move', onMove)
+        }
+    }, [map, onMove])
 
     return (
-        <MapContainer center={[-33.447487, -70.673676]} zoom={12} style={{ height: "100%", width: "100%" }}>
-            <TileLayer
-                url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-                attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-            />
-            {nodes.map((node) => (
-                <Marker key={node.id} position={[node.lat, node.lon]}>
-                    <Popup>
-                        <b>{node.tags?.name || 'Sin nombre'}</b><br />
-                        Amenity: {node.tags?.amenity || 'Desconocido'}
-                    </Popup>
-                </Marker>
-            ))}
-        </MapContainer>
+        <p>
+            latitude: {position.lat.toFixed(4)}, longitude: {position.lng.toFixed(4)}{' '}
+            <button onClick={onClick}>reset</button>
+        </p>
     )
 }
+
+export const MapView = () => {
+    const [map, setMap] = useState<L.Map | null>(null);
+
+    return (
+        <>
+            {map ? <DisplayPosition map={map} /> : null}
+
+            <MapContainer
+                center={[-33.447487, -70.673676]}
+                zoom={zoom}
+                style={{ height: '100%', width: '100%' }}
+                scrollWheelZoom={true}
+                ref={setMap}
+            >
+                <TileLayer
+                    attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+                    url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+                />
+                <Marcador />
+            </MapContainer>
+        </>
+    );
+};

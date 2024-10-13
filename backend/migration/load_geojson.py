@@ -2,7 +2,7 @@ import os
 import psycopg2
 import json
 from geoalchemy2 import Geometry, WKTElement
-from sqlalchemy import create_engine, Table, Column, Integer, MetaData, String
+from sqlalchemy import create_engine, Table, Column, Integer, MetaData, String, inspect
 from sqlalchemy.dialects.postgresql import JSON
 from sqlalchemy.orm import sessionmaker
 
@@ -19,18 +19,6 @@ engine = create_engine(DATABASE_URL)
 Session = sessionmaker(bind=engine)
 session = Session()
 metadata = MetaData()
-
-# Función para crear una tabla
-def create_table(table_name):
-    table = Table(
-        table_name, metadata,
-        Column('id', Integer, primary_key=True, autoincrement=True),
-        Column('properties', JSON),
-        Column('geometry', Geometry('GEOMETRY', srid=4326)),
-        extend_existing=True
-    )
-    metadata.create_all(engine)
-    return table
 
 # Función para convertir GeoJSON a WKT
 def geojson_to_wkt(geometry):
@@ -55,10 +43,14 @@ def geojson_to_wkt(geometry):
     else:
         raise ValueError(f"Tipo de geometría '{geometry['type']}' no soportado.")
 
-# Función para crear una tabla e insertar datos GeoJSON
+# Función para cargar GeoJSON en la base de datos solo si la tabla no existe
 def load_geojson_to_db(geojson_path, table_name):
-    with open(geojson_path) as f:
-        data = json.load(f)
+    inspector = inspect(engine)
+
+    # Verificar si la tabla ya existe
+    if inspector.has_table(table_name):
+        print(f"La tabla '{table_name}' ya existe. Se omite la creación e inserción de datos.")
+        return
 
     # Crear tabla si no existe
     table = Table(
@@ -70,6 +62,10 @@ def load_geojson_to_db(geojson_path, table_name):
     )
     metadata.create_all(engine)
 
+    # Cargar los datos del archivo GeoJSON
+    with open(geojson_path) as f:
+        data = json.load(f)
+
     # Insertar datos en la tabla
     for feature in data['features']:
         # Convertir la geometría a WKT
@@ -80,6 +76,7 @@ def load_geojson_to_db(geojson_path, table_name):
         session.execute(ins)
 
     session.commit()
+    print(f"Datos insertados en la tabla '{table_name}'.")
 
 # Lista de archivos GeoJSON y sus tablas correspondientes
 geojson_files = [
