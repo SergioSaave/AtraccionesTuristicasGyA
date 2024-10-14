@@ -4,7 +4,7 @@ import { MapContainer, TileLayer } from 'react-leaflet';
 import { Marcador } from '../Marcador/Marcador';
 import { calculateBBox } from '../../helper/calculateBbox';
 import { useUserStore } from '../../state/State';
-// import { LayersControlComponent } from '../LayersControl/LayersControlComponent';
+import { LayersControlComponent } from '../LayersControl/LayersControlComponent';
 
 const center = [-33.447487, -70.673676]; // Santiago
 const zoom = 12;
@@ -37,6 +37,11 @@ function DisplayPosition({ map }: any) {
             map.off('move', onMove);
         };
     }, [map, onMove]);
+
+    useEffect(() => {
+        const { lat, lng } = map.getCenter();
+        console.log(calculateBBox(lat, lng, 0.01));
+    }, [])
 
     return (
         <p>
@@ -81,19 +86,19 @@ export const MapView = () => {
         setNodesIglesias(nodesData);
     }
 
-    // const getParques = async () => {
-    //     const response = await fetch('http://localhost:4000/parques/');
-    //     const data = await response.json();
-    //     console.log(data);
-    //     const nodesData = data.elements.filter((element: { type: string; }) => element.type === 'node') as Node[];
-    //     setNodesParques(nodesData);
-    // }
+    const getParques = async () => {
+        const response = await fetch('http://localhost:4000/parques/');
+        const data = await response.json();
+        console.log(data);
+        // const nodesData = data.elements.filter((element: { type: string; }) => element.type === 'node') as Node[];
+        // setNodesParques(nodesData);
+    }
 
     useEffect(() => {
         getMuseos();
         getMonumentos();
         getIglesias();
-        // getParques();
+        getParques();
     }, []);
 
     // Función para determinar el color según el tipo de lugar
@@ -133,7 +138,7 @@ export const MapView = () => {
                     showIglesias ? <Marcador nodes={nodesIglesias} color={'grey'} /> : null
                 }
                 {/* <Marcador nodes={nodesParques} color={'green'} /> */}
-                {/* <LayersControlComponent /> */}
+                <LayersControlComponent />
             </MapContainer>
         </>
     );
