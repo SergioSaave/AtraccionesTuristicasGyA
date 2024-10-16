@@ -1,0 +1,74 @@
+version: '3.7'
+
+services:
+  postgres:
+    image: postgis/postgis:13-3.1
+    container_name: postgres
+    environment:
+      POSTGRES_DB: geodata
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: password
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres"]
+      interval: 15s
+      timeout: 5s
+      retries: 3
+
+  load_data:
+    image: python:3.9-slim
+    container_name: load_data
+    depends_on:
+      postgres:
+        condition: service_healthy
+    volumes:
+      - ./Sitio web/backend/migration:/usr/src/app
+      - ./requirements.txt:/usr/src/app/requirements.txt 
+    working_dir: /usr/src/app
+    command: >
+      sh -c "pip install -r requirements.txt && python load_geojson.py"
+
+  frontend:
+    build:
+      context: ./Sitio Web/frontend
+      dockerfile: Dockerfile
+    ports:
+      - "5173:5173"
+    
+  flask_app:
+    image: python:3.9
+    working_dir: /app
+    volumes:
+      - ./Sitio Web/backend:/app
+      - ./requirements.txt:/usr/src/app/requirements.txt 
+    command: >
+      sh -c "pip install -r requirements.txt && python app.py"
+    ports:
+      - "5000:5000"
+
+  amenazas:
+    image: python:3.9
+    working_dir: /app
+    volumes:
+      - ./Amenazas:/app
+      - ./requirements.txt:/app/requirements.txt
+    command: >
+      sh -c "pip install -r requirements.txt && python AmenazaClima.py && python AmenazaFeriados.py"
+
+  metadata:
+    image: python:3.9
+    working_dir: /app
+    volumes:
+      - ./Metadata:/app
+      - ./requirements.txt:/app/requirements.txt
+    command: >
+      sh -c "apt-get update && apt-get install -y libgl1-mesa-glx && \
+      pip install -r requirements.txt && \
+      python metadataOverpass.py && python metadataSTOP.py"
+
+volumes:
+  pgdata:
+    driver: local

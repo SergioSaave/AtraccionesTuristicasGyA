@@ -1,0 +1,5178 @@
+{
+    "version": 0.6,
+    "generator": "Overpass API 0.7.62.1 084b4234",
+    "osm3s": {
+        "timestamp_osm_base": "2024-10-16T23:36:43Z",
+        "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL."
+    },
+    "elements": [
+        {
+            "type": "node",
+            "id": 223920407,
+            "lat": -33.4355959,
+            "lon": -70.6303997,
+            "tags": {
+                "addr:country": "CL",
+                "name": "Museo de los Tajamares",
+                "tourism": "museum",
+                "wikidata": "Q28501698",
+                "wikipedia": "es:Museo de los Tajamares"
+            }
+        },
+        {
+            "type": "node",
+            "id": 721033687,
+            "lat": -33.4143977,
+            "lon": -70.6534896,
+            "tags": {
+                "addr:city": "Independencia",
+                "addr:country": "CL",
+                "addr:street": "San Jos\u00e9",
+                "name": "Antiguo Hospital San Jos\u00e9",
+                "tourism": "museum",
+                "wikidata": "Q16483490",
+                "wikimedia_commons": "Category:Antiguo Hospital San Jos\u00e9",
+                "wikipedia": "es:Antiguo Hospital San Jos\u00e9"
+            }
+        },
+        {
+            "type": "node",
+            "id": 1214175916,
+            "lat": -33.4312595,
+            "lon": -70.634155,
+            "tags": {
+                "addr:city": "Providencia",
+                "addr:country": "CL",
+                "addr:housenumber": "192",
+                "addr:street": "Pasaje Fernando M\u00e1rquez de La Plata",
+                "architect": "Germ\u00e1n Rodr\u00edguez Arias y Carlos Martner",
+                "description": "Monumento Hist\u00f3rico de Chile desde el 31 de Julio de 1990",
+                "fee": "yes",
+                "museum": "person",
+                "name": "Casa Museo La Chascona",
+                "note": "entrada en intersecci\u00f3n de pasaje Fernando M\u00e1rquez de La Plata y calle Chucre Manzur",
+                "opening_hours": "Mo off; Mar-Dec: Tu-Su 10:00-18:00; Jan-Feb: Tu-Su 10:00-19:00",
+                "operator": "Fundaci\u00f3n Pablo Neruda",
+                "operator:type": "private_for_profit",
+                "phone": "+56-2-2777 87 41 / +56-2-2737 87 12",
+                "start_date": "1986",
+                "tourism": "museum",
+                "website": "http://www.fundacionneruda.org/es/la-chascona/informacion-visita",
+                "wheelchair": "limited",
+                "wikidata": "Q5962867",
+                "wikimedia_commons": "File:Casa de Pablo Neruda La Chascona 03.JPG",
+                "wikipedia": "es:La Chascona"
+            }
+        },
+        {
+            "type": "node",
+            "id": 1242362916,
+            "lat": -33.4514831,
+            "lon": -70.6575433,
+            "tags": {
+                "addr:country": "CL",
+                "government": "map",
+                "museum": "military",
+                "name": "IGM museum",
+                "operator": "Instituto Geogr\u00e1fico Militar",
+                "operator:short": "IGM",
+                "operator:wikidata": "Q5917346",
+                "short_name": "IGM",
+                "tourism": "museum"
+            }
+        },
+        {
+            "type": "node",
+            "id": 1278934534,
+            "lat": -33.4437338,
+            "lon": -70.6451672,
+            "tags": {
+                "addr:city": "Santiago",
+                "addr:country": "CL",
+                "addr:housenumber": "659",
+                "addr:street": "Marcoleta",
+                "alt_name": "Club de la Rep\u00fablica Gran Logia de Chile",
+                "name": "Museo Mas\u00f3nico",
+                "tourism": "museum"
+            }
+        },
+        {
+            "type": "node",
+            "id": 1297763053,
+            "lat": -33.4390245,
+            "lon": -70.6521952,
+            "tags": {
+                "addr:country": "CL",
+                "addr:housenumber": "361",
+                "addr:street": "Bandera",
+                "fee": "yes",
+                "name": "Museo de Arte Precolombino",
+                "name:en": "Museum of Precolombian Art",
+                "opening_hours": "Tu-Su 10:00-18:00",
+                "tourism": "museum",
+                "website": "https://museo.precolombino.cl/",
+                "wikidata": "Q517430",
+                "wikimedia_commons": "Category:Museo Chileno de Arte Precolombino",
+                "wikipedia": "en:Museo Chileno de Arte Precolombino"
+            }
+        },
+        {
+            "type": "node",
+            "id": 1297908112,
+            "lat": -33.4436101,
+            "lon": -70.647835,
+            "tags": {
+                "addr:city": "Santiago",
+                "addr:country": "CL",
+                "addr:housenumber": "834",
+                "addr:street": "Avenida Libertador Bernardo O'Higgins",
+                "museum": "art",
+                "name": "Museo de Arte Colonial de San Francisco",
+                "opening_hours": "Mo-Fr 09:30-13:30,15:00-18:00; Sa,Su 10:00-14:00",
+                "phone": "+56 2 26398737",
+                "source": "survey",
+                "tourism": "museum",
+                "website": "http://www.museosanfrancisco.com",
+                "wikidata": "Q16494156",
+                "wikimedia_commons": "Category:Museo de Arte Colonial de San Francisco",
+                "wikipedia": "en:Museo Colonial"
+            }
+        },
+        {
+            "type": "node",
+            "id": 1865044936,
+            "lat": -33.510568,
+            "lon": -70.7662248,
+            "tags": {
+                "addr:country": "CL",
+                "name": "Museo del Carmen",
+                "tourism": "museum",
+                "wikidata": "Q56318282",
+                "wikimedia_commons": "Category:Museo del Carmen de Maip\u00fa",
+                "wikipedia": "es:Museo del Carmen de Maip\u00fa"
+            }
+        },
+        {
+            "type": "node",
+            "id": 2283670628,
+            "lat": -33.441749,
+            "lon": -70.6782795,
+            "tags": {
+                "addr:country": "CL",
+                "name": "Museo de la Educaci\u00f3n Gabriela Mistral",
+                "source": "http://www.museodelaeducacion.cl/Vistas_Publicas/publicHome/homePublic.aspx?idInstitucion=98",
+                "tourism": "museum",
+                "wikidata": "Q6034227",
+                "wikimedia_commons": "Category:Museo de la Educaci\u00f3n Gabriela Mistral",
+                "wikipedia": "es:Museo de la Educaci\u00f3n Gabriela Mistral"
+            }
+        },
+        {
+            "type": "node",
+            "id": 2463424205,
+            "lat": -33.4398181,
+            "lon": -70.6837212,
+            "tags": {
+                "addr:city": "Santiago",
+                "addr:country": "CL",
+                "addr:street": "Santo Domingo",
+                "alt_name": "Museo de los Ni\u00f1os",
+                "museum": "children",
+                "name": "Museo Infantil",
+                "operator": "Corporaci\u00f3n Privada para la Divulgaci\u00f3n de la Ciencia y Tecnolog\u00eda (Corpdicyt)",
+                "operator:type": "private_non_profit",
+                "tourism": "museum",
+                "website": "http://www.corpdicyt.cl/minfantil/",
+                "wikidata": "Q20016884",
+                "wikipedia": "es:Museo Infantil (Chile)"
+            }
+        },
+        {
+            "type": "node",
+            "id": 2501991505,
+            "lat": -33.4423,
+            "lon": -70.6120982,
+            "tags": {
+                "addr:city": "Providencia",
+                "addr:country": "CL",
+                "addr:housenumber": "1690",
+                "addr:street": "Antonio Varas",
+                "name": "Museo Hist\u00f3rico de Carabineros",
+                "opening_hours": "Tu-Fr 09:00-17:00",
+                "tourism": "museum"
+            }
+        },
+        {
+            "type": "node",
+            "id": 3801481997,
+            "lat": -33.4248166,
+            "lon": -70.6448334,
+            "tags": {
+                "addr:city": "Santiago",
+                "addr:country": "CL",
+                "addr:housenumber": "683",
+                "addr:street": "Avenida Recoleta",
+                "museum": "history",
+                "name": "Museo Hist\u00f3rico Dominico",
+                "opening_hours": "Tu-Fr 10:00-17:30",
+                "operator": "Servicio Nacional del Patrimonio Cultural",
+                "operator:type": "government",
+                "start_date": "2005",
+                "tourism": "museum",
+                "website": "http://www.museodominico.cl",
+                "wikidata": "Q16911655",
+                "wikimedia_commons": "Category:Museo Hist\u00f3rico Dominico",
+                "wikipedia": "es:Museo Hist\u00f3rico Dominico"
+            }
+        },
+        {
+            "type": "node",
+            "id": 5312381322,
+            "lat": -33.5064164,
+            "lon": -70.6070539,
+            "tags": {
+                "addr:country": "CL",
+                "name": "Museo CSD Colo Colo",
+                "tourism": "museum"
+            }
+        },
+        {
+            "type": "node",
+            "id": 5604506491,
+            "lat": -33.4362529,
+            "lon": -70.6509728,
+            "tags": {
+                "addr:city": "Santiago",
+                "addr:country": "CL",
+                "addr:housenumber": "978",
+                "addr:street": "Santo Domingo",
+                "amenity": "fire_station",
+                "email": "contacto.mubo@cbs.cl",
+                "name": "Museo de Bomberos de Santiago (MUBO)",
+                "opening_hours": "Tu-Sa 10:00-18:00",
+                "tourism": "museum",
+                "website": "https://mubo.cl/",
+                "wikidata": "Q76824234",
+                "wikimedia_commons": "Category:Museo de Bomberos de Santiago",
+                "wikipedia": "es:Museo de Bomberos de Santiago"
+            }
+        },
+        {
+            "type": "node",
+            "id": 5904215285,
+            "lat": -33.4397152,
+            "lon": -70.6751391,
+            "tags": {
+                "addr:country": "CL",
+                "name": "Centro Cultural Casa Quemada",
+                "tourism": "museum"
+            }
+        },
+        {
+            "type": "node",
+            "id": 6938501880,
+            "lat": -33.3736873,
+            "lon": -70.6058756,
+            "tags": {
+                "addr:city": "Huechuraba",
+                "addr:street": "Camino Bosque Santiago",
+                "alt_name": "Museo de la Vivienda Chilena",
+                "check_date": "2024-02-26",
+                "museum": "open_air",
+                "name": "Museo de la Vivienda Tradicional Local",
+                "opening_hours": "Tu-Su 10:00-19:00",
+                "operator": "ParqueMet",
+                "operator:type": "public",
+                "start_date": "2019",
+                "tourism": "museum",
+                "wikidata": "Q86278859",
+                "wikipedia": "es:Museo de la Vivienda Tradicional Local"
+            }
+        },
+        {
+            "type": "node",
+            "id": 7622851659,
+            "lat": -33.4193103,
+            "lon": -70.6118699,
+            "tags": {
+                "addr:city": "Providencia",
+                "addr:housenumber": "2201",
+                "addr:street": "Avenida Santa Mar\u00eda",
+                "architect": "Germ\u00e1n Bannen y Jorge Oyarz\u00fan",
+                "museum": "open_air",
+                "name": "Museo al Aire Libre Parque de Las Esculturas",
+                "operator": "Corporaci\u00f3n Cultural de Providencia",
+                "operator:type": "public",
+                "start_date": "1986-12-17",
+                "tourism": "museum",
+                "wikidata": "Q16616308",
+                "wikimedia_commons": "Category:Parque de las Esculturas",
+                "wikipedia": "es:Parque de las Esculturas"
+            }
+        },
+        {
+            "type": "node",
+            "id": 9009050285,
+            "lat": -33.4082455,
+            "lon": -70.5416817,
+            "tags": {
+                "name": "Museo de Cera Las Condes",
+                "tourism": "museum",
+                "wikidata": "Q65926757",
+                "wikimedia_commons": "Category:Museo de Cera de Las Condes",
+                "wikipedia": "es:Museo de Cera de Las Condes"
+            }
+        },
+        {
+            "type": "node",
+            "id": 10702579775,
+            "lat": -33.4457192,
+            "lon": -70.6533205,
+            "tags": {
+                "addr:city": "Santiago",
+                "addr:country": "CL",
+                "addr:street": "Avenida Presidente Bulnes",
+                "alt_name": "Pante\u00f3n de los H\u00e9roes de la Patria",
+                "building": "yes",
+                "fee": "no",
+                "museum": "history",
+                "name": "Altar de la Patria",
+                "operator": "Escuela Militar del Libertador Bernardo O'Higgins",
+                "operator:type": "public",
+                "start_date": "20007",
+                "tourism": "museum",
+                "wikidata": "Q25414728",
+                "wikipedia": "es:Altar de la Patria (Chile)"
+            }
+        },
+        {
+            "type": "node",
+            "id": 10772181267,
+            "lat": -33.4921505,
+            "lon": -70.6136558,
+            "tags": {
+                "addr:city": "Macul",
+                "addr:street": "Arturo Prat",
+                "alt_name": "Museo a Cielo Abierto Macul",
+                "museum": "open_air",
+                "name": "Museo Macul Vimasur",
+                "opening_hours": "24/7",
+                "operator": "Corporaci\u00f3n CulturalHa Crew y Junta de Vecinos Poblaci\u00f3n Vicu\u00f1a Mackenna Sur",
+                "operator:type": "community",
+                "short_name": "MUMA",
+                "start_date": "2022-09-04",
+                "tourism": "museum",
+                "website": "https://www.museomacul.cl/"
+            }
+        },
+        {
+            "type": "node",
+            "id": 10863893661,
+            "lat": -33.4421898,
+            "lon": -70.6758062,
+            "tags": {
+                "addr:city": "Santiago",
+                "addr:housenumber": "2919",
+                "addr:street": "Hu\u00e9rfanos",
+                "museum": "technology",
+                "name": "Museo del Sonido",
+                "operator": "Fundaci\u00f3n Mariana Pr\u00e9ndez de Casanueva",
+                "tourism": "museum",
+                "website": "https://www.museodelsonido.cl/",
+                "wikidata": "Q86280105",
+                "wikimedia_commons": "Category:Museo del Sonido",
+                "wikipedia": "es:Museo del Sonido"
+            }
+        },
+        {
+            "type": "node",
+            "id": 10915399287,
+            "lat": -33.4436168,
+            "lon": -70.6528467,
+            "tags": {
+                "addr:city": "Santiago",
+                "addr:housenumber": "25",
+                "addr:street": "Morand\u00e9",
+                "check_date": "2023-05-20",
+                "fee": "no",
+                "level": "-2",
+                "museum": "history",
+                "name": "Museo del Ahorro",
+                "opening_hours": "Mo-Fr 09:00-14:00",
+                "operator": "Banco Estado",
+                "operator:type": "business",
+                "start_date": "1992-12-22",
+                "tourism": "museum",
+                "wikidata": "Q24942099",
+                "wikimedia_commons": "Category:Museo del Ahorro",
+                "wikipedia": "es:Museo del Ahorro"
+            }
+        },
+        {
+            "type": "node",
+            "id": 10915439399,
+            "lat": -33.4649954,
+            "lon": -70.5955066,
+            "tags": {
+                "addr:city": "\u00d1u\u00f1oa",
+                "addr:street": "Avenida Grecia",
+                "fee": "no",
+                "museum": "art",
+                "name": "Museo de Arte Popular Americano Tom\u00e1s Lago (MAPA)",
+                "operator": "Universidad de Chile",
+                "operator:type": "university",
+                "start_date": "1944-12-20",
+                "tourism": "museum",
+                "website": "https://mapa.uchile.cl/",
+                "wikidata": "Q2894417",
+                "wikipedia": "es:Museo de Arte Popular Americano"
+            }
+        },
+        {
+            "type": "node",
+            "id": 10917409223,
+            "lat": -33.4244775,
+            "lon": -70.6449615,
+            "tags": {
+                "addr:city": "Recoleta",
+                "addr:street": "Avenida Recoleta",
+                "museum": "art",
+                "name": "Museo de Artes Decorativas",
+                "opening_hours": "Tu-Fr 10:00-17:30",
+                "operator": "Centro Patrimonial de la Recoleta Dominica",
+                "operator:type": "government",
+                "start_date": "2005",
+                "tourism": "museum",
+                "website": "http://www.artdec.cl/",
+                "wikidata": "Q16494160",
+                "wikimedia_commons": "Category:Museo de Artes Decorativas, Santiago de Chile",
+                "wikipedia": "es:Museo de Artes Decorativas (Santiago de Chile)"
+            }
+        },
+        {
+            "type": "node",
+            "id": 10925461823,
+            "lat": -33.4353501,
+            "lon": -70.6434401,
+            "tags": {
+                "addr:city": "Santiago",
+                "addr:housenumber": "650",
+                "addr:street": "Jos\u00e9 Miguel de la Barra",
+                "fee": "no",
+                "museum": "art",
+                "name": "Museo Nacional de Bellas Artes",
+                "old_name": "Museo Nacional de Pinturas",
+                "operator": "Servicio Nacional del Patrimonio Cultural",
+                "operator:type": "public",
+                "short_name": "MNBA",
+                "start_date": "1880",
+                "tourism": "museum",
+                "website": "http://www.mnba.cl/",
+                "wikidata": "Q775376",
+                "wikimedia_commons": "Category:Museo Nacional de Bellas Artes, Chile",
+                "wikipedia": "es:Museo Nacional de Bellas Artes (Chile)"
+            }
+        },
+        {
+            "type": "node",
+            "id": 10927993051,
+            "lat": -33.4370031,
+            "lon": -70.63607,
+            "tags": {
+                "addr:city": "Santiago",
+                "addr:housenumber": "50",
+                "addr:street": "Merced",
+                "museum": "science",
+                "name": "Museo de Qu\u00edmica y Farmacia",
+                "tourism": "museum",
+                "wikidata": "Q111972327",
+                "wikimedia_commons": "Category:Museo de Qu\u00edmica y Farmacia Profesor C\u00e9sar Leyton Caravagno",
+                "wikipedia": "es:Museo de Qu\u00edmica y Farmacia Profesor C\u00e9sar Leyton Caravagno"
+            }
+        },
+        {
+            "type": "node",
+            "id": 10928002663,
+            "lat": -33.4523832,
+            "lon": -70.6565849,
+            "tags": {
+                "addr:city": "Santiago",
+                "addr:housenumber": "438",
+                "addr:street": "Dieciocho",
+                "museum": "history",
+                "name": "Museo Palacio Cousi\u00f1o",
+                "operator": "Santiago Cultura",
+                "operator:type": "public",
+                "tourism": "museum",
+                "website": "http://www.palaciocousino.cl/"
+            }
+        },
+        {
+            "type": "node",
+            "id": 10943273386,
+            "lat": -33.4321095,
+            "lon": -70.6559063,
+            "tags": {
+                "addr:city": "Santiago",
+                "addr:housenumber": "1301",
+                "addr:street": "Avenida Presidente Balmaceda",
+                "museum": "art",
+                "name": "Museo del Circo Nacional",
+                "tourism": "museum"
+            }
+        },
+        {
+            "type": "node",
+            "id": 10943273387,
+            "lat": -33.4411376,
+            "lon": -70.6528204,
+            "tags": {
+                "addr:city": "Santiago",
+                "addr:housenumber": "1180",
+                "addr:street": "Agustinas",
+                "museum": "history",
+                "name": "Museo Numism\u00e1tico",
+                "old_name": "Museo de la Historia Monetaria de Chile",
+                "operator": "Banco Central de Chile",
+                "operator:type": "business",
+                "tourism": "museum",
+                "website": "https://www.museobancocentral.cl/",
+                "wikidata": "Q86279665",
+                "wikimedia_commons": "Category:Museo Numism\u00e1tico del Banco Central de Chile",
+                "wikipedia": "es:Museo Numism\u00e1tico del Banco Central de Chile"
+            }
+        },
+        {
+            "type": "node",
+            "id": 10943273390,
+            "lat": -33.4378771,
+            "lon": -70.6516195,
+            "tags": {
+                "addr:city": "Santiago",
+                "addr:street": "Plaza de Armas",
+                "museum": "art",
+                "name": "Museo de Arte Sagrado",
+                "operator": "Catedral Metropolitana de Santiago",
+                "operator:type": "religious",
+                "tourism": "museum",
+                "website": "https://www.iglesiadesantiago.cl/",
+                "wikidata": "Q6940532",
+                "wikipedia": "es:Museo de Arte Sagrado"
+            }
+        },
+        {
+            "type": "node",
+            "id": 10943434533,
+            "lat": -33.4177998,
+            "lon": -70.6548073,
+            "tags": {
+                "addr:city": "Recoleta",
+                "addr:housenumber": "1130",
+                "addr:street": "Profesor Alberto Za\u00f1artu",
+                "name": "Museo de Anatom\u00eda",
+                "operator": "Facultad de Medicina U. de Chile",
+                "operator:type": "university",
+                "tourism": "museum",
+                "wikidata": "Q106651137",
+                "wikipedia": "es:Museo de Anatom\u00eda"
+            }
+        },
+        {
+            "type": "node",
+            "id": 10943434534,
+            "lat": -33.4193457,
+            "lon": -70.6555141,
+            "tags": {
+                "addr:city": "Independencia",
+                "addr:housenumber": "1027",
+                "addr:street": "Avenida Independencia",
+                "name": "Museo Nacional de Medicina Dr. Enrique Laval",
+                "operator": "Universidad de Chile",
+                "operator:type": "university",
+                "tourism": "museum",
+                "wikidata": "Q29983304",
+                "wikimedia_commons": "Category:Museo Nacional de Medicina Dr Enrique Laval",
+                "wikipedia": "es:Museo Nacional de Medicina Dr. Enrique Laval"
+            }
+        },
+        {
+            "type": "node",
+            "id": 10963945038,
+            "lat": -33.4371206,
+            "lon": -70.6506217,
+            "tags": {
+                "addr:city": "Santiago",
+                "addr:housenumber": "951",
+                "addr:street": "Libertador Bernardo O'Higgins",
+                "building": "yes",
+                "email": "oirs@dibam.cl",
+                "fee": "no",
+                "museum": "history",
+                "name": "Museo Hist\u00f3rico Nacional",
+                "phone": "+56 2 2360 5272",
+                "tourism": "museum",
+                "wikidata": "Q3647931",
+                "wikimedia_commons": "Category:Museo Hist\u00f3rico Nacional, Chile",
+                "wikipedia": "es:Palacio de la Real Audiencia de Santiago"
+            }
+        },
+        {
+            "type": "node",
+            "id": 11908136041,
+            "lat": -33.508434,
+            "lon": -70.7474797,
+            "tags": {
+                "addr:city": "Maip\u00fa",
+                "addr:housenumber": "2010",
+                "addr:street": "Avenida Segunda Transversal",
+                "museum": "nature",
+                "name": "Museo del Agua SMAPA",
+                "operator": "SMAPA",
+                "operator:type": "local_authority",
+                "tourism": "museum"
+            }
+        },
+        {
+            "type": "node",
+            "id": 11942619737,
+            "lat": -33.4122319,
+            "lon": -70.5837954,
+            "tags": {
+                "addr:city": "Las Condes",
+                "addr:housenumber": "4601",
+                "addr:street": "Avenida Presidente Riesco",
+                "check_date": "2024-05-29",
+                "museum": "history",
+                "name": "Museo Militar",
+                "operator": "Ej\u00e9rcito de Chile",
+                "operator:type": "government",
+                "start_date": "2009-03",
+                "tourism": "museum"
+            }
+        },
+        {
+            "type": "node",
+            "id": 11949131844,
+            "lat": -33.4444723,
+            "lon": -70.6512464,
+            "tags": {
+                "addr:city": "Santiago",
+                "addr:street": "Avenida Libertador Bernardo O'Higgins",
+                "museum": "history",
+                "name": "Sala Museo Gabriela Mistral",
+                "operator": "U. De Chile",
+                "operator:type": "university",
+                "tourism": "museum"
+            }
+        },
+        {
+            "type": "node",
+            "id": 12219866036,
+            "lat": -33.4623407,
+            "lon": -70.6579763,
+            "tags": {
+                "addr:city": "Santiago",
+                "addr:street": "Avenida Viel",
+                "alt_name": "Museo de Insectos",
+                "museum": "nature",
+                "name": "Insectario del Parque",
+                "tourism": "museum"
+            }
+        },
+        {
+            "type": "node",
+            "id": 12241457953,
+            "lat": -33.4421117,
+            "lon": -70.6675178,
+            "tags": {
+                "addr:city": "Santiago",
+                "addr:housenumber": "2267",
+                "addr:street": "Agustinas",
+                "museum": "living_history",
+                "name": "Museo Ocean Pacific's",
+                "tourism": "museum",
+                "website": "https://oceanpacifics.cl/museo/"
+            }
+        },
+        {
+            "type": "way",
+            "id": 39633984,
+            "bounds": {
+                "minlat": -33.5193534,
+                "minlon": -70.6137623,
+                "maxlat": -33.518374,
+                "maxlon": -70.6130053
+            },
+            "nodes": [
+                475085230,
+                7716639049,
+                5291905435,
+                5291905436,
+                4854464011,
+                4854464013,
+                4854464016,
+                475085231,
+                5291905437,
+                4854464124,
+                4854464123,
+                4854464126,
+                8716730265,
+                4854464134,
+                4854464136,
+                8716730266,
+                4854464138,
+                4854464140,
+                4854464152,
+                4854464164,
+                4854464166,
+                4854464180,
+                4854464187,
+                475085232,
+                7716639048,
+                475085233,
+                7716639047,
+                475085234,
+                475085235,
+                475085236,
+                475085238,
+                4854464182,
+                4854464178,
+                475085239,
+                4854464170,
+                4854464173,
+                4854464158,
+                8716730178,
+                4854464157,
+                4854464155,
+                8716730177,
+                4854464151,
+                4854464143,
+                475085242,
+                4854464130,
+                4854464125,
+                4854464122,
+                4854464121,
+                475085245,
+                475085247,
+                475085248,
+                4854464009,
+                8716730139,
+                8716730138,
+                8716730137,
+                8716730142,
+                8716730140,
+                8716730136,
+                8716730135,
+                475085230
+            ],
+            "geometry": [
+                {
+                    "lat": -33.518374,
+                    "lon": -70.6135256
+                },
+                {
+                    "lat": -33.518435,
+                    "lon": -70.6135431
+                },
+                {
+                    "lat": -33.5184182,
+                    "lon": -70.6135893
+                },
+                {
+                    "lat": -33.5184486,
+                    "lon": -70.613595
+                },
+                {
+                    "lat": -33.5184444,
+                    "lon": -70.6136228
+                },
+                {
+                    "lat": -33.5185383,
+                    "lon": -70.6136443
+                },
+                {
+                    "lat": -33.5185808,
+                    "lon": -70.6134089
+                },
+                {
+                    "lat": -33.5186071,
+                    "lon": -70.6134089
+                },
+                {
+                    "lat": -33.5186172,
+                    "lon": -70.6137422
+                },
+                {
+                    "lat": -33.5187541,
+                    "lon": -70.6137368
+                },
+                {
+                    "lat": -33.5187525,
+                    "lon": -70.6136725
+                },
+                {
+                    "lat": -33.5188358,
+                    "lon": -70.6136892
+                },
+                {
+                    "lat": -33.5188463,
+                    "lon": -70.6136232
+                },
+                {
+                    "lat": -33.5188682,
+                    "lon": -70.6134854
+                },
+                {
+                    "lat": -33.5189034,
+                    "lon": -70.6134928
+                },
+                {
+                    "lat": -33.5189109,
+                    "lon": -70.6136222
+                },
+                {
+                    "lat": -33.5189179,
+                    "lon": -70.6137422
+                },
+                {
+                    "lat": -33.5190543,
+                    "lon": -70.6137321
+                },
+                {
+                    "lat": -33.519056,
+                    "lon": -70.613702
+                },
+                {
+                    "lat": -33.5191198,
+                    "lon": -70.61371
+                },
+                {
+                    "lat": -33.5191371,
+                    "lon": -70.6135679
+                },
+                {
+                    "lat": -33.5192176,
+                    "lon": -70.6135819
+                },
+                {
+                    "lat": -33.5192439,
+                    "lon": -70.6137093
+                },
+                {
+                    "lat": -33.5193534,
+                    "lon": -70.6137623
+                },
+                {
+                    "lat": -33.5193121,
+                    "lon": -70.6136403
+                },
+                {
+                    "lat": -33.5192858,
+                    "lon": -70.613529
+                },
+                {
+                    "lat": -33.5192752,
+                    "lon": -70.6134123
+                },
+                {
+                    "lat": -33.5192774,
+                    "lon": -70.6133084
+                },
+                {
+                    "lat": -33.5192931,
+                    "lon": -70.6131796
+                },
+                {
+                    "lat": -33.5193383,
+                    "lon": -70.6130167
+                },
+                {
+                    "lat": -33.5192584,
+                    "lon": -70.6130053
+                },
+                {
+                    "lat": -33.5192338,
+                    "lon": -70.6130844
+                },
+                {
+                    "lat": -33.5192109,
+                    "lon": -70.6132326
+                },
+                {
+                    "lat": -33.5192001,
+                    "lon": -70.6134185
+                },
+                {
+                    "lat": -33.5191652,
+                    "lon": -70.6134173
+                },
+                {
+                    "lat": -33.5191874,
+                    "lon": -70.6132172
+                },
+                {
+                    "lat": -33.5190879,
+                    "lon": -70.6131957
+                },
+                {
+                    "lat": -33.5190783,
+                    "lon": -70.6132693
+                },
+                {
+                    "lat": -33.5190622,
+                    "lon": -70.6133928
+                },
+                {
+                    "lat": -33.5190242,
+                    "lon": -70.6133888
+                },
+                {
+                    "lat": -33.5190161,
+                    "lon": -70.6132681
+                },
+                {
+                    "lat": -33.5190085,
+                    "lon": -70.6131555
+                },
+                {
+                    "lat": -33.5189258,
+                    "lon": -70.6131683
+                },
+                {
+                    "lat": -33.5189347,
+                    "lon": -70.6131065
+                },
+                {
+                    "lat": -33.5188039,
+                    "lon": -70.6130757
+                },
+                {
+                    "lat": -33.5187664,
+                    "lon": -70.6133325
+                },
+                {
+                    "lat": -33.5187346,
+                    "lon": -70.6133325
+                },
+                {
+                    "lat": -33.5187251,
+                    "lon": -70.6131092
+                },
+                {
+                    "lat": -33.518663,
+                    "lon": -70.6131132
+                },
+                {
+                    "lat": -33.518601,
+                    "lon": -70.6131112
+                },
+                {
+                    "lat": -33.518601,
+                    "lon": -70.6133124
+                },
+                {
+                    "lat": -33.5184685,
+                    "lon": -70.6132964
+                },
+                {
+                    "lat": -33.5184658,
+                    "lon": -70.6132609
+                },
+                {
+                    "lat": -33.5184632,
+                    "lon": -70.6132329
+                },
+                {
+                    "lat": -33.5184366,
+                    "lon": -70.6132284
+                },
+                {
+                    "lat": -33.5184259,
+                    "lon": -70.6132932
+                },
+                {
+                    "lat": -33.5184494,
+                    "lon": -70.613299
+                },
+                {
+                    "lat": -33.5184382,
+                    "lon": -70.6133651
+                },
+                {
+                    "lat": -33.5184123,
+                    "lon": -70.6133587
+                },
+                {
+                    "lat": -33.518374,
+                    "lon": -70.6135256
+                }
+            ],
+            "tags": {
+                "addr:city": "La Granja",
+                "addr:country": "CL",
+                "air_conditioning": "yes",
+                "alt_name": "MIM",
+                "building": "yes",
+                "museum": "science",
+                "name": "Museo Interactivo Mirador",
+                "operator": "Fundaci\u00f3n Tiempos Nuevos",
+                "operator:type": "government",
+                "start_date": "2000",
+                "tourism": "museum",
+                "website": "https://www.mim.cl/",
+                "wheelchair": "yes",
+                "wikidata": "Q9046849",
+                "wikimedia_commons": "Category:Museo Interactivo Mirador",
+                "wikipedia": "es:Museo Interactivo Mirador"
+            }
+        },
+        {
+            "type": "way",
+            "id": 70904549,
+            "bounds": {
+                "minlat": -33.3979428,
+                "minlon": -70.573733,
+                "maxlat": -33.3978049,
+                "maxlon": -70.5735687
+            },
+            "nodes": [
+                845133077,
+                845133079,
+                845133081,
+                845149572,
+                845133077
+            ],
+            "geometry": [
+                {
+                    "lat": -33.3979015,
+                    "lon": -70.5735687
+                },
+                {
+                    "lat": -33.3979428,
+                    "lon": -70.5736829
+                },
+                {
+                    "lat": -33.3978462,
+                    "lon": -70.573733
+                },
+                {
+                    "lat": -33.3978049,
+                    "lon": -70.5736188
+                },
+                {
+                    "lat": -33.3979015,
+                    "lon": -70.5735687
+                }
+            ],
+            "tags": {
+                "addr:city": "Vitacura",
+                "addr:country": "CL",
+                "building": "yes",
+                "name": "Museo de Historia Natural 'Flaminio Ruiz'",
+                "tourism": "museum"
+            }
+        },
+        {
+            "type": "way",
+            "id": 80216503,
+            "bounds": {
+                "minlat": -33.4398539,
+                "minlon": -70.679821,
+                "maxlat": -33.4396332,
+                "maxlon": -70.6789887
+            },
+            "nodes": [
+                936115726,
+                936115687,
+                936115716,
+                936115749,
+                936115726
+            ],
+            "geometry": [
+                {
+                    "lat": -33.4396807,
+                    "lon": -70.679821
+                },
+                {
+                    "lat": -33.4396332,
+                    "lon": -70.6790032
+                },
+                {
+                    "lat": -33.4398065,
+                    "lon": -70.6789887
+                },
+                {
+                    "lat": -33.4398539,
+                    "lon": -70.6798065
+                },
+                {
+                    "lat": -33.4396807,
+                    "lon": -70.679821
+                }
+            ],
+            "tags": {
+                "addr:city": "Santigo de Chile",
+                "addr:country": "CL",
+                "addr:housenumber": "501",
+                "addr:street": "Matucana",
+                "building": "yes",
+                "fee": "no",
+                "level": "1",
+                "name": "Museo de la Memoria y los Derechos Humanos",
+                "opening_hours": "Mo-Su 10:00-18:00",
+                "tourism": "museum",
+                "website": "http://ww3.museodelamemoria.cl",
+                "wheelchair": "yes",
+                "wikidata": "Q6940940",
+                "wikimedia_commons": "Category:Museo de la Memoria y los Derechos Humanos",
+                "wikipedia": "en:Museum of Memory and Human Rights"
+            }
+        },
+        {
+            "type": "way",
+            "id": 111293916,
+            "bounds": {
+                "minlat": -33.4643621,
+                "minlon": -70.5430737,
+                "maxlat": -33.4630009,
+                "maxlon": -70.542046
+            },
+            "nodes": [
+                1268345210,
+                4504778408,
+                1268345206,
+                1268345203,
+                1268345208,
+                11221386288,
+                9180403802,
+                1268345210
+            ],
+            "geometry": [
+                {
+                    "lat": -33.4630009,
+                    "lon": -70.542046
+                },
+                {
+                    "lat": -33.4631609,
+                    "lon": -70.5420745
+                },
+                {
+                    "lat": -33.4643621,
+                    "lon": -70.5421488
+                },
+                {
+                    "lat": -33.4641966,
+                    "lon": -70.5430737
+                },
+                {
+                    "lat": -33.4633195,
+                    "lon": -70.5430308
+                },
+                {
+                    "lat": -33.4630312,
+                    "lon": -70.5422899
+                },
+                {
+                    "lat": -33.4630042,
+                    "lon": -70.5422125
+                },
+                {
+                    "lat": -33.4630009,
+                    "lon": -70.542046
+                }
+            ],
+            "tags": {
+                "access": "yes",
+                "addr:city": "Pe\u00f1alolen",
+                "addr:country": "CL",
+                "architect": "Luis Santib\u00e1\u00f1ez Ibarra, Ana Torrealba, Jos\u00e9 Luis Guajardo",
+                "check_date": "2023-09-28",
+                "dog": "no",
+                "email": "educacion@villagrimaldi.cl",
+                "image": "https://upload.wikimedia.org/wikipedia/commons/6/67/Parque_por_la_paz_Villa_Grimaldi_%282%29.JPG",
+                "leisure": "park",
+                "name": "Museo de Sitio y Parque por la Paz Villa Grimaldi",
+                "object:street": "Avenida Jos\u00e9 Arrieta",
+                "official_name": "Parque por La Paz Villa Grimaldi",
+                "old_name": "Cuartel Terranova",
+                "opening_hours": "Mo-Su 10:00-18:00",
+                "operator": "Corporaci\u00f3n Parque por la Paz Villa Grimaldi",
+                "operator:type": "corporation",
+                "phone": "+56222925229",
+                "protection_title": "Monumento Hist\u00f3rico",
+                "smoking": "no",
+                "source": "https://www.monumentos.gob.cl/monumentos/monumentos-historicos/parque-paz-villa-grimaldi",
+                "start_date": "1997-03-22",
+                "tourism": "museum",
+                "website": "https://villagrimaldi.cl/",
+                "wikidata": "Q2301496",
+                "wikimedia_commons": "File:Villa Grimaldi, Santiago, Pe\u00f1alo\u00e9n. Chile.jpg",
+                "wikipedia": "es:Villa Grimaldi"
+            }
+        },
+        {
+            "type": "way",
+            "id": 191983673,
+            "bounds": {
+                "minlat": -33.489425,
+                "minlon": -70.6998748,
+                "maxlat": -33.4852207,
+                "maxlon": -70.6936926
+            },
+            "nodes": [
+                2025475929,
+                6080926404,
+                6080926405,
+                2704339530,
+                7769629276,
+                656638231,
+                2704339535,
+                6089270573,
+                2704339493,
+                6089270987,
+                7769629275,
+                6089270986,
+                6103958923,
+                6089270985,
+                7769363062,
+                7769363061,
+                2025475927,
+                2025475924,
+                6089270988,
+                2025475923,
+                6089270989,
+                6080926403,
+                2025475949,
+                1398989623,
+                7769363060,
+                6831443561,
+                2704339466,
+                7769363065,
+                7769363064,
+                7769363066,
+                1398989632,
+                9403319608,
+                11165840615,
+                10542211391,
+                2025475929
+            ],
+            "geometry": [
+                {
+                    "lat": -33.485367,
+                    "lon": -70.6963212
+                },
+                {
+                    "lat": -33.4852207,
+                    "lon": -70.6965655
+                },
+                {
+                    "lat": -33.4852498,
+                    "lon": -70.6968136
+                },
+                {
+                    "lat": -33.4857318,
+                    "lon": -70.697304
+                },
+                {
+                    "lat": -33.4862945,
+                    "lon": -70.6978731
+                },
+                {
+                    "lat": -33.4863258,
+                    "lon": -70.6979109
+                },
+                {
+                    "lat": -33.4863682,
+                    "lon": -70.6979532
+                },
+                {
+                    "lat": -33.4868249,
+                    "lon": -70.6984191
+                },
+                {
+                    "lat": -33.4869005,
+                    "lon": -70.6985213
+                },
+                {
+                    "lat": -33.487024,
+                    "lon": -70.6986562
+                },
+                {
+                    "lat": -33.4873456,
+                    "lon": -70.6989821
+                },
+                {
+                    "lat": -33.4874385,
+                    "lon": -70.6990764
+                },
+                {
+                    "lat": -33.4877849,
+                    "lon": -70.6993907
+                },
+                {
+                    "lat": -33.4879021,
+                    "lon": -70.6994882
+                },
+                {
+                    "lat": -33.4883,
+                    "lon": -70.6998324
+                },
+                {
+                    "lat": -33.4882866,
+                    "lon": -70.6998619
+                },
+                {
+                    "lat": -33.4883019,
+                    "lon": -70.6998748
+                },
+                {
+                    "lat": -33.4886368,
+                    "lon": -70.6992174
+                },
+                {
+                    "lat": -33.4886393,
+                    "lon": -70.6991826
+                },
+                {
+                    "lat": -33.4886712,
+                    "lon": -70.6991205
+                },
+                {
+                    "lat": -33.4889127,
+                    "lon": -70.6986262
+                },
+                {
+                    "lat": -33.4887605,
+                    "lon": -70.6985164
+                },
+                {
+                    "lat": -33.4892468,
+                    "lon": -70.6975622
+                },
+                {
+                    "lat": -33.489425,
+                    "lon": -70.6973038
+                },
+                {
+                    "lat": -33.48915,
+                    "lon": -70.6969799
+                },
+                {
+                    "lat": -33.4889017,
+                    "lon": -70.6966245
+                },
+                {
+                    "lat": -33.4889565,
+                    "lon": -70.6965695
+                },
+                {
+                    "lat": -33.4888391,
+                    "lon": -70.6963442
+                },
+                {
+                    "lat": -33.4884907,
+                    "lon": -70.6957781
+                },
+                {
+                    "lat": -33.4881567,
+                    "lon": -70.6952174
+                },
+                {
+                    "lat": -33.4878224,
+                    "lon": -70.6946504
+                },
+                {
+                    "lat": -33.4872459,
+                    "lon": -70.6936926
+                },
+                {
+                    "lat": -33.4870091,
+                    "lon": -70.6940872
+                },
+                {
+                    "lat": -33.4862294,
+                    "lon": -70.6951124
+                },
+                {
+                    "lat": -33.485367,
+                    "lon": -70.6963212
+                }
+            ],
+            "tags": {
+                "addr:city": "Cerrillos",
+                "addr:country": "CL",
+                "addr:housenumber": "5000",
+                "addr:street": "Avenida Pedro Aguirre Cerda",
+                "museum": "aerospace",
+                "name": "Museo Nacional Aeron\u00e1utico y del Espacio",
+                "operator": "Direcci\u00f3n General de Aeron\u00e1utica Civil",
+                "operator:type": "military",
+                "tourism": "museum",
+                "website": "http://www.museoaeronautico.gob.cl",
+                "wikidata": "Q9046877",
+                "wikimedia_commons": "Category:Museo Nacional Aeron\u00e1utico y del Espacio",
+                "wikipedia": "en:Museo Nacional Aeron\u00e1utico y del Espacio"
+            }
+        },
+        {
+            "type": "way",
+            "id": 194211366,
+            "bounds": {
+                "minlat": -33.3882639,
+                "minlon": -70.5457316,
+                "maxlat": -33.3866312,
+                "maxlon": -70.5439245
+            },
+            "nodes": [
+                2047256786,
+                2047256793,
+                10856690044,
+                2047256759,
+                4431549124,
+                2047256784,
+                6145910875,
+                6145910876,
+                6145910874,
+                2047256787,
+                2047256786
+            ],
+            "geometry": [
+                {
+                    "lat": -33.3867591,
+                    "lon": -70.5448705
+                },
+                {
+                    "lat": -33.3866312,
+                    "lon": -70.5444362
+                },
+                {
+                    "lat": -33.3870494,
+                    "lon": -70.544252
+                },
+                {
+                    "lat": -33.3878454,
+                    "lon": -70.5439245
+                },
+                {
+                    "lat": -33.3882639,
+                    "lon": -70.5450977
+                },
+                {
+                    "lat": -33.3874186,
+                    "lon": -70.545507
+                },
+                {
+                    "lat": -33.3869814,
+                    "lon": -70.5457316
+                },
+                {
+                    "lat": -33.3869506,
+                    "lon": -70.5456569
+                },
+                {
+                    "lat": -33.387395,
+                    "lon": -70.5454136
+                },
+                {
+                    "lat": -33.3871725,
+                    "lon": -70.5446916
+                },
+                {
+                    "lat": -33.3867591,
+                    "lon": -70.5448705
+                }
+            ],
+            "tags": {
+                "addr:city": "Vitacura",
+                "addr:country": "CL",
+                "addr:housenumber": "9350",
+                "addr:street": "Avenida Presidente Kennedy",
+                "name": "Casa Lo Matta",
+                "source": "Reconocimiento cortogr\u00e1fico de campo 2016 por KG",
+                "tourism": "museum"
+            }
+        },
+        {
+            "type": "way",
+            "id": 207740315,
+            "bounds": {
+                "minlat": -33.4191833,
+                "minlon": -70.5394907,
+                "maxlat": -33.4187592,
+                "maxlon": -70.5390017
+            },
+            "nodes": [
+                2179900229,
+                2179900228,
+                2179900203,
+                2179900234,
+                2179900235,
+                2179900236,
+                11345417360,
+                2179900244,
+                2179900222,
+                2179900226,
+                12086395270,
+                2179900209,
+                2179900204,
+                2179900229
+            ],
+            "geometry": [
+                {
+                    "lat": -33.4188304,
+                    "lon": -70.5394907
+                },
+                {
+                    "lat": -33.4191833,
+                    "lon": -70.5394076
+                },
+                {
+                    "lat": -33.4191687,
+                    "lon": -70.5393184
+                },
+                {
+                    "lat": -33.4190728,
+                    "lon": -70.539341
+                },
+                {
+                    "lat": -33.4190371,
+                    "lon": -70.5391235
+                },
+                {
+                    "lat": -33.4191418,
+                    "lon": -70.5390988
+                },
+                {
+                    "lat": -33.4191258,
+                    "lon": -70.5390017
+                },
+                {
+                    "lat": -33.4187592,
+                    "lon": -70.5390879
+                },
+                {
+                    "lat": -33.4187775,
+                    "lon": -70.5391998
+                },
+                {
+                    "lat": -33.4188835,
+                    "lon": -70.5391749
+                },
+                {
+                    "lat": -33.4188971,
+                    "lon": -70.5392573
+                },
+                {
+                    "lat": -33.4189136,
+                    "lon": -70.5393581
+                },
+                {
+                    "lat": -33.4188126,
+                    "lon": -70.5393818
+                },
+                {
+                    "lat": -33.4188304,
+                    "lon": -70.5394907
+                }
+            ],
+            "tags": {
+                "addr:country": "CL",
+                "building": "yes",
+                "name": "Museo de la Chilenidad",
+                "operator": "Corporaci\u00f3n Cultural de Las Condes",
+                "tourism": "museum"
+            }
+        },
+        {
+            "type": "way",
+            "id": 235840038,
+            "bounds": {
+                "minlat": -33.4999557,
+                "minlon": -70.6143283,
+                "maxlat": -33.4997879,
+                "maxlon": -70.6141265
+            },
+            "nodes": [
+                6754083547,
+                6754083548,
+                6754083549,
+                2439143910,
+                2439143912,
+                2439143913,
+                2439143915,
+                2439143917,
+                2439143919,
+                6754083543,
+                6754083544,
+                6754083545,
+                6754083546,
+                2439143921,
+                2439143902,
+                2439143904,
+                2439143906,
+                2439143908,
+                11842842306,
+                2439143922,
+                6754083547
+            ],
+            "geometry": [
+                {
+                    "lat": -33.4997982,
+                    "lon": -70.614177
+                },
+                {
+                    "lat": -33.4998155,
+                    "lon": -70.6141515
+                },
+                {
+                    "lat": -33.4998387,
+                    "lon": -70.6141341
+                },
+                {
+                    "lat": -33.4998654,
+                    "lon": -70.6141265
+                },
+                {
+                    "lat": -33.4998927,
+                    "lon": -70.6141295
+                },
+                {
+                    "lat": -33.4999177,
+                    "lon": -70.6141429
+                },
+                {
+                    "lat": -33.4999379,
+                    "lon": -70.6141651
+                },
+                {
+                    "lat": -33.499951,
+                    "lon": -70.614194
+                },
+                {
+                    "lat": -33.4999557,
+                    "lon": -70.6142263
+                },
+                {
+                    "lat": -33.4999516,
+                    "lon": -70.6142588
+                },
+                {
+                    "lat": -33.4999385,
+                    "lon": -70.6142887
+                },
+                {
+                    "lat": -33.499918,
+                    "lon": -70.6143117
+                },
+                {
+                    "lat": -33.4998923,
+                    "lon": -70.6143254
+                },
+                {
+                    "lat": -33.4998643,
+                    "lon": -70.6143283
+                },
+                {
+                    "lat": -33.499837,
+                    "lon": -70.6143199
+                },
+                {
+                    "lat": -33.4998136,
+                    "lon": -70.6143012
+                },
+                {
+                    "lat": -33.4997966,
+                    "lon": -70.6142744
+                },
+                {
+                    "lat": -33.4997879,
+                    "lon": -70.6142423
+                },
+                {
+                    "lat": -33.499788,
+                    "lon": -70.6142389
+                },
+                {
+                    "lat": -33.4997884,
+                    "lon": -70.6142086
+                },
+                {
+                    "lat": -33.4997982,
+                    "lon": -70.614177
+                }
+            ],
+            "tags": {
+                "addr:city": "Macul",
+                "addr:housenumber": "4860",
+                "addr:street": "Avenida Vicu\u00f1a Mackenna",
+                "building": "yes",
+                "museum": "technology",
+                "name": "Complejo Andr\u00f3nico Luksic Abaroa",
+                "operator": "PUC",
+                "operator:type": "university",
+                "tourism": "museum"
+            }
+        },
+        {
+            "type": "way",
+            "id": 266475914,
+            "bounds": {
+                "minlat": -33.4627576,
+                "minlon": -70.6079937,
+                "maxlat": -33.4625763,
+                "maxlon": -70.6075705
+            },
+            "nodes": [
+                2720192425,
+                2720192436,
+                2720192494,
+                2720192374,
+                2720192438,
+                2720192488,
+                2720192399,
+                2720192469,
+                2720192432,
+                11258946302,
+                11258946305,
+                2720192425
+            ],
+            "geometry": [
+                {
+                    "lat": -33.4627153,
+                    "lon": -70.6079937
+                },
+                {
+                    "lat": -33.4627576,
+                    "lon": -70.6076204
+                },
+                {
+                    "lat": -33.4627081,
+                    "lon": -70.6076123
+                },
+                {
+                    "lat": -33.4627114,
+                    "lon": -70.607583
+                },
+                {
+                    "lat": -33.4626344,
+                    "lon": -70.6075705
+                },
+                {
+                    "lat": -33.4626266,
+                    "lon": -70.6076394
+                },
+                {
+                    "lat": -33.4626096,
+                    "lon": -70.6076367
+                },
+                {
+                    "lat": -33.4625763,
+                    "lon": -70.6079312
+                },
+                {
+                    "lat": -33.4625964,
+                    "lon": -70.6079345
+                },
+                {
+                    "lat": -33.462592,
+                    "lon": -70.6079736
+                },
+                {
+                    "lat": -33.4626666,
+                    "lon": -70.6079858
+                },
+                {
+                    "lat": -33.4627153,
+                    "lon": -70.6079937
+                }
+            ],
+            "tags": {
+                "addr:city": "\u00d1u\u00f1oa",
+                "addr:street": "Avenida Grecia",
+                "alt_name": "Sitio de Memoria Camar\u00edn Piscina",
+                "building": "yes",
+                "check_date": "2023-10-12",
+                "fee": "no",
+                "museum": "history",
+                "name": "Sitio de Memoria Camar\u00edn de Mujeres",
+                "operator": "Corporaci\u00f3n Memoria Estadio Nacional",
+                "operator:type": "community",
+                "source": "Bing 2012;survey",
+                "start_date": "2019-03",
+                "tourism": "museum",
+                "website": "https://www.memoriaestadionacional.cl/"
+            }
+        },
+        {
+            "type": "way",
+            "id": 276755097,
+            "bounds": {
+                "minlat": -33.3978883,
+                "minlon": -70.5869676,
+                "maxlat": -33.3974182,
+                "maxlon": -70.5859743
+            },
+            "nodes": [
+                2813381712,
+                2813381741,
+                2813381760,
+                2813381719,
+                2813381739,
+                2813381745,
+                2813381722,
+                2813381762,
+                5282249396,
+                5282249397,
+                5282249392,
+                5282249393,
+                5282249395,
+                5282249394,
+                2813381761,
+                2813381714,
+                5282249391,
+                5282249390,
+                2813381704,
+                2813381735,
+                5282249389,
+                5282249388,
+                2813381754,
+                2813381750,
+                2813381776,
+                2813381775,
+                2813381774,
+                2813381765,
+                5282249386,
+                5282249387,
+                5282249385,
+                5282249384,
+                2813381763,
+                2813381740,
+                2813381712
+            ],
+            "geometry": [
+                {
+                    "lat": -33.3976243,
+                    "lon": -70.5868787
+                },
+                {
+                    "lat": -33.3978079,
+                    "lon": -70.5868866
+                },
+                {
+                    "lat": -33.3978132,
+                    "lon": -70.5867095
+                },
+                {
+                    "lat": -33.3978851,
+                    "lon": -70.5867126
+                },
+                {
+                    "lat": -33.3978883,
+                    "lon": -70.5866041
+                },
+                {
+                    "lat": -33.3977445,
+                    "lon": -70.586598
+                },
+                {
+                    "lat": -33.3977388,
+                    "lon": -70.5867922
+                },
+                {
+                    "lat": -33.3976471,
+                    "lon": -70.5867883
+                },
+                {
+                    "lat": -33.397652,
+                    "lon": -70.5866215
+                },
+                {
+                    "lat": -33.3976609,
+                    "lon": -70.5866218
+                },
+                {
+                    "lat": -33.3976698,
+                    "lon": -70.5863108
+                },
+                {
+                    "lat": -33.3976462,
+                    "lon": -70.5863098
+                },
+                {
+                    "lat": -33.3976475,
+                    "lon": -70.5862673
+                },
+                {
+                    "lat": -33.3976748,
+                    "lon": -70.5862684
+                },
+                {
+                    "lat": -33.3976751,
+                    "lon": -70.5862581
+                },
+                {
+                    "lat": -33.3978429,
+                    "lon": -70.5862659
+                },
+                {
+                    "lat": -33.3978468,
+                    "lon": -70.5861435
+                },
+                {
+                    "lat": -33.3978332,
+                    "lon": -70.5861428
+                },
+                {
+                    "lat": -33.3978388,
+                    "lon": -70.5859795
+                },
+                {
+                    "lat": -33.3977335,
+                    "lon": -70.5859743
+                },
+                {
+                    "lat": -33.3977276,
+                    "lon": -70.5861459
+                },
+                {
+                    "lat": -33.3976574,
+                    "lon": -70.5861424
+                },
+                {
+                    "lat": -33.3976605,
+                    "lon": -70.5860534
+                },
+                {
+                    "lat": -33.3975235,
+                    "lon": -70.5860466
+                },
+                {
+                    "lat": -33.3975084,
+                    "lon": -70.5864805
+                },
+                {
+                    "lat": -33.397422,
+                    "lon": -70.5864762
+                },
+                {
+                    "lat": -33.3974182,
+                    "lon": -70.5865841
+                },
+                {
+                    "lat": -33.3974549,
+                    "lon": -70.5865859
+                },
+                {
+                    "lat": -33.3974492,
+                    "lon": -70.5867522
+                },
+                {
+                    "lat": -33.3975173,
+                    "lon": -70.5867555
+                },
+                {
+                    "lat": -33.3975176,
+                    "lon": -70.5867466
+                },
+                {
+                    "lat": -33.3975498,
+                    "lon": -70.5867481
+                },
+                {
+                    "lat": -33.3975432,
+                    "lon": -70.5869642
+                },
+                {
+                    "lat": -33.3976217,
+                    "lon": -70.5869676
+                },
+                {
+                    "lat": -33.3976243,
+                    "lon": -70.5868787
+                }
+            ],
+            "tags": {
+                "addr:city": "Vitacura",
+                "addr:country": "CL",
+                "addr:housenumber": "4562",
+                "addr:street": "Avenida Vitacura",
+                "building": "yes",
+                "name": "Museo de la Moda",
+                "tourism": "museum",
+                "wikidata": "Q9047072",
+                "wikimedia_commons": "Category:Museo de la Moda",
+                "wikipedia": "es:Museo de la Moda (Chile)"
+            }
+        },
+        {
+            "type": "way",
+            "id": 436815536,
+            "bounds": {
+                "minlat": -33.397005,
+                "minlon": -70.5922059,
+                "maxlat": -33.3965719,
+                "maxlon": -70.5917066
+            },
+            "nodes": [
+                4346772667,
+                4346772664,
+                4346772665,
+                4346772659,
+                4346772661,
+                4346772660,
+                4346772671,
+                7730095246,
+                7730095247,
+                4346772658,
+                4346772655,
+                4346772657,
+                4346772663,
+                4346772675,
+                4346772662,
+                4346772670,
+                4346772669,
+                4346772666,
+                4346772667
+            ],
+            "geometry": [
+                {
+                    "lat": -33.3965719,
+                    "lon": -70.5921367
+                },
+                {
+                    "lat": -33.3966211,
+                    "lon": -70.5921501
+                },
+                {
+                    "lat": -33.3966252,
+                    "lon": -70.5921286
+                },
+                {
+                    "lat": -33.3967468,
+                    "lon": -70.5921616
+                },
+                {
+                    "lat": -33.3967428,
+                    "lon": -70.5921828
+                },
+                {
+                    "lat": -33.3968126,
+                    "lon": -70.5922018
+                },
+                {
+                    "lat": -33.3968151,
+                    "lon": -70.5921888
+                },
+                {
+                    "lat": -33.396878,
+                    "lon": -70.5922059
+                },
+                {
+                    "lat": -33.3968833,
+                    "lon": -70.5921781
+                },
+                {
+                    "lat": -33.3968933,
+                    "lon": -70.5921809
+                },
+                {
+                    "lat": -33.3969103,
+                    "lon": -70.5920912
+                },
+                {
+                    "lat": -33.3969863,
+                    "lon": -70.5921119
+                },
+                {
+                    "lat": -33.397002,
+                    "lon": -70.592029
+                },
+                {
+                    "lat": -33.3969589,
+                    "lon": -70.5920173
+                },
+                {
+                    "lat": -33.397005,
+                    "lon": -70.5917741
+                },
+                {
+                    "lat": -33.3967567,
+                    "lon": -70.5917066
+                },
+                {
+                    "lat": -33.3967471,
+                    "lon": -70.5917573
+                },
+                {
+                    "lat": -33.3966488,
+                    "lon": -70.5917306
+                },
+                {
+                    "lat": -33.3965719,
+                    "lon": -70.5921367
+                }
+            ],
+            "tags": {
+                "addr:city": "Vitacura",
+                "addr:country": "CL",
+                "addr:housenumber": "4110",
+                "addr:street": "Alonso de Sotomayor",
+                "building": "yes",
+                "name": "Museo Ralli",
+                "tourism": "museum",
+                "wikidata": "Q86280142"
+            }
+        },
+        {
+            "type": "way",
+            "id": 446732086,
+            "bounds": {
+                "minlat": -33.4958824,
+                "minlon": -70.7052038,
+                "maxlat": -33.4941992,
+                "maxlon": -70.7027879
+            },
+            "nodes": [
+                4439683319,
+                4439683320,
+                5144171700,
+                11360542145,
+                11360502630,
+                10542211677,
+                4439683319
+            ],
+            "geometry": [
+                {
+                    "lat": -33.4950869,
+                    "lon": -70.7027879
+                },
+                {
+                    "lat": -33.4958824,
+                    "lon": -70.7034615
+                },
+                {
+                    "lat": -33.4950477,
+                    "lon": -70.7052038
+                },
+                {
+                    "lat": -33.4941992,
+                    "lon": -70.7045778
+                },
+                {
+                    "lat": -33.4945787,
+                    "lon": -70.7038418
+                },
+                {
+                    "lat": -33.4947198,
+                    "lon": -70.7035683
+                },
+                {
+                    "lat": -33.4950869,
+                    "lon": -70.7027879
+                }
+            ],
+            "tags": {
+                "addr:country": "CL",
+                "name": "Centro Nacional de Arte Contempor\u00e1neo de Los Cerrillos",
+                "opening_hours": "Tu-Su 10:00-17:00",
+                "operator": "Ministerio de las Culturas, las Artes y el Patrimonio",
+                "tourism": "museum",
+                "website": "http://centronacionaldearte.cl/",
+                "wikidata": "Q48695233",
+                "wikimedia_commons": "Category:Centro Nacional de Arte Contempor\u00e1neo Cerrillos",
+                "wikipedia": "es:Centro Nacional de Arte Contempor\u00e1neo Cerrillos"
+            }
+        },
+        {
+            "type": "way",
+            "id": 477208865,
+            "bounds": {
+                "minlat": -33.4439357,
+                "minlon": -70.6873222,
+                "maxlat": -33.4421129,
+                "maxlon": -70.6844529
+            },
+            "nodes": [
+                4705976073,
+                5262839158,
+                1841344786,
+                4948081195,
+                4705976076,
+                4705976077,
+                6068613775,
+                4705976078,
+                6068613757,
+                5762844050,
+                6068613776,
+                4705976079,
+                6068613777,
+                5762844051,
+                5465842804,
+                6068613778,
+                6068613779,
+                4705976080,
+                6068613781,
+                6068613780,
+                5465842805,
+                6893787385,
+                6893787386,
+                4705976081,
+                4705976082,
+                4705976083,
+                6068613782,
+                4705976084,
+                5910476756,
+                4705976085,
+                4705976073
+            ],
+            "geometry": [
+                {
+                    "lat": -33.443878,
+                    "lon": -70.6844529
+                },
+                {
+                    "lat": -33.4438948,
+                    "lon": -70.6849458
+                },
+                {
+                    "lat": -33.4439357,
+                    "lon": -70.6857396
+                },
+                {
+                    "lat": -33.4435391,
+                    "lon": -70.6857693
+                },
+                {
+                    "lat": -33.4431277,
+                    "lon": -70.6858445
+                },
+                {
+                    "lat": -33.442917,
+                    "lon": -70.6873222
+                },
+                {
+                    "lat": -33.4428281,
+                    "lon": -70.6872163
+                },
+                {
+                    "lat": -33.4427552,
+                    "lon": -70.6871202
+                },
+                {
+                    "lat": -33.4426642,
+                    "lon": -70.686988
+                },
+                {
+                    "lat": -33.4426477,
+                    "lon": -70.6869636
+                },
+                {
+                    "lat": -33.4425525,
+                    "lon": -70.6868175
+                },
+                {
+                    "lat": -33.44248,
+                    "lon": -70.6866964
+                },
+                {
+                    "lat": -33.4424199,
+                    "lon": -70.6865925
+                },
+                {
+                    "lat": -33.4423668,
+                    "lon": -70.6864782
+                },
+                {
+                    "lat": -33.4423085,
+                    "lon": -70.6863457
+                },
+                {
+                    "lat": -33.4422619,
+                    "lon": -70.6862062
+                },
+                {
+                    "lat": -33.4422268,
+                    "lon": -70.6860809
+                },
+                {
+                    "lat": -33.4422068,
+                    "lon": -70.685992
+                },
+                {
+                    "lat": -33.4421863,
+                    "lon": -70.6858917
+                },
+                {
+                    "lat": -33.4421658,
+                    "lon": -70.6857663
+                },
+                {
+                    "lat": -33.4421475,
+                    "lon": -70.685642
+                },
+                {
+                    "lat": -33.4421273,
+                    "lon": -70.685475
+                },
+                {
+                    "lat": -33.4421129,
+                    "lon": -70.6853521
+                },
+                {
+                    "lat": -33.442115,
+                    "lon": -70.685277
+                },
+                {
+                    "lat": -33.4422902,
+                    "lon": -70.6849864
+                },
+                {
+                    "lat": -33.4422856,
+                    "lon": -70.6848259
+                },
+                {
+                    "lat": -33.4423726,
+                    "lon": -70.6846314
+                },
+                {
+                    "lat": -33.443332,
+                    "lon": -70.6845133
+                },
+                {
+                    "lat": -33.4433696,
+                    "lon": -70.6845056
+                },
+                {
+                    "lat": -33.4433932,
+                    "lon": -70.6845042
+                },
+                {
+                    "lat": -33.443878,
+                    "lon": -70.6844529
+                }
+            ],
+            "tags": {
+                "addr:city": "Santiago",
+                "addr:country": "CL",
+                "addr:street": "Avenida Las Palmeras",
+                "fee": "800 CLP",
+                "museum": "railway",
+                "name": "Museo Ferroviario",
+                "name:de": "Eisenbahnmuseum",
+                "name:en": "Railway Museum",
+                "opening_hours": "10:00-18:00",
+                "operator": "Corpdicyt",
+                "tourism": "museum",
+                "website": "http://www.corpdicyt.cl/mferroviario/",
+                "wikidata": "Q20016778",
+                "wikimedia_commons": "Category:Museo Ferroviario de Santiago",
+                "wikipedia": "es:Museo Ferroviario de Santiago"
+            }
+        },
+        {
+            "type": "way",
+            "id": 477208867,
+            "bounds": {
+                "minlat": -33.4402893,
+                "minlon": -70.6837662,
+                "maxlat": -33.4397727,
+                "maxlon": -70.6834046
+            },
+            "nodes": [
+                4705976086,
+                4705976087,
+                4705976088,
+                4948085984,
+                4948085985,
+                4948085986,
+                4948085987,
+                4705976289,
+                4948085988,
+                4948085989,
+                4705976086
+            ],
+            "geometry": [
+                {
+                    "lat": -33.4397727,
+                    "lon": -70.6837543
+                },
+                {
+                    "lat": -33.4402858,
+                    "lon": -70.6837662
+                },
+                {
+                    "lat": -33.4402893,
+                    "lon": -70.6835458
+                },
+                {
+                    "lat": -33.4401453,
+                    "lon": -70.6835424
+                },
+                {
+                    "lat": -33.4401474,
+                    "lon": -70.6834074
+                },
+                {
+                    "lat": -33.4400265,
+                    "lon": -70.6834046
+                },
+                {
+                    "lat": -33.4400242,
+                    "lon": -70.683547
+                },
+                {
+                    "lat": -33.4398217,
+                    "lon": -70.6835424
+                },
+                {
+                    "lat": -33.4398201,
+                    "lon": -70.6836393
+                },
+                {
+                    "lat": -33.4397745,
+                    "lon": -70.6836382
+                },
+                {
+                    "lat": -33.4397727,
+                    "lon": -70.6837543
+                }
+            ],
+            "tags": {
+                "addr:city": "Santiago",
+                "addr:country": "CL",
+                "addr:street": "Santo Domingo",
+                "building": "yes",
+                "museum": "technology",
+                "name": "Museo de Ciencia y Tecnolog\u00eda",
+                "operator": "Corporaci\u00f3n Privada para la Divulgaci\u00f3n de la Ciencia y Tecnolog\u00eda",
+                "operator:type": "private_non_profit",
+                "tourism": "museum",
+                "website": "http://www.corpdicyt.cl/corpdicyt/",
+                "wikidata": "Q17624570",
+                "wikimedia_commons": "Category:Museo de Ciencia y Tecnolog\u00eda",
+                "wikipedia": "es:Museo de Ciencia y Tecnolog\u00eda"
+            }
+        },
+        {
+            "type": "way",
+            "id": 530129252,
+            "bounds": {
+                "minlat": -33.4424772,
+                "minlon": -70.6808734,
+                "maxlat": -33.4418007,
+                "maxlon": -70.6802849
+            },
+            "nodes": [
+                5148646884,
+                5148646885,
+                5148646888,
+                5148646890,
+                5148646891,
+                5148646889,
+                5148646872,
+                7100064443,
+                7100064446,
+                7100064445,
+                7100064444,
+                5148646879,
+                7100064438,
+                7100064439,
+                7100064441,
+                7100064440,
+                5148646878,
+                7100064437,
+                5148646877,
+                5148646875,
+                5148646871,
+                5148646873,
+                5148646860,
+                7100064442,
+                7100064448,
+                7100064459,
+                7100064460,
+                7100064465,
+                7100064464,
+                7100064463,
+                7100064462,
+                7100064461,
+                7100064455,
+                7100064453,
+                7100064452,
+                7100064450,
+                7100064449,
+                7100064451,
+                7100064454,
+                7100064456,
+                7100064466,
+                7100064467,
+                7100064468,
+                7100064469,
+                7100064470,
+                7100064471,
+                7100064458,
+                7100064457,
+                7100064447,
+                5148646884
+            ],
+            "geometry": [
+                {
+                    "lat": -33.4418918,
+                    "lon": -70.6806772
+                },
+                {
+                    "lat": -33.441892,
+                    "lon": -70.6806811
+                },
+                {
+                    "lat": -33.4418268,
+                    "lon": -70.6806867
+                },
+                {
+                    "lat": -33.4418217,
+                    "lon": -70.6806019
+                },
+                {
+                    "lat": -33.4418109,
+                    "lon": -70.6806028
+                },
+                {
+                    "lat": -33.4418007,
+                    "lon": -70.6804308
+                },
+                {
+                    "lat": -33.4418107,
+                    "lon": -70.6804299
+                },
+                {
+                    "lat": -33.4418055,
+                    "lon": -70.6803413
+                },
+                {
+                    "lat": -33.4418729,
+                    "lon": -70.6803356
+                },
+                {
+                    "lat": -33.4418732,
+                    "lon": -70.6803418
+                },
+                {
+                    "lat": -33.4420079,
+                    "lon": -70.6803303
+                },
+                {
+                    "lat": -33.4420073,
+                    "lon": -70.680321
+                },
+                {
+                    "lat": -33.4422478,
+                    "lon": -70.6803003
+                },
+                {
+                    "lat": -33.4422482,
+                    "lon": -70.6803075
+                },
+                {
+                    "lat": -33.4423871,
+                    "lon": -70.6802954
+                },
+                {
+                    "lat": -33.4423869,
+                    "lon": -70.6802906
+                },
+                {
+                    "lat": -33.4424516,
+                    "lon": -70.6802849
+                },
+                {
+                    "lat": -33.4424569,
+                    "lon": -70.6803717
+                },
+                {
+                    "lat": -33.4424666,
+                    "lon": -70.6803709
+                },
+                {
+                    "lat": -33.4424772,
+                    "lon": -70.6805426
+                },
+                {
+                    "lat": -33.4424666,
+                    "lon": -70.6805435
+                },
+                {
+                    "lat": -33.442472,
+                    "lon": -70.6806309
+                },
+                {
+                    "lat": -33.4424031,
+                    "lon": -70.6806369
+                },
+                {
+                    "lat": -33.4424028,
+                    "lon": -70.6806327
+                },
+                {
+                    "lat": -33.4422707,
+                    "lon": -70.6806442
+                },
+                {
+                    "lat": -33.4422714,
+                    "lon": -70.6806555
+                },
+                {
+                    "lat": -33.4422591,
+                    "lon": -70.6806723
+                },
+                {
+                    "lat": -33.4422622,
+                    "lon": -70.680715
+                },
+                {
+                    "lat": -33.4422614,
+                    "lon": -70.6807404
+                },
+                {
+                    "lat": -33.4422551,
+                    "lon": -70.680767
+                },
+                {
+                    "lat": -33.4422435,
+                    "lon": -70.6807899
+                },
+                {
+                    "lat": -33.4422233,
+                    "lon": -70.6808156
+                },
+                {
+                    "lat": -33.4422121,
+                    "lon": -70.6808262
+                },
+                {
+                    "lat": -33.4422128,
+                    "lon": -70.6808624
+                },
+                {
+                    "lat": -33.4421883,
+                    "lon": -70.6808636
+                },
+                {
+                    "lat": -33.4421887,
+                    "lon": -70.6808727
+                },
+                {
+                    "lat": -33.4421512,
+                    "lon": -70.6808734
+                },
+                {
+                    "lat": -33.4421513,
+                    "lon": -70.6808655
+                },
+                {
+                    "lat": -33.4421218,
+                    "lon": -70.6808656
+                },
+                {
+                    "lat": -33.442121,
+                    "lon": -70.6808349
+                },
+                {
+                    "lat": -33.4421072,
+                    "lon": -70.6808276
+                },
+                {
+                    "lat": -33.4420971,
+                    "lon": -70.6808202
+                },
+                {
+                    "lat": -33.4420846,
+                    "lon": -70.6808097
+                },
+                {
+                    "lat": -33.4420716,
+                    "lon": -70.6807906
+                },
+                {
+                    "lat": -33.4420608,
+                    "lon": -70.6807655
+                },
+                {
+                    "lat": -33.4420545,
+                    "lon": -70.6807343
+                },
+                {
+                    "lat": -33.4420532,
+                    "lon": -70.6806932
+                },
+                {
+                    "lat": -33.4420356,
+                    "lon": -70.6806762
+                },
+                {
+                    "lat": -33.4420346,
+                    "lon": -70.6806647
+                },
+                {
+                    "lat": -33.4418918,
+                    "lon": -70.6806772
+                }
+            ],
+            "tags": {
+                "addr:city": "Santiago",
+                "addr:country": "CL",
+                "addr:housenumber": "464",
+                "addr:street": "Matucana",
+                "architect": "Alberto Cruz Montt",
+                "building": "yes",
+                "building:levels": "2",
+                "museum": "art",
+                "name": "Museo de Arte Contemporaneo",
+                "not:name": "Palacio Versalles",
+                "official_name": "Palacio Versailles",
+                "operator": "MAC",
+                "operator:type": "public",
+                "short_name": "MAC Quinta Normal",
+                "start_date": "1918",
+                "tourism": "museum",
+                "wikidata": "Q16615162",
+                "wikimedia_commons": "File:Museo de Arte Contempor\u00e1neo-- GISLECHTVALK GI.JPG",
+                "wikipedia": "es:Palacio Versailles"
+            }
+        },
+        {
+            "type": "way",
+            "id": 530305074,
+            "bounds": {
+                "minlat": -33.4977794,
+                "minlon": -70.5636032,
+                "maxlat": -33.4974933,
+                "maxlon": -70.5630932
+            },
+            "nodes": [
+                5149751417,
+                7735858856,
+                7735858855,
+                7735858854,
+                7735858853,
+                2524925113,
+                5149751418,
+                9409145597,
+                7735858852,
+                5149751419,
+                5149751420,
+                5149751521,
+                5149751522,
+                5149751523,
+                5149751524,
+                5149751525,
+                5149751526,
+                5149751527,
+                5149751528,
+                5149751529,
+                5149751530,
+                5149751417
+            ],
+            "geometry": [
+                {
+                    "lat": -33.4974933,
+                    "lon": -70.5633619
+                },
+                {
+                    "lat": -33.4975245,
+                    "lon": -70.5633671
+                },
+                {
+                    "lat": -33.4975231,
+                    "lon": -70.5633795
+                },
+                {
+                    "lat": -33.4975554,
+                    "lon": -70.563385
+                },
+                {
+                    "lat": -33.4975467,
+                    "lon": -70.5634605
+                },
+                {
+                    "lat": -33.4975985,
+                    "lon": -70.5634691
+                },
+                {
+                    "lat": -33.4976501,
+                    "lon": -70.5634777
+                },
+                {
+                    "lat": -33.4976439,
+                    "lon": -70.5635312
+                },
+                {
+                    "lat": -33.4976369,
+                    "lon": -70.5635919
+                },
+                {
+                    "lat": -33.4977044,
+                    "lon": -70.5636032
+                },
+                {
+                    "lat": -33.4977187,
+                    "lon": -70.5634791
+                },
+                {
+                    "lat": -33.4977622,
+                    "lon": -70.5634863
+                },
+                {
+                    "lat": -33.4977794,
+                    "lon": -70.5633376
+                },
+                {
+                    "lat": -33.4976607,
+                    "lon": -70.5633177
+                },
+                {
+                    "lat": -33.4976059,
+                    "lon": -70.5633086
+                },
+                {
+                    "lat": -33.4976191,
+                    "lon": -70.5631947
+                },
+                {
+                    "lat": -33.4976567,
+                    "lon": -70.5632011
+                },
+                {
+                    "lat": -33.4976668,
+                    "lon": -70.5631139
+                },
+                {
+                    "lat": -33.4975419,
+                    "lon": -70.5630932
+                },
+                {
+                    "lat": -33.4975223,
+                    "lon": -70.5632618
+                },
+                {
+                    "lat": -33.4975052,
+                    "lon": -70.5632589
+                },
+                {
+                    "lat": -33.4974933,
+                    "lon": -70.5633619
+                }
+            ],
+            "tags": {
+                "building": "yes",
+                "name": "Museo del Vino",
+                "tourism": "museum"
+            }
+        },
+        {
+            "type": "way",
+            "id": 543918606,
+            "bounds": {
+                "minlat": -33.4143195,
+                "minlon": -70.595547,
+                "maxlat": -33.4141387,
+                "maxlon": -70.5952631
+            },
+            "nodes": [
+                5257939169,
+                5257939170,
+                5257939171,
+                5257939178,
+                5257939180,
+                5257939179,
+                5257939177,
+                5286329723,
+                5257939176,
+                5257939175,
+                5257939174,
+                5257939173,
+                5257939172,
+                5257939169
+            ],
+            "geometry": [
+                {
+                    "lat": -33.4141642,
+                    "lon": -70.595547
+                },
+                {
+                    "lat": -33.4143195,
+                    "lon": -70.5955133
+                },
+                {
+                    "lat": -33.4143078,
+                    "lon": -70.5954358
+                },
+                {
+                    "lat": -33.4142831,
+                    "lon": -70.5954411
+                },
+                {
+                    "lat": -33.4142683,
+                    "lon": -70.5953435
+                },
+                {
+                    "lat": -33.4142925,
+                    "lon": -70.5953383
+                },
+                {
+                    "lat": -33.4142812,
+                    "lon": -70.5952631
+                },
+                {
+                    "lat": -33.4141525,
+                    "lon": -70.595291
+                },
+                {
+                    "lat": -33.4141387,
+                    "lon": -70.595294
+                },
+                {
+                    "lat": -33.4141499,
+                    "lon": -70.5953684
+                },
+                {
+                    "lat": -33.4141753,
+                    "lon": -70.595363
+                },
+                {
+                    "lat": -33.4141906,
+                    "lon": -70.5954644
+                },
+                {
+                    "lat": -33.4141529,
+                    "lon": -70.5954726
+                },
+                {
+                    "lat": -33.4141642,
+                    "lon": -70.595547
+                }
+            ],
+            "tags": {
+                "addr:city": "Las Condes",
+                "addr:country": "CL",
+                "addr:housenumber": "3400",
+                "addr:street": "Isidora Goyenechea",
+                "building": "yes",
+                "building:levels": "2",
+                "fee": "yes",
+                "name": "Museo Interactivo Audiovisual MUI",
+                "phone": "+56229637180",
+                "tourism": "museum",
+                "website": "http://www.mui.cl",
+                "wikidata": "Q86279038"
+            }
+        },
+        {
+            "type": "way",
+            "id": 551922359,
+            "bounds": {
+                "minlat": -33.4362914,
+                "minlon": -70.588387,
+                "maxlat": -33.4361205,
+                "maxlon": -70.5881802
+            },
+            "nodes": [
+                5329476789,
+                5329476790,
+                5329476791,
+                5329476792,
+                5329476789
+            ],
+            "geometry": [
+                {
+                    "lat": -33.4361205,
+                    "lon": -70.5882564
+                },
+                {
+                    "lat": -33.4362251,
+                    "lon": -70.588387
+                },
+                {
+                    "lat": -33.4362914,
+                    "lon": -70.5883108
+                },
+                {
+                    "lat": -33.4361868,
+                    "lon": -70.5881802
+                },
+                {
+                    "lat": -33.4361205,
+                    "lon": -70.5882564
+                }
+            ],
+            "tags": {
+                "addr:city": "Providencia",
+                "addr:housenumber": "3678",
+                "addr:street": "Arturo Medina",
+                "building": "house",
+                "museum": "history",
+                "name": "Casa Museo Patricio Aylwin Az\u00f3car",
+                "operator": "Fundacion Aylwin",
+                "operator:type": "private_non_profit",
+                "tourism": "museum",
+                "website": "http://fundacionaylwin.cl/museo/"
+            }
+        },
+        {
+            "type": "way",
+            "id": 587531988,
+            "bounds": {
+                "minlat": -33.4439995,
+                "minlon": -70.6224364,
+                "maxlat": -33.4438118,
+                "maxlon": -70.6222964
+            },
+            "nodes": [
+                5612015405,
+                5612015406,
+                5612015407,
+                5612015408,
+                5612015409,
+                5612015410,
+                5612015411,
+                5612015412,
+                5612015413,
+                5612015414,
+                5612015405
+            ],
+            "geometry": [
+                {
+                    "lat": -33.4439995,
+                    "lon": -70.6224033
+                },
+                {
+                    "lat": -33.443976,
+                    "lon": -70.6222964
+                },
+                {
+                    "lat": -33.4439013,
+                    "lon": -70.62232
+                },
+                {
+                    "lat": -33.4438995,
+                    "lon": -70.6223117
+                },
+                {
+                    "lat": -33.4438499,
+                    "lon": -70.6223274
+                },
+                {
+                    "lat": -33.443852,
+                    "lon": -70.6223371
+                },
+                {
+                    "lat": -33.4438118,
+                    "lon": -70.6223498
+                },
+                {
+                    "lat": -33.4438305,
+                    "lon": -70.6224345
+                },
+                {
+                    "lat": -33.4438901,
+                    "lon": -70.6224156
+                },
+                {
+                    "lat": -33.4438947,
+                    "lon": -70.6224364
+                },
+                {
+                    "lat": -33.4439995,
+                    "lon": -70.6224033
+                }
+            ],
+            "tags": {
+                "addr:city": "Providencia",
+                "addr:country": "CL",
+                "addr:housenumber": "683",
+                "addr:street": "Hindenburg",
+                "building": "house",
+                "fee": "yes",
+                "name": "Casa Museo Eduardo Frei Montalva",
+                "opening_hours": "PH,Tu-Su 10:00-18:00",
+                "tourism": "museum",
+                "wikidata": "Q5898202",
+                "wikimedia_commons": "Category:Casa Museo Eduardo Frei Montalva",
+                "wikipedia": "es:Casa Museo Eduardo Frei Montalva"
+            }
+        },
+        {
+            "type": "way",
+            "id": 601872767,
+            "bounds": {
+                "minlat": -33.4659487,
+                "minlon": -70.6812098,
+                "maxlat": -33.4654791,
+                "maxlon": -70.6802359
+            },
+            "nodes": [
+                5732569493,
+                5732569494,
+                5732569487,
+                5721142700,
+                5721142631,
+                5721143036,
+                5721142623,
+                5721142702,
+                5718950246,
+                5718950247,
+                5732569488,
+                5732569485,
+                5732569483,
+                5732569493
+            ],
+            "geometry": [
+                {
+                    "lat": -33.4656512,
+                    "lon": -70.6804241
+                },
+                {
+                    "lat": -33.4658912,
+                    "lon": -70.6802359
+                },
+                {
+                    "lat": -33.4659218,
+                    "lon": -70.6802362
+                },
+                {
+                    "lat": -33.4659312,
+                    "lon": -70.6802744
+                },
+                {
+                    "lat": -33.465935,
+                    "lon": -70.6804397
+                },
+                {
+                    "lat": -33.465948,
+                    "lon": -70.6810144
+                },
+                {
+                    "lat": -33.4659487,
+                    "lon": -70.6812098
+                },
+                {
+                    "lat": -33.4656339,
+                    "lon": -70.6811933
+                },
+                {
+                    "lat": -33.4654968,
+                    "lon": -70.6812005
+                },
+                {
+                    "lat": -33.4654791,
+                    "lon": -70.6806813
+                },
+                {
+                    "lat": -33.4655156,
+                    "lon": -70.6806145
+                },
+                {
+                    "lat": -33.4655866,
+                    "lon": -70.6806096
+                },
+                {
+                    "lat": -33.4655898,
+                    "lon": -70.6805125
+                },
+                {
+                    "lat": -33.4656512,
+                    "lon": -70.6804241
+                }
+            ],
+            "tags": {
+                "addr:country": "CL",
+                "name": "Museo del Autom\u00f3vil",
+                "tourism": "museum"
+            }
+        },
+        {
+            "type": "way",
+            "id": 607199304,
+            "bounds": {
+                "minlat": -33.4447888,
+                "minlon": -70.6842415,
+                "maxlat": -33.4445404,
+                "maxlon": -70.6839837
+            },
+            "nodes": [
+                5755097526,
+                10752046540,
+                10752046541,
+                10752046542,
+                10752046543,
+                5755097527,
+                10752046545,
+                10752046546,
+                10752046547,
+                10752046544,
+                5755097528,
+                10752046551,
+                10752046550,
+                10752046549,
+                10752046548,
+                5755097529,
+                5755097526
+            ],
+            "geometry": [
+                {
+                    "lat": -33.4447568,
+                    "lon": -70.6842415
+                },
+                {
+                    "lat": -33.4447571,
+                    "lon": -70.6842286
+                },
+                {
+                    "lat": -33.4447847,
+                    "lon": -70.6842294
+                },
+                {
+                    "lat": -33.4447888,
+                    "lon": -70.684032
+                },
+                {
+                    "lat": -33.4447677,
+                    "lon": -70.6840313
+                },
+                {
+                    "lat": -33.4447681,
+                    "lon": -70.6840147
+                },
+                {
+                    "lat": -33.4447101,
+                    "lon": -70.6840129
+                },
+                {
+                    "lat": -33.4447107,
+                    "lon": -70.6839874
+                },
+                {
+                    "lat": -33.4445924,
+                    "lon": -70.6839837
+                },
+                {
+                    "lat": -33.4445919,
+                    "lon": -70.6840098
+                },
+                {
+                    "lat": -33.4445635,
+                    "lon": -70.6840089
+                },
+                {
+                    "lat": -33.4445622,
+                    "lon": -70.6840673
+                },
+                {
+                    "lat": -33.4445428,
+                    "lon": -70.6840667
+                },
+                {
+                    "lat": -33.4445404,
+                    "lon": -70.6841807
+                },
+                {
+                    "lat": -33.4445598,
+                    "lon": -70.6841813
+                },
+                {
+                    "lat": -33.4445587,
+                    "lon": -70.6842355
+                },
+                {
+                    "lat": -33.4447568,
+                    "lon": -70.6842415
+                }
+            ],
+            "tags": {
+                "addr:city": "Santiago",
+                "addr:country": "CL",
+                "addr:housenumber": "3530",
+                "addr:street": "Avenida Portales",
+                "building": "yes",
+                "museum": "art",
+                "name": "Museo Artequin",
+                "protection_title": "Monumento Hist\u00f3rico Nacional",
+                "source": "Reconocimiento cartogr\u00e1fico 2016 por KG.",
+                "start_date": "1889",
+                "tourism": "museum",
+                "website": "https://www.artequin.cl/",
+                "wikidata": "Q9046779",
+                "wikimedia_commons": "Category:Museo Artequin",
+                "wikipedia": "es:Museo Artequin"
+            }
+        },
+        {
+            "type": "way",
+            "id": 621762068,
+            "bounds": {
+                "minlat": -33.4449665,
+                "minlon": -70.6633736,
+                "maxlat": -33.444717,
+                "maxlon": -70.6630366
+            },
+            "nodes": [
+                1906205578,
+                5873611238,
+                5873611237,
+                5873611236,
+                5873611235,
+                5873611234,
+                5873611233,
+                5873611232,
+                5873611231,
+                5873611230,
+                1906205578
+            ],
+            "geometry": [
+                {
+                    "lat": -33.4449246,
+                    "lon": -70.6630366
+                },
+                {
+                    "lat": -33.444717,
+                    "lon": -70.6630805
+                },
+                {
+                    "lat": -33.4447545,
+                    "lon": -70.6633736
+                },
+                {
+                    "lat": -33.4448299,
+                    "lon": -70.6633625
+                },
+                {
+                    "lat": -33.4448171,
+                    "lon": -70.6632626
+                },
+                {
+                    "lat": -33.4448577,
+                    "lon": -70.6632552
+                },
+                {
+                    "lat": -33.4448634,
+                    "lon": -70.6632995
+                },
+                {
+                    "lat": -33.444916,
+                    "lon": -70.6632898
+                },
+                {
+                    "lat": -33.4449213,
+                    "lon": -70.6633317
+                },
+                {
+                    "lat": -33.4449665,
+                    "lon": -70.6633209
+                },
+                {
+                    "lat": -33.4449246,
+                    "lon": -70.6630366
+                }
+            ],
+            "tags": {
+                "addr:city": "Santiago",
+                "addr:housenumber": "50B",
+                "addr:street": "Cienfuegos",
+                "building": "house",
+                "museum": "history",
+                "name": "Fundaci\u00f3n Museo Guerra del Pac\u00edfico Domingo de Toro Herrera",
+                "tourism": "museum",
+                "website": "https://guerradelpacifico1879.cl/"
+            }
+        },
+        {
+            "type": "way",
+            "id": 664529816,
+            "bounds": {
+                "minlat": -33.4412593,
+                "minlon": -70.6337435,
+                "maxlat": -33.4410547,
+                "maxlon": -70.6334721
+            },
+            "nodes": [
+                6219709268,
+                6219709267,
+                10865449241,
+                10865449240,
+                6219709266,
+                6219709265,
+                6219709270,
+                6219709269,
+                6219709268
+            ],
+            "geometry": [
+                {
+                    "lat": -33.4410962,
+                    "lon": -70.6337202
+                },
+                {
+                    "lat": -33.4410547,
+                    "lon": -70.6335183
+                },
+                {
+                    "lat": -33.4411045,
+                    "lon": -70.6335036
+                },
+                {
+                    "lat": -33.4411565,
+                    "lon": -70.6334882
+                },
+                {
+                    "lat": -33.441211,
+                    "lon": -70.6334721
+                },
+                {
+                    "lat": -33.4412593,
+                    "lon": -70.6337069
+                },
+                {
+                    "lat": -33.4411354,
+                    "lon": -70.6337435
+                },
+                {
+                    "lat": -33.4411286,
+                    "lon": -70.6337106
+                },
+                {
+                    "lat": -33.4410962,
+                    "lon": -70.6337202
+                }
+            ],
+            "tags": {
+                "addr:city": "Santiago",
+                "addr:country": "CL",
+                "addr:housenumber": "94",
+                "addr:street": "Avenida Vicu\u00f1a Mackenna",
+                "building": "yes",
+                "museum": "history",
+                "name": "Museo Ciudadano Vicu\u00f1a Mackenna",
+                "official_name": "Museo Benjam\u00edn Vicu\u00f1a Mackenna",
+                "operator": "Servicio Nacional del Patrimonio Cultural",
+                "operator:type": "government",
+                "short_name": "MCVM",
+                "source": "https://www.nochedemuseos.cl/espacio-cultural/museo-ciudadano-vicuna-mackenna",
+                "toilets": "yes",
+                "tourism": "museum",
+                "website": "https://www.museovicunamackenna.gob.cl/",
+                "wheelchair": "yes",
+                "wikidata": "Q5390779",
+                "wikimedia_commons": "Category:Museo Nacional Benjam\u00edn Vicu\u00f1a Mackenna",
+                "wikipedia": "es:Museo Nacional Benjam\u00edn Vicu\u00f1a Mackenna"
+            }
+        },
+        {
+            "type": "way",
+            "id": 705255870,
+            "bounds": {
+                "minlat": -33.4443978,
+                "minlon": -70.6481889,
+                "maxlat": -33.444213,
+                "maxlon": -70.6479569
+            },
+            "nodes": [
+                6624816111,
+                6624786350,
+                6624816117,
+                10908404039,
+                10908404038,
+                10908404005,
+                10908401204,
+                10908404006,
+                10908404033,
+                10908404040,
+                6624816121,
+                6624816122,
+                6624816111
+            ],
+            "geometry": [
+                {
+                    "lat": -33.444306,
+                    "lon": -70.6481889
+                },
+                {
+                    "lat": -33.444213,
+                    "lon": -70.6480768
+                },
+                {
+                    "lat": -33.4443003,
+                    "lon": -70.6479746
+                },
+                {
+                    "lat": -33.4443336,
+                    "lon": -70.6480148
+                },
+                {
+                    "lat": -33.4443423,
+                    "lon": -70.6480051
+                },
+                {
+                    "lat": -33.4443823,
+                    "lon": -70.6479575
+                },
+                {
+                    "lat": -33.4443944,
+                    "lon": -70.6479569
+                },
+                {
+                    "lat": -33.4443959,
+                    "lon": -70.6479962
+                },
+                {
+                    "lat": -33.4443971,
+                    "lon": -70.6480294
+                },
+                {
+                    "lat": -33.4443978,
+                    "lon": -70.6480468
+                },
+                {
+                    "lat": -33.4443805,
+                    "lon": -70.6480677
+                },
+                {
+                    "lat": -33.4443953,
+                    "lon": -70.6480875
+                },
+                {
+                    "lat": -33.444306,
+                    "lon": -70.6481889
+                }
+            ],
+            "tags": {
+                "addr:city": "Santiago",
+                "addr:housenumber": "40",
+                "addr:street": "Londres",
+                "building": "yes",
+                "museum": "history",
+                "name": "Espacio de Memoria Londres 38",
+                "operator": "Ministerio de las Culturas",
+                "operator:type": "government",
+                "tourism": "museum",
+                "website": "https://www.londres38.cl/",
+                "wikidata": "Q4043155",
+                "wikipedia": "es:Londres 38"
+            }
+        },
+        {
+            "type": "way",
+            "id": 828126833,
+            "bounds": {
+                "minlat": -33.4544162,
+                "minlon": -70.6680991,
+                "maxlat": -33.4540058,
+                "maxlon": -70.6673304
+            },
+            "nodes": [
+                8630603599,
+                8630603600,
+                8630603601,
+                8630603602,
+                8630603603,
+                8630603599
+            ],
+            "geometry": [
+                {
+                    "lat": -33.4541213,
+                    "lon": -70.6680991
+                },
+                {
+                    "lat": -33.4544162,
+                    "lon": -70.668038
+                },
+                {
+                    "lat": -33.4542872,
+                    "lon": -70.6673304
+                },
+                {
+                    "lat": -33.4540482,
+                    "lon": -70.6673818
+                },
+                {
+                    "lat": -33.4540058,
+                    "lon": -70.6673925
+                },
+                {
+                    "lat": -33.4541213,
+                    "lon": -70.6680991
+                }
+            ],
+            "tags": {
+                "addr:city": "Santiago",
+                "addr:country": "CL",
+                "addr:housename": "Museo de la Solidaridad Salvador Allende",
+                "addr:housenumber": "475",
+                "addr:street": "Rep\u00fablica",
+                "museum": "history",
+                "name": "Museo de la Solidaridad Salvador Allende",
+                "operator": "Fundaci\u00f3n Arte y Solidaridad",
+                "tourism": "museum",
+                "wikidata": "Q6034308",
+                "wikimedia_commons": "Category:Museo de la Solidaridad Salvador Allende",
+                "wikipedia": "es:Museo de la Solidaridad Salvador Allende"
+            }
+        },
+        {
+            "type": "way",
+            "id": 895887128,
+            "bounds": {
+                "minlat": -33.438689,
+                "minlon": -70.6469032,
+                "maxlat": -33.4383858,
+                "maxlon": -70.6467404
+            },
+            "nodes": [
+                8292155626,
+                8292153781,
+                8327608511,
+                8327608512,
+                8292155626
+            ],
+            "geometry": [
+                {
+                    "lat": -33.4383986,
+                    "lon": -70.6469032
+                },
+                {
+                    "lat": -33.438689,
+                    "lon": -70.646858
+                },
+                {
+                    "lat": -33.4386762,
+                    "lon": -70.6467404
+                },
+                {
+                    "lat": -33.4383858,
+                    "lon": -70.6467855
+                },
+                {
+                    "lat": -33.4383986,
+                    "lon": -70.6469032
+                }
+            ],
+            "tags": {
+                "addr:city": "Santiago",
+                "addr:housenumber": "341",
+                "addr:street": "Enrique Mac Iver",
+                "building": "yes",
+                "name": "Museo de la Merced",
+                "tourism": "museum"
+            }
+        },
+        {
+            "type": "way",
+            "id": 897353495,
+            "bounds": {
+                "minlat": -33.4515829,
+                "minlon": -70.6635723,
+                "maxlat": -33.4513494,
+                "maxlon": -70.6632852
+            },
+            "nodes": [
+                5721615500,
+                8340433200,
+                8340433201,
+                8340433202,
+                8340433203,
+                8340433204,
+                5721615496,
+                5721615497,
+                5721615500
+            ],
+            "geometry": [
+                {
+                    "lat": -33.4515829,
+                    "lon": -70.6635586
+                },
+                {
+                    "lat": -33.4515144,
+                    "lon": -70.6635723
+                },
+                {
+                    "lat": -33.4514855,
+                    "lon": -70.6634286
+                },
+                {
+                    "lat": -33.4513707,
+                    "lon": -70.6634472
+                },
+                {
+                    "lat": -33.4513494,
+                    "lon": -70.6633638
+                },
+                {
+                    "lat": -33.4513723,
+                    "lon": -70.6633087
+                },
+                {
+                    "lat": -33.4515372,
+                    "lon": -70.6632852
+                },
+                {
+                    "lat": -33.4515573,
+                    "lon": -70.6634139
+                },
+                {
+                    "lat": -33.4515829,
+                    "lon": -70.6635586
+                }
+            ],
+            "tags": {
+                "addr:city": "Santiago",
+                "addr:housenumber": "311",
+                "addr:street": "Jos\u00e9 Miguel Carrera",
+                "building": "house",
+                "building:levels": "2",
+                "museum": "art",
+                "name": "Museo de la M\u00fasica Chilena",
+                "operator": "Sindicato Nacional de M\u00fasicos y Artistas de Chile \"SINAMUARCHI\"",
+                "operator:type": "association",
+                "tourism": "museum",
+                "website": "https://www.sinamuarchi.cl/"
+            }
+        },
+        {
+            "type": "way",
+            "id": 941194408,
+            "bounds": {
+                "minlat": -33.5160982,
+                "minlon": -70.6137745,
+                "maxlat": -33.5159207,
+                "maxlon": -70.6135615
+            },
+            "nodes": [
+                8716729749,
+                8716729750,
+                8716729751,
+                8716729752,
+                8716729833,
+                8716729753,
+                8716729754,
+                8716729755,
+                8716729834,
+                8716729738,
+                8716729739,
+                8716729742,
+                8716729743,
+                8716729744,
+                8716729745,
+                8716729746,
+                8716729747,
+                8716729748,
+                8716729740,
+                8716729741,
+                8716729749
+            ],
+            "geometry": [
+                {
+                    "lat": -33.5160548,
+                    "lon": -70.6135761
+                },
+                {
+                    "lat": -33.5160284,
+                    "lon": -70.6135635
+                },
+                {
+                    "lat": -33.5160001,
+                    "lon": -70.6135615
+                },
+                {
+                    "lat": -33.5159726,
+                    "lon": -70.6135704
+                },
+                {
+                    "lat": -33.5159489,
+                    "lon": -70.6135891
+                },
+                {
+                    "lat": -33.5159312,
+                    "lon": -70.6136158
+                },
+                {
+                    "lat": -33.5159215,
+                    "lon": -70.6136478
+                },
+                {
+                    "lat": -33.5159207,
+                    "lon": -70.6136819
+                },
+                {
+                    "lat": -33.5159238,
+                    "lon": -70.6136946
+                },
+                {
+                    "lat": -33.5159288,
+                    "lon": -70.6137145
+                },
+                {
+                    "lat": -33.5159465,
+                    "lon": -70.6137442
+                },
+                {
+                    "lat": -33.5159715,
+                    "lon": -70.613765
+                },
+                {
+                    "lat": -33.5160009,
+                    "lon": -70.6137745
+                },
+                {
+                    "lat": -33.5160312,
+                    "lon": -70.6137717
+                },
+                {
+                    "lat": -33.516059,
+                    "lon": -70.6137567
+                },
+                {
+                    "lat": -33.516081,
+                    "lon": -70.6137315
+                },
+                {
+                    "lat": -33.5160946,
+                    "lon": -70.6136988
+                },
+                {
+                    "lat": -33.5160982,
+                    "lon": -70.6136626
+                },
+                {
+                    "lat": -33.5160915,
+                    "lon": -70.613627
+                },
+                {
+                    "lat": -33.5160766,
+                    "lon": -70.613598
+                },
+                {
+                    "lat": -33.5160548,
+                    "lon": -70.6135761
+                }
+            ],
+            "tags": {
+                "building": "service",
+                "museum": "technology",
+                "name": "Museo Digital",
+                "operator": "MIM",
+                "operator:type": "private_non_profit",
+                "tourism": "museum"
+            }
+        },
+        {
+            "type": "way",
+            "id": 1041419150,
+            "bounds": {
+                "minlat": -33.457975,
+                "minlon": -70.6566443,
+                "maxlat": -33.4564879,
+                "maxlon": -70.6557023
+            },
+            "nodes": [
+                4899628588,
+                9587694451,
+                1195983717,
+                1195983697,
+                1195983731,
+                9587694450,
+                4899630828,
+                4899628588
+            ],
+            "geometry": [
+                {
+                    "lat": -33.4565539,
+                    "lon": -70.6566443
+                },
+                {
+                    "lat": -33.4564879,
+                    "lon": -70.6558603
+                },
+                {
+                    "lat": -33.456583,
+                    "lon": -70.6558499
+                },
+                {
+                    "lat": -33.4579107,
+                    "lon": -70.6557023
+                },
+                {
+                    "lat": -33.4579694,
+                    "lon": -70.6564601
+                },
+                {
+                    "lat": -33.457975,
+                    "lon": -70.656489
+                },
+                {
+                    "lat": -33.4579362,
+                    "lon": -70.656493
+                },
+                {
+                    "lat": -33.4565539,
+                    "lon": -70.6566443
+                }
+            ],
+            "tags": {
+                "addr:city": "Santiago",
+                "addr:country": "CL",
+                "addr:housenumber": "1550",
+                "addr:street": "Almirante Blanco Encalada",
+                "name": "Museo Hist\u00f3rico Militar",
+                "tourism": "museum",
+                "wikidata": "Q20017266",
+                "wikipedia": "es:Museo Hist\u00f3rico y Militar de Chile"
+            }
+        },
+        {
+            "type": "way",
+            "id": 1156548856,
+            "bounds": {
+                "minlat": -33.4623311,
+                "minlon": -70.6576265,
+                "maxlat": -33.4621891,
+                "maxlon": -70.6575219
+            },
+            "nodes": [
+                10755491402,
+                10755491400,
+                10754627959,
+                10755491401,
+                10755491402
+            ],
+            "geometry": [
+                {
+                    "lat": -33.4622,
+                    "lon": -70.6576265
+                },
+                {
+                    "lat": -33.4621891,
+                    "lon": -70.6575481
+                },
+                {
+                    "lat": -33.4623202,
+                    "lon": -70.6575219
+                },
+                {
+                    "lat": -33.4623311,
+                    "lon": -70.6576003
+                },
+                {
+                    "lat": -33.4622,
+                    "lon": -70.6576265
+                }
+            ],
+            "tags": {
+                "addr:city": "Santiago",
+                "addr:housenumber": "1071",
+                "addr:street": "Avenida Viel",
+                "building": "yes",
+                "name": "Museo Paleontol\u00f3gico de Chile",
+                "tourism": "museum",
+                "website": "https://museo-paleontologico-chile.es.tl/#google_vignette"
+            }
+        },
+        {
+            "type": "way",
+            "id": 1176138737,
+            "bounds": {
+                "minlat": -33.3828851,
+                "minlon": -70.5526391,
+                "maxlat": -33.3824821,
+                "maxlon": -70.552124
+            },
+            "nodes": [
+                10928046027,
+                10928046028,
+                10928046029,
+                10928046030,
+                10928046031,
+                10928046032,
+                10928046033,
+                10928046034,
+                10928046035,
+                10928046036,
+                10928046037,
+                10928046038,
+                10928046039,
+                10928046040,
+                10928046041,
+                10928046042,
+                10928046043,
+                10928046044,
+                10928046027
+            ],
+            "geometry": [
+                {
+                    "lat": -33.3825938,
+                    "lon": -70.5526391
+                },
+                {
+                    "lat": -33.3827199,
+                    "lon": -70.552562
+                },
+                {
+                    "lat": -33.3827045,
+                    "lon": -70.5525218
+                },
+                {
+                    "lat": -33.3828052,
+                    "lon": -70.5524544
+                },
+                {
+                    "lat": -33.3828243,
+                    "lon": -70.5524946
+                },
+                {
+                    "lat": -33.3828669,
+                    "lon": -70.5524663
+                },
+                {
+                    "lat": -33.3828515,
+                    "lon": -70.5524283
+                },
+                {
+                    "lat": -33.3828851,
+                    "lon": -70.5524076
+                },
+                {
+                    "lat": -33.3828125,
+                    "lon": -70.5522425
+                },
+                {
+                    "lat": -33.3827616,
+                    "lon": -70.5522707
+                },
+                {
+                    "lat": -33.382699,
+                    "lon": -70.552124
+                },
+                {
+                    "lat": -33.3825439,
+                    "lon": -70.5522272
+                },
+                {
+                    "lat": -33.3825584,
+                    "lon": -70.5522631
+                },
+                {
+                    "lat": -33.382483,
+                    "lon": -70.5523055
+                },
+                {
+                    "lat": -33.3824948,
+                    "lon": -70.5523446
+                },
+                {
+                    "lat": -33.3824821,
+                    "lon": -70.55235
+                },
+                {
+                    "lat": -33.3825302,
+                    "lon": -70.5524989
+                },
+                {
+                    "lat": -33.3825429,
+                    "lon": -70.5524881
+                },
+                {
+                    "lat": -33.3825938,
+                    "lon": -70.5526391
+                }
+            ],
+            "tags": {
+                "addr:city": "Vitacura",
+                "addr:country": "CL",
+                "addr:housenumber": "8800",
+                "addr:street": "Mar J\u00f3nico",
+                "building": "yes",
+                "museum": "history",
+                "name": "Museo Jud\u00edo Alem\u00e1n de Santiago",
+                "operator": "Comunidad Nueva Bnei Israel",
+                "operator:type": "private_non_profit",
+                "start_date": "2018",
+                "tourism": "museum",
+                "wikidata": "Q116759559",
+                "wikipedia": "es:Museo Jud\u00edo Alem\u00e1n de Santiago"
+            }
+        },
+        {
+            "type": "way",
+            "id": 1179892374,
+            "bounds": {
+                "minlat": -33.4412986,
+                "minlon": -70.6741054,
+                "maxlat": -33.440973,
+                "maxlon": -70.6738908
+            },
+            "nodes": [
+                10958657126,
+                10958657127,
+                10958657128,
+                10958657129,
+                10958657130,
+                10958657131,
+                10958657132,
+                10958657133,
+                10958657134,
+                10958657135,
+                10958657136,
+                10958657126
+            ],
+            "geometry": [
+                {
+                    "lat": -33.4409864,
+                    "lon": -70.6740732
+                },
+                {
+                    "lat": -33.4410222,
+                    "lon": -70.6741054
+                },
+                {
+                    "lat": -33.4412404,
+                    "lon": -70.6740785
+                },
+                {
+                    "lat": -33.4412393,
+                    "lon": -70.6740155
+                },
+                {
+                    "lat": -33.4412986,
+                    "lon": -70.6740088
+                },
+                {
+                    "lat": -33.4412908,
+                    "lon": -70.6738908
+                },
+                {
+                    "lat": -33.4411487,
+                    "lon": -70.6739176
+                },
+                {
+                    "lat": -33.4411531,
+                    "lon": -70.6739887
+                },
+                {
+                    "lat": -33.4410871,
+                    "lon": -70.6739954
+                },
+                {
+                    "lat": -33.4410815,
+                    "lon": -70.6739257
+                },
+                {
+                    "lat": -33.440973,
+                    "lon": -70.6739431
+                },
+                {
+                    "lat": -33.4409864,
+                    "lon": -70.6740732
+                }
+            ],
+            "tags": {
+                "addr:city": "Santiago",
+                "addr:housenumber": "2784",
+                "addr:street": "Compa\u00f1\u00eda de Jes\u00fas",
+                "building": "yes",
+                "museum": "living_history",
+                "name": "Museo Taller",
+                "tourism": "museum",
+                "wikidata": "Q86279757"
+            }
+        },
+        {
+            "type": "way",
+            "id": 1180488146,
+            "bounds": {
+                "minlat": -33.4393494,
+                "minlon": -70.6360006,
+                "maxlat": -33.4386235,
+                "maxlon": -70.6349383
+            },
+            "nodes": [
+                10963899344,
+                10963899343,
+                10963899326,
+                10963899331,
+                10963899304,
+                10963899298,
+                10963899300,
+                10963899297,
+                10963899289,
+                10963899288,
+                10963899285,
+                10963899338,
+                10963899284,
+                10963899276,
+                10963899275,
+                10963899339,
+                10963899256,
+                10963899253,
+                10963899254,
+                10963899255,
+                10963899257,
+                1259052956,
+                10963899258,
+                10963899259,
+                10963899266,
+                8328678111,
+                10963899244,
+                10963899243,
+                10963899344
+            ],
+            "geometry": [
+                {
+                    "lat": -33.4389562,
+                    "lon": -70.6360006
+                },
+                {
+                    "lat": -33.4389408,
+                    "lon": -70.6359563
+                },
+                {
+                    "lat": -33.438911,
+                    "lon": -70.6358709
+                },
+                {
+                    "lat": -33.4389056,
+                    "lon": -70.6358555
+                },
+                {
+                    "lat": -33.438879,
+                    "lon": -70.6357793
+                },
+                {
+                    "lat": -33.4388306,
+                    "lon": -70.6356407
+                },
+                {
+                    "lat": -33.4388198,
+                    "lon": -70.6356098
+                },
+                {
+                    "lat": -33.4387931,
+                    "lon": -70.6355332
+                },
+                {
+                    "lat": -33.4387756,
+                    "lon": -70.6354831
+                },
+                {
+                    "lat": -33.4387488,
+                    "lon": -70.6354063
+                },
+                {
+                    "lat": -33.4387312,
+                    "lon": -70.6353559
+                },
+                {
+                    "lat": -33.4387156,
+                    "lon": -70.6353112
+                },
+                {
+                    "lat": -33.4387058,
+                    "lon": -70.6352832
+                },
+                {
+                    "lat": -33.4386895,
+                    "lon": -70.6352366
+                },
+                {
+                    "lat": -33.4386235,
+                    "lon": -70.6350475
+                },
+                {
+                    "lat": -33.4386508,
+                    "lon": -70.6350398
+                },
+                {
+                    "lat": -33.4386548,
+                    "lon": -70.6350443
+                },
+                {
+                    "lat": -33.4387226,
+                    "lon": -70.6350275
+                },
+                {
+                    "lat": -33.4387243,
+                    "lon": -70.6350362
+                },
+                {
+                    "lat": -33.4388296,
+                    "lon": -70.6350064
+                },
+                {
+                    "lat": -33.4388264,
+                    "lon": -70.63499
+                },
+                {
+                    "lat": -33.439009,
+                    "lon": -70.6349383
+                },
+                {
+                    "lat": -33.4390422,
+                    "lon": -70.6350295
+                },
+                {
+                    "lat": -33.4390623,
+                    "lon": -70.6350846
+                },
+                {
+                    "lat": -33.4391045,
+                    "lon": -70.6352004
+                },
+                {
+                    "lat": -33.4393494,
+                    "lon": -70.6358723
+                },
+                {
+                    "lat": -33.4392107,
+                    "lon": -70.6359176
+                },
+                {
+                    "lat": -33.439188,
+                    "lon": -70.635925
+                },
+                {
+                    "lat": -33.4389562,
+                    "lon": -70.6360006
+                }
+            ],
+            "tags": {
+                "addr:city": "Santiago",
+                "addr:country": "CL",
+                "addr:housenumber": "37",
+                "addr:street": "Avenida Vicu\u00f1a Mackenna",
+                "museum": "art",
+                "name": "Museo Violeta Parra",
+                "opening_hours:covid19": "closed",
+                "tourism": "museum",
+                "website": "https://www.museovioletaparra.cl/",
+                "wikidata": "Q21065570",
+                "wikimedia_commons": "Category:Museo Violeta Parra",
+                "wikipedia": "es:Museo Violeta Parra"
+            }
+        },
+        {
+            "type": "way",
+            "id": 1205673952,
+            "bounds": {
+                "minlat": -33.5239408,
+                "minlon": -70.6613453,
+                "maxlat": -33.5238003,
+                "maxlon": -70.661212
+            },
+            "nodes": [
+                11173304747,
+                11173304748,
+                11173304749,
+                11173304750,
+                11173304747
+            ],
+            "geometry": [
+                {
+                    "lat": -33.5238003,
+                    "lon": -70.6613069
+                },
+                {
+                    "lat": -33.5238215,
+                    "lon": -70.661212
+                },
+                {
+                    "lat": -33.5239408,
+                    "lon": -70.6612503
+                },
+                {
+                    "lat": -33.5239196,
+                    "lon": -70.6613453
+                },
+                {
+                    "lat": -33.5238003,
+                    "lon": -70.6613069
+                }
+            ],
+            "tags": {
+                "addr:city": "La Cisterna",
+                "addr:housenumber": "162",
+                "addr:street": "Santa Teresa",
+                "architect": "German Rosales",
+                "building": "yes",
+                "description": "Luego de su allanamiento y ocupaci\u00f3n en 1975 por parte de la Fuerza A\u00e9rea de Chile (FACh), fue transformada en centro de detenci\u00f3n clandestino, tortura y exterminio durante la dictadura militar, recibiendo el nombre en clave de \u201cNido 20\u201d.",
+                "museum": "history",
+                "name": "Casa Museo Alberto Bachelet Mart\u00ednez (Ex-Nido 20)",
+                "start_date": "1964",
+                "tourism": "museum"
+            }
+        },
+        {
+            "type": "relation",
+            "id": 1205050,
+            "bounds": {
+                "minlat": -33.4424316,
+                "minlon": -70.6822771,
+                "maxlat": -33.4416336,
+                "maxlon": -70.6812074
+            },
+            "members": [
+                {
+                    "type": "way",
+                    "ref": 504650693,
+                    "role": "outer",
+                    "geometry": [
+                        {
+                            "lat": -33.4422927,
+                            "lon": -70.681341
+                        },
+                        {
+                            "lat": -33.4423107,
+                            "lon": -70.681595
+                        },
+                        {
+                            "lat": -33.4424153,
+                            "lon": -70.6815844
+                        },
+                        {
+                            "lat": -33.4424316,
+                            "lon": -70.6818145
+                        },
+                        {
+                            "lat": -33.4423264,
+                            "lon": -70.6818252
+                        },
+                        {
+                            "lat": -33.4423448,
+                            "lon": -70.6820843
+                        },
+                        {
+                            "lat": -33.4423547,
+                            "lon": -70.6820833
+                        },
+                        {
+                            "lat": -33.442364,
+                            "lon": -70.6822141
+                        },
+                        {
+                            "lat": -33.4422566,
+                            "lon": -70.6822249
+                        },
+                        {
+                            "lat": -33.4422556,
+                            "lon": -70.6822098
+                        },
+                        {
+                            "lat": -33.4420974,
+                            "lon": -70.6822257
+                        },
+                        {
+                            "lat": -33.4420983,
+                            "lon": -70.6822383
+                        },
+                        {
+                            "lat": -33.4419915,
+                            "lon": -70.682249
+                        },
+                        {
+                            "lat": -33.4419905,
+                            "lon": -70.6822344
+                        },
+                        {
+                            "lat": -33.4418299,
+                            "lon": -70.6822505
+                        },
+                        {
+                            "lat": -33.441831,
+                            "lon": -70.6822663
+                        },
+                        {
+                            "lat": -33.4417233,
+                            "lon": -70.6822771
+                        },
+                        {
+                            "lat": -33.4417137,
+                            "lon": -70.6821401
+                        },
+                        {
+                            "lat": -33.4417239,
+                            "lon": -70.682139
+                        },
+                        {
+                            "lat": -33.4417067,
+                            "lon": -70.6818918
+                        },
+                        {
+                            "lat": -33.4416497,
+                            "lon": -70.6818975
+                        },
+                        {
+                            "lat": -33.4416336,
+                            "lon": -70.6816671
+                        },
+                        {
+                            "lat": -33.4416935,
+                            "lon": -70.6816611
+                        },
+                        {
+                            "lat": -33.4416754,
+                            "lon": -70.6814025
+                        },
+                        {
+                            "lat": -33.4416659,
+                            "lon": -70.6814034
+                        },
+                        {
+                            "lat": -33.4416567,
+                            "lon": -70.6812713
+                        },
+                        {
+                            "lat": -33.4417634,
+                            "lon": -70.6812606
+                        },
+                        {
+                            "lat": -33.441764,
+                            "lon": -70.6812704
+                        },
+                        {
+                            "lat": -33.4419209,
+                            "lon": -70.6812547
+                        },
+                        {
+                            "lat": -33.4419203,
+                            "lon": -70.6812453
+                        },
+                        {
+                            "lat": -33.4420282,
+                            "lon": -70.6812346
+                        },
+                        {
+                            "lat": -33.4420289,
+                            "lon": -70.6812433
+                        },
+                        {
+                            "lat": -33.4421825,
+                            "lon": -70.6812279
+                        },
+                        {
+                            "lat": -33.4421818,
+                            "lon": -70.6812182
+                        },
+                        {
+                            "lat": -33.4422897,
+                            "lon": -70.6812074
+                        },
+                        {
+                            "lat": -33.442299,
+                            "lon": -70.6813403
+                        },
+                        {
+                            "lat": -33.4422927,
+                            "lon": -70.681341
+                        }
+                    ]
+                },
+                {
+                    "type": "way",
+                    "ref": 80216512,
+                    "role": "inner",
+                    "geometry": [
+                        {
+                            "lat": -33.4418127,
+                            "lon": -70.6821012
+                        },
+                        {
+                            "lat": -33.441806,
+                            "lon": -70.6820043
+                        },
+                        {
+                            "lat": -33.4417978,
+                            "lon": -70.6818839
+                        },
+                        {
+                            "lat": -33.4418074,
+                            "lon": -70.6818829
+                        },
+                        {
+                            "lat": -33.4418064,
+                            "lon": -70.681868
+                        },
+                        {
+                            "lat": -33.441962,
+                            "lon": -70.6818525
+                        },
+                        {
+                            "lat": -33.4419628,
+                            "lon": -70.6818635
+                        },
+                        {
+                            "lat": -33.4420064,
+                            "lon": -70.6818592
+                        },
+                        {
+                            "lat": -33.4420728,
+                            "lon": -70.6818529
+                        },
+                        {
+                            "lat": -33.4420719,
+                            "lon": -70.6818408
+                        },
+                        {
+                            "lat": -33.4422258,
+                            "lon": -70.6818258
+                        },
+                        {
+                            "lat": -33.4422267,
+                            "lon": -70.6818386
+                        },
+                        {
+                            "lat": -33.4422395,
+                            "lon": -70.6818373
+                        },
+                        {
+                            "lat": -33.4422542,
+                            "lon": -70.6820548
+                        },
+                        {
+                            "lat": -33.4422106,
+                            "lon": -70.6820591
+                        },
+                        {
+                            "lat": -33.4422142,
+                            "lon": -70.6821124
+                        },
+                        {
+                            "lat": -33.4420894,
+                            "lon": -70.6821245
+                        },
+                        {
+                            "lat": -33.4420887,
+                            "lon": -70.6821132
+                        },
+                        {
+                            "lat": -33.4419836,
+                            "lon": -70.6821235
+                        },
+                        {
+                            "lat": -33.4419843,
+                            "lon": -70.6821337
+                        },
+                        {
+                            "lat": -33.4418584,
+                            "lon": -70.6821462
+                        },
+                        {
+                            "lat": -33.4418551,
+                            "lon": -70.6820975
+                        },
+                        {
+                            "lat": -33.4418467,
+                            "lon": -70.6820983
+                        },
+                        {
+                            "lat": -33.4418127,
+                            "lon": -70.6821012
+                        }
+                    ]
+                },
+                {
+                    "type": "way",
+                    "ref": 80216513,
+                    "role": "inner",
+                    "geometry": [
+                        {
+                            "lat": -33.441791,
+                            "lon": -70.6816591
+                        },
+                        {
+                            "lat": -33.4417905,
+                            "lon": -70.6816519
+                        },
+                        {
+                            "lat": -33.441783,
+                            "lon": -70.6816527
+                        },
+                        {
+                            "lat": -33.4417641,
+                            "lon": -70.6813896
+                        },
+                        {
+                            "lat": -33.441772,
+                            "lon": -70.6813887
+                        },
+                        {
+                            "lat": -33.4417714,
+                            "lon": -70.6813805
+                        },
+                        {
+                            "lat": -33.4419287,
+                            "lon": -70.6813644
+                        },
+                        {
+                            "lat": -33.4419295,
+                            "lon": -70.6813752
+                        },
+                        {
+                            "lat": -33.4419578,
+                            "lon": -70.6813724
+                        },
+                        {
+                            "lat": -33.4420145,
+                            "lon": -70.6813665
+                        },
+                        {
+                            "lat": -33.4420371,
+                            "lon": -70.6813643
+                        },
+                        {
+                            "lat": -33.4420362,
+                            "lon": -70.6813516
+                        },
+                        {
+                            "lat": -33.4421645,
+                            "lon": -70.6813387
+                        },
+                        {
+                            "lat": -33.4421677,
+                            "lon": -70.6813844
+                        },
+                        {
+                            "lat": -33.4422046,
+                            "lon": -70.6813807
+                        },
+                        {
+                            "lat": -33.4422102,
+                            "lon": -70.6814596
+                        },
+                        {
+                            "lat": -33.442216,
+                            "lon": -70.681543
+                        },
+                        {
+                            "lat": -33.4422206,
+                            "lon": -70.6816077
+                        },
+                        {
+                            "lat": -33.4422088,
+                            "lon": -70.6816089
+                        },
+                        {
+                            "lat": -33.4422094,
+                            "lon": -70.6816172
+                        },
+                        {
+                            "lat": -33.4420555,
+                            "lon": -70.6816328
+                        },
+                        {
+                            "lat": -33.4420546,
+                            "lon": -70.6816194
+                        },
+                        {
+                            "lat": -33.4420305,
+                            "lon": -70.6816217
+                        },
+                        {
+                            "lat": -33.4419779,
+                            "lon": -70.6816271
+                        },
+                        {
+                            "lat": -33.4419485,
+                            "lon": -70.6816302
+                        },
+                        {
+                            "lat": -33.4419494,
+                            "lon": -70.6816428
+                        },
+                        {
+                            "lat": -33.441791,
+                            "lon": -70.6816591
+                        }
+                    ]
+                }
+            ],
+            "tags": {
+                "addr:country": "CL",
+                "building": "yes",
+                "name": "Museo Nacional de Historia Natural",
+                "tourism": "museum",
+                "type": "multipolygon",
+                "wikidata": "Q3064279",
+                "wikipedia": "es:Museo Nacional de Historia Natural de Chile"
+            }
+        },
+        {
+            "type": "relation",
+            "id": 11361700,
+            "bounds": {
+                "minlat": -33.4396598,
+                "minlon": -70.6560645,
+                "maxlat": -33.4389946,
+                "maxlon": -70.655726
+            },
+            "members": [
+                {
+                    "type": "way",
+                    "ref": 831665924,
+                    "role": "inner",
+                    "geometry": [
+                        {
+                            "lat": -33.4392186,
+                            "lon": -70.6558762
+                        },
+                        {
+                            "lat": -33.4392271,
+                            "lon": -70.6559692
+                        },
+                        {
+                            "lat": -33.4391365,
+                            "lon": -70.6559812
+                        },
+                        {
+                            "lat": -33.4391265,
+                            "lon": -70.6558887
+                        },
+                        {
+                            "lat": -33.4392186,
+                            "lon": -70.6558762
+                        }
+                    ]
+                },
+                {
+                    "type": "way",
+                    "ref": 350675000,
+                    "role": "outer",
+                    "geometry": [
+                        {
+                            "lat": -33.4391698,
+                            "lon": -70.6560445
+                        },
+                        {
+                            "lat": -33.4390396,
+                            "lon": -70.6560617
+                        },
+                        {
+                            "lat": -33.4390187,
+                            "lon": -70.6560645
+                        },
+                        {
+                            "lat": -33.4389946,
+                            "lon": -70.6558037
+                        },
+                        {
+                            "lat": -33.4391606,
+                            "lon": -70.6557878
+                        },
+                        {
+                            "lat": -33.4391989,
+                            "lon": -70.6557841
+                        },
+                        {
+                            "lat": -33.4392946,
+                            "lon": -70.655775
+                        },
+                        {
+                            "lat": -33.4393325,
+                            "lon": -70.6557692
+                        },
+                        {
+                            "lat": -33.4393884,
+                            "lon": -70.6557606
+                        },
+                        {
+                            "lat": -33.4394253,
+                            "lon": -70.6557549
+                        },
+                        {
+                            "lat": -33.4394646,
+                            "lon": -70.6557483
+                        },
+                        {
+                            "lat": -33.4395151,
+                            "lon": -70.6557412
+                        },
+                        {
+                            "lat": -33.4396142,
+                            "lon": -70.655726
+                        },
+                        {
+                            "lat": -33.4396257,
+                            "lon": -70.6557897
+                        },
+                        {
+                            "lat": -33.4395623,
+                            "lon": -70.6558009
+                        },
+                        {
+                            "lat": -33.439571,
+                            "lon": -70.6559258
+                        },
+                        {
+                            "lat": -33.4396491,
+                            "lon": -70.6559198
+                        },
+                        {
+                            "lat": -33.4396598,
+                            "lon": -70.6559795
+                        },
+                        {
+                            "lat": -33.439503,
+                            "lon": -70.6560003
+                        },
+                        {
+                            "lat": -33.4391698,
+                            "lon": -70.6560445
+                        }
+                    ]
+                },
+                {
+                    "type": "way",
+                    "ref": 831665923,
+                    "role": "inner",
+                    "geometry": [
+                        {
+                            "lat": -33.4395194,
+                            "lon": -70.6558366
+                        },
+                        {
+                            "lat": -33.4395258,
+                            "lon": -70.6559318
+                        },
+                        {
+                            "lat": -33.4394573,
+                            "lon": -70.6559425
+                        },
+                        {
+                            "lat": -33.4394471,
+                            "lon": -70.6558478
+                        },
+                        {
+                            "lat": -33.4395194,
+                            "lon": -70.6558366
+                        }
+                    ]
+                }
+            ],
+            "tags": {
+                "access": "permissive",
+                "addr:city": "Santiago",
+                "addr:country": "CL",
+                "addr:housenumber": "1340",
+                "addr:street": "Compa\u00f1\u00eda de Jes\u00fas",
+                "building": "yes",
+                "layer": "1",
+                "museum": "art",
+                "name": "Palacio La Alhambra",
+                "operator": "Sociedad Nacional de Bellas Artes",
+                "operator:type": "private_non_profit",
+                "start_date": "1862",
+                "tourism": "museum",
+                "type": "multipolygon",
+                "wikidata": "Q6057698",
+                "wikipedia": "es:Palacio La Alhambra"
+            }
+        },
+        {
+            "type": "relation",
+            "id": 12135649,
+            "bounds": {
+                "minlat": -33.4386859,
+                "minlon": -70.649431,
+                "maxlat": -33.4383257,
+                "maxlon": -70.6489827
+            },
+            "members": [
+                {
+                    "type": "way",
+                    "ref": 892134684,
+                    "role": "inner",
+                    "geometry": [
+                        {
+                            "lat": -33.438565,
+                            "lon": -70.6492962
+                        },
+                        {
+                            "lat": -33.4384378,
+                            "lon": -70.6493134
+                        },
+                        {
+                            "lat": -33.4384224,
+                            "lon": -70.6491494
+                        },
+                        {
+                            "lat": -33.4385495,
+                            "lon": -70.6491322
+                        },
+                        {
+                            "lat": -33.438565,
+                            "lon": -70.6492962
+                        }
+                    ]
+                },
+                {
+                    "type": "way",
+                    "ref": 892134683,
+                    "role": "outer",
+                    "geometry": [
+                        {
+                            "lat": -33.4383257,
+                            "lon": -70.6490324
+                        },
+                        {
+                            "lat": -33.4384071,
+                            "lon": -70.6490213
+                        },
+                        {
+                            "lat": -33.4384111,
+                            "lon": -70.6490631
+                        },
+                        {
+                            "lat": -33.4385417,
+                            "lon": -70.6490454
+                        },
+                        {
+                            "lat": -33.4385372,
+                            "lon": -70.6489976
+                        },
+                        {
+                            "lat": -33.4386473,
+                            "lon": -70.6489827
+                        },
+                        {
+                            "lat": -33.4386859,
+                            "lon": -70.6493926
+                        },
+                        {
+                            "lat": -33.4385758,
+                            "lon": -70.6494075
+                        },
+                        {
+                            "lat": -33.4385739,
+                            "lon": -70.6493875
+                        },
+                        {
+                            "lat": -33.4384433,
+                            "lon": -70.6494052
+                        },
+                        {
+                            "lat": -33.4384447,
+                            "lon": -70.6494199
+                        },
+                        {
+                            "lat": -33.4384357,
+                            "lon": -70.6494211
+                        },
+                        {
+                            "lat": -33.4383691,
+                            "lon": -70.6494302
+                        },
+                        {
+                            "lat": -33.4383633,
+                            "lon": -70.649431
+                        },
+                        {
+                            "lat": -33.4383257,
+                            "lon": -70.6490324
+                        }
+                    ]
+                }
+            ],
+            "tags": {
+                "addr:country": "CL",
+                "addr:street": "Merced",
+                "building": "yes",
+                "height": "5.6",
+                "name": "Museo de Santiago - Casa Colorada",
+                "source": "Reconocimiento cortogr\u00e1fico de campo 2016 por KG",
+                "tourism": "museum",
+                "type": "multipolygon",
+                "wikidata": "Q3304620"
+            }
+        },
+        {
+            "type": "relation",
+            "id": 14902635,
+            "bounds": {
+                "minlat": -33.4357397,
+                "minlon": -70.6473538,
+                "maxlat": -33.4354798,
+                "maxlon": -70.6469946
+            },
+            "members": [
+                {
+                    "type": "way",
+                    "ref": 256580272,
+                    "role": "outer",
+                    "geometry": [
+                        {
+                            "lat": -33.4355106,
+                            "lon": -70.6473538
+                        },
+                        {
+                            "lat": -33.4357397,
+                            "lon": -70.6473206
+                        },
+                        {
+                            "lat": -33.4357037,
+                            "lon": -70.6469946
+                        },
+                        {
+                            "lat": -33.435629,
+                            "lon": -70.6470054
+                        },
+                        {
+                            "lat": -33.4356306,
+                            "lon": -70.6470221
+                        },
+                        {
+                            "lat": -33.4354798,
+                            "lon": -70.6470435
+                        },
+                        {
+                            "lat": -33.4355106,
+                            "lon": -70.6473538
+                        }
+                    ]
+                },
+                {
+                    "type": "way",
+                    "ref": 1115082096,
+                    "role": "inner",
+                    "geometry": [
+                        {
+                            "lat": -33.4355671,
+                            "lon": -70.6472507
+                        },
+                        {
+                            "lat": -33.4355529,
+                            "lon": -70.6471087
+                        },
+                        {
+                            "lat": -33.4356305,
+                            "lon": -70.6470976
+                        },
+                        {
+                            "lat": -33.4356447,
+                            "lon": -70.6472395
+                        },
+                        {
+                            "lat": -33.4355671,
+                            "lon": -70.6472507
+                        }
+                    ]
+                }
+            ],
+            "tags": {
+                "addr:city": "Santiago",
+                "addr:housenumber": "689",
+                "addr:street": "Santo Domingo",
+                "building": "yes",
+                "museum": "history",
+                "name": "Casa de Velasco",
+                "operator": "Fundaci\u00f3n Artesan\u00edas de Chile",
+                "operator:type": "private_non_profit",
+                "tourism": "museum",
+                "type": "multipolygon",
+                "wikidata": "Q5755062",
+                "wikipedia": "es:Casa de Velasco (Santiago de Chile)"
+            }
+        }
+    ]
+}
