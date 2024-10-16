@@ -5,6 +5,7 @@ import { Marcador } from '../Marcador/Marcador';
 import { calculateBBox } from '../../helper/calculateBbox';
 import { useUserStore } from '../../state/State';
 import { LayersControlComponent } from '../LayersControl/LayersControlComponent';
+import { Circulos } from '../Circulos/Circulos';
 
 const center = [-33.447487, -70.673676]; // Santiago
 const zoom = 12;
@@ -56,11 +57,13 @@ export const MapView = () => {
     const [nodesMuseos, setNodesMuseos] = useState<Node[]>([]);
     const [nodesMonumentos, setNodesMonumentos] = useState<Node[]>([]);
     const [nodesIglesias, setNodesIglesias] = useState<Node[]>([]);
+    const [nodesAmenazas, setNodesAmenazas] = useState<any>([]);
     // const [nodesParques, setNodesParques] = useState<Node[]>([]);
 
     const showMuseos = useUserStore((state) => state.showMuseos);
     const showMonumentos = useUserStore((state) => state.showMonumentos);
     const showIglesias = useUserStore((state) => state.showIglesias);
+    const showAmenazas = useUserStore((state) => state.showAmenazas);
 
     const getMuseos = async () => {
         const response = await fetch('http://localhost:4000/museos/');
@@ -86,19 +89,27 @@ export const MapView = () => {
         setNodesIglesias(nodesData);
     }
 
-    const getParques = async () => {
-        const response = await fetch('http://localhost:4000/parques/');
+    // const getParques = async () => {
+    //     const response = await fetch('http://localhost:4000/parques/');
+    //     const data = await response.json();
+    //     console.log(data);
+    //     // const nodesData = data.elements.filter((element: { type: string; }) => element.type === 'node') as Node[];
+    //     // setNodesParques(nodesData);
+    // }
+
+    const getAmenazas = async () => {
+        const response = await fetch('http://127.0.0.1:5000/api/hexagons');
         const data = await response.json();
         console.log(data);
-        // const nodesData = data.elements.filter((element: { type: string; }) => element.type === 'node') as Node[];
-        // setNodesParques(nodesData);
+        setNodesAmenazas(data);
     }
 
     useEffect(() => {
         getMuseos();
         getMonumentos();
         getIglesias();
-        getParques();
+        // getParques();
+        getAmenazas();
     }, []);
 
     // Función para determinar el color según el tipo de lugar
@@ -136,6 +147,10 @@ export const MapView = () => {
                 }
                 {
                     showIglesias ? <Marcador nodes={nodesIglesias} color={'grey'} /> : null
+                }
+                {
+                    // showAmenazas ? <Marcador nodes={nodesIglesias} color={'grey'} /> : null
+                    showAmenazas ? <Circulos coordinates={nodesAmenazas} color={'red'} radius={200} /> : null
                 }
                 {/* <Marcador nodes={nodesParques} color={'green'} /> */}
                 <LayersControlComponent />

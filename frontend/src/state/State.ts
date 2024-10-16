@@ -6,6 +6,7 @@ export interface UserSlice {
     showMonumentos: boolean;
     showIglesias: boolean;
     showParques: boolean;
+    showAmenazas: boolean;
     isModalOpen: boolean;
 }
 
@@ -14,6 +15,7 @@ export interface UserActions {
     setShowMonumentos: (state: boolean) => void;
     setShowIglesias: (state: boolean) => void;
     setShowParques: (state: boolean) => void;
+    setShowAmenazas: (state: boolean) => void;
     openModal: () => void;
     closeModal: () => void;
 }
@@ -26,11 +28,13 @@ export const useUserStore = create<UserState>()(
         showMonumentos: false,
         showIglesias: false,
         showParques: false,
+        showAmenazas: false,
         isModalOpen: false,
         setShowMuseos: (showMuseos: boolean) => set({ showMuseos }),
         setShowMonumentos: (showMonumentos: boolean) => set({ showMonumentos }),
         setShowIglesias: (showIglesias: boolean) => set({ showIglesias }),
         setShowParques: (showParques: boolean) => set({ showParques }),
+        setShowAmenazas: (showAmenazas: boolean) => set({ showAmenazas }),
         openModal: () => set((state) => { state.isModalOpen = true; }),
         closeModal: () => set((state) => { state.isModalOpen = false; }),
     }))

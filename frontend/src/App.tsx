@@ -11,9 +11,11 @@ const App = () => {
   const showMuseos = useUserStore((state) => state.showMuseos);
   const showMonumentos = useUserStore((state) => state.showMonumentos);
   const showIglesias = useUserStore((state) => state.showIglesias);
+  const showAmenazas = useUserStore((state) => state.showAmenazas);
   const setShowMuseos = useUserStore((state) => state.setShowMuseos);
   const setShowMonumentos = useUserStore((state) => state.setShowMonumentos);
   const setShowIglesias = useUserStore((state) => state.setShowIglesias);
+  const setShowAmenazas = useUserStore((state) => state.setShowAmenazas);
 
   useEffect(() => {
     openModal();
@@ -72,6 +74,12 @@ const App = () => {
               label="Mostrar Iglesias"
               onChange={() => setShowIglesias(!showIglesias)}
               checked={showIglesias}
+            />
+            <FormControlLabel
+              control={<Checkbox />}
+              label="Mostrar Amenazas"
+              onChange={() => setShowAmenazas(!showAmenazas)}
+              checked={showAmenazas}
             />
             <FormControlLabel
               control={<Checkbox />}
