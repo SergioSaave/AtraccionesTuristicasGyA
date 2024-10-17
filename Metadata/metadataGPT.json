@@ -1,0 +1,32 @@
+[
+    {
+        "resultado": {
+            "Braille": false,
+            "abierto": false,
+            "open_festivos": false,
+            "pet_friendly": false,
+            "silla_ruedas": false
+        },
+        "url": "https://www.mnba.gob.cl/servicios/visita-el-museo"
+    },
+    {
+        "resultado": {
+            "Braille": false,
+            "abierto": true,
+            "open_festivos": false,
+            "pet_friendly": false,
+            "silla_ruedas": false
+        },
+        "url": "https://vitacura.cl/parque-bicentenario/conozca-el-parque-bicentenario/"
+    },
+    {
+        "resultado": {
+            "Braille": false,
+            "abierto": false,
+            "open_festivos": false,
+            "pet_friendly": false,
+            "silla_ruedas": false
+        },
+        "url": "https://www.conaf.cl/parque_nacionales/parque-nacional-la-campana/"
+    }
+]

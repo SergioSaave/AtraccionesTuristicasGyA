@@ -66,10 +66,12 @@ services:
     volumes:
       - ./Metadata:/app
       - ./requirements.txt:/app/requirements.txt
+    depends_on:
+      - flask_app
     command: >
       sh -c "apt-get update && apt-get install -y libgl1-mesa-glx && \
       pip install -r requirements.txt && \
-      python metadataOverpass.py && python metadataSTOP.py"
+      python metadataOverpass.py && python metadataSTOP.py && python metadataGPT.py"
 
 volumes:
   pgdata:

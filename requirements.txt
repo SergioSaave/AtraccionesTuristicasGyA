@@ -7,3 +7,6 @@ sqlalchemy
 geoalchemy2
 shapely
 opencv-python
+beautifulsoup4==4.12.2
+openai==0.28.0
+python-dotenv==1.0.0

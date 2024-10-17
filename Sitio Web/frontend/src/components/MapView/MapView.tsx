@@ -150,7 +150,7 @@ export const MapView = () => {
                 }
                 {
                     // showAmenazas ? <Marcador nodes={nodesIglesias} color={'grey'} /> : null
-                    showAmenazas ? <Circulos coordinates={nodesAmenazas} color={'red'} radius={200} /> : null
+                    showAmenazas ? <Circulos coordinates={nodesAmenazas} color={'red'} radius={300} /> : null
                 }
                 {/* <Marcador nodes={nodesParques} color={'green'} /> */}
                 <LayersControlComponent />

@@ -1,9 +1,13 @@
-from flask import Flask, render_template, jsonify
+from flask import Flask, render_template, jsonify, request
 from flask_cors import CORS  # Importa CORS
 import cv2
 import numpy as np
 import requests
 import os
+from dotenv import load_dotenv
+import json
+import openai
+from bs4 import BeautifulSoup
 
 app = Flask(__name__)
 CORS(app)  # Habilita CORS para toda la aplicación
@@ -255,6 +259,111 @@ def museos_handler():
     # Configurar el tipo de contenido como JSON
     return jsonify(body)
 
+load_dotenv()  # Asegúrate de cargar el .env al inicio del script
+
+API_KEY = os.getenv("GOOGLE_API_KEY")
+SEARCH_ENGINE_ID = os.getenv("SEARCH_ENGINE_ID")
+OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
+ENDPOINT = "https://www.googleapis.com/customsearch/v1"
+
+if not API_KEY or not SEARCH_ENGINE_ID or not OPENAI_API_KEY:
+    raise ValueError("Las claves API no se han cargado correctamente desde el archivo .env")
+
+ENDPOINT = "https://www.googleapis.com/customsearch/v1"
+
+# Función para hacer una búsqueda en Google usando Custom Search API
+def buscar_en_google(query):
+    print(f"Realizando búsqueda en Google con la consulta: {query}")
+    
+    params = {
+        'key': API_KEY,
+        'cx': SEARCH_ENGINE_ID,
+        'q': query,
+        'siteSearch': '.cl',  # Filtrar para dominios de Chile
+        'siteSearchFilter': 'i'  # Incluir solo resultados del dominio especificado
+    }
+    
+    response = requests.get(ENDPOINT, params=params)
+    response.raise_for_status()
+    search_results = response.json()
+    
+    print("Resultados obtenidos de Google Custom Search:")
+    print(json.dumps(search_results, indent=4, ensure_ascii=False))
+    
+    return search_results
+
+# Función para extraer el HTML de una página web con encabezado 'User-Agent' para evitar el error 406
+def obtener_contenido_pagina(url):
+    try:
+        print(f"Extrayendo contenido de la página: {url}")
+        headers = {
+            'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.3'
+        }
+        response = requests.get(url, headers=headers, timeout=10)  # Tiempo de espera de 10 segundos
+        response.raise_for_status()  # Lanza una excepción en caso de fallo
+        soup = BeautifulSoup(response.content, "html.parser")
+        return soup.get_text()[:5000]  # Limitar a los primeros 5000 caracteres para evitar exceder tokens
+    except requests.exceptions.RequestException as e:
+        print(f"Error al acceder a la página {url}: {e}")
+        return None
+
+# Función para procesar la información con GPT-3.5 o GPT-4 y retornarla en formato JSON
+def analizar_con_gpt(contenido, url, nombre_museo):
+    openai.api_key = OPENAI_API_KEY
+    
+    messages = [
+        {"role": "system", "content": f"Eres un asistente experto en análisis de sitios web para información de {nombre_museo}. Debes analizar solo páginas que coincidan con el nombre del museo."},
+        {"role": "user", "content": f"Analiza esta página sobre {nombre_museo}: {url}\n\nContenido:\n{contenido}"}
+    ]
+
+    response = openai.ChatCompletion.create(
+        model="gpt-3.5-turbo",  
+        messages=messages,
+        temperature=0,
+        max_tokens=500
+    )
+    
+    respuesta_gpt = response['choices'][0]['message']['content']
+
+    resultado_json = {
+        "abierto": "sí" in respuesta_gpt.lower(),
+        "silla_ruedas": "accesibilidad para sillas de ruedas" in respuesta_gpt.lower(),
+        "Braille": "sistema braille" in respuesta_gpt.lower(),
+        "open_festivos": "días festivos" in respuesta_gpt.lower(),
+        "pet_friendly": "pet-friendly" in respuesta_gpt.lower() or "mascotas" in respuesta_gpt.lower()
+    }
+
+    return resultado_json
+
+# Endpoint para buscar y analizar información de museos
+@app.route('/buscar-museo', methods=['GET'])
+def buscar_y_analizar_museo():
+    # Obtener el parámetro 'nombre_museo' de la URL de la solicitud GET
+    nombre_museo = request.args.get('nombre_museo', default='', type=str)
+    
+    if not nombre_museo:
+        return jsonify({"error": "Se requiere un nombre de museo"}), 400
+
+    query = f"{nombre_museo} accesibilidad sillas de ruedas abierto hoy teléfono"
+    resultados = buscar_en_google(query)
+    
+    # Limitar a los 3 primeros resultados
+    urls = [item['link'] for item in resultados.get('items', [])[:3] if '.cl' in item['link']]
+    
+    resultados_analizados = []
+
+    # Extraer y procesar el contenido de cada página
+    for url in urls:
+        contenido_pagina = obtener_contenido_pagina(url)
+        if contenido_pagina:
+            # Enviar el contenido a GPT para su análisis
+            resultado_gpt = analizar_con_gpt(contenido_pagina, url, nombre_museo)
+            resultados_analizados.append({
+                "url": url,
+                "resultado": resultado_gpt
+            })
+
+    return jsonify(resultados_analizados)
+
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5000, debug=True)  # Cambiado a 0.0.0.0
-
