@@ -124,7 +124,7 @@
         {
             "code": "SCMK",
             "city": "Melinka",
-            "updated_at": "20:00:00",
+            "updated_at": "20:31:00",
             "temperature": 10,
             "condition": "Despejado",
             "humidity": 94
@@ -132,10 +132,10 @@
         {
             "code": "SCQN",
             "city": "Santiago Centro",
-            "updated_at": "20:00:00",
-            "temperature": 15.4,
+            "updated_at": "20:25:00",
+            "temperature": 14.9,
             "condition": "Despejado",
-            "humidity": 60
+            "humidity": 62
         },
         {
             "code": "SCCY",
@@ -204,10 +204,10 @@
         {
             "code": "SCVD",
             "city": "Valdivia",
-            "updated_at": "20:00:00",
+            "updated_at": "20:33:00",
             "temperature": 13,
-            "condition": "Cubierto y lluvia",
-            "humidity": 94
+            "condition": "Cubierto",
+            "humidity": 88
         },
         {
             "code": "SCFT",

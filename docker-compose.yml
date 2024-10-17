@@ -43,9 +43,11 @@ services:
     working_dir: /app
     volumes:
       - ./Sitio Web/backend:/app
-      - ./requirements.txt:/usr/src/app/requirements.txt 
+      - ./requirements.txt:/app/requirements.txt
     command: >
-      sh -c "pip install -r requirements.txt && python app.py"
+      sh -c "apt-get update && apt-get install -y libgl1-mesa-glx && \
+      pip install -r requirements.txt && \
+      python app.py"
     ports:
       - "5000:5000"
 

@@ -66,7 +66,7 @@ export const MapView = () => {
     const showAmenazas = useUserStore((state) => state.showAmenazas);
 
     const getMuseos = async () => {
-        const response = await fetch('http://localhost:4000/museos/');
+        const response = await fetch('http://127.0.0.1:5000/museos');
         const data = await response.json();
         console.log(data);
         const nodesData = data.elements.filter((element: { type: string; }) => element.type === 'node') as Node[];
@@ -74,7 +74,7 @@ export const MapView = () => {
     }
 
     const getMonumentos = async () => {
-        const response = await fetch('http://localhost:4000/monumentos/');
+        const response = await fetch('http://127.0.0.1:5000/monumentos');
         const data = await response.json();
         console.log(data);
         const nodesData = data.elements.filter((element: { type: string; }) => element.type === 'node') as Node[];
@@ -82,7 +82,7 @@ export const MapView = () => {
     }
 
     const getIglesias = async () => {
-        const response = await fetch('http://localhost:4000/iglesias/');
+        const response = await fetch('http://127.0.0.1:5000/iglesias');
         const data = await response.json();
         console.log(data);
         const nodesData = data.elements.filter((element: { type: string; }) => element.type === 'node') as Node[];
@@ -90,7 +90,7 @@ export const MapView = () => {
     }
 
     // const getParques = async () => {
-    //     const response = await fetch('http://localhost:4000/parques/');
+    //     const response = await fetch('http://127.0.0.1:5000/parques/');
     //     const data = await response.json();
     //     console.log(data);
     //     // const nodesData = data.elements.filter((element: { type: string; }) => element.type === 'node') as Node[];

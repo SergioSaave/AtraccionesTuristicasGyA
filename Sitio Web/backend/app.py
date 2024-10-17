@@ -14,6 +14,11 @@ bbox_x_max = -7848955.358720397  # max x (right)
 bbox_y_min = -3969088.2399931327  # min y (bottom)
 bbox_y_max = -3941341.5987256127  # max y (top)
 
+MIN_LAT = -33.54912050860342  # Límite sur
+MIN_LON = -70.79795837402345  # Límite oeste
+MAX_LAT = -33.35834837283271  # Límite norte
+MAX_LON = -70.52639007568361  # Límite este
+
 def detect_shapes(image):
     hexagon_centers = []
 
@@ -118,5 +123,138 @@ def get_hexagon_coordinates():
     # Devuelve las coordenadas en formato JSON
     return jsonify(georeferenced_centers)
 
+@app.route('/iglesias', methods=['GET'])
+def iglesias_handler():
+    # Define la URL base de Overpass API
+    base_url = "https://overpass-api.de/api/interpreter"
+
+    # Define las coordenadas del bounding box
+    min_lat = -33.54912050860342  # Límite sur
+    min_lon = -70.79795837402345  # Límite oeste
+    max_lat = -33.35834837283271  # Límite norte
+    max_lon = -70.52639007568361  # Límite este
+
+    # Define la consulta con el bounding box y los filtros
+    query = f"""
+    [out:json][timeout:25];
+    nwr["amenity"="place_of_worship"]["religion"="christian"]({min_lat},{min_lon},{max_lat},{max_lon});
+    out geom;
+    """
+
+    # Haz la solicitud HTTP POST
+    response = requests.post(base_url, data={'data': query})
+
+    # Verifica si la respuesta fue exitosa
+    if response.status_code != 200:
+        return jsonify({"error": "Error en la solicitud a Overpass API"}), response.status_code
+
+    # Retorna la respuesta JSON de Overpass API
+    return jsonify(response.json())
+
+@app.route('/monumentos', methods=['GET'])
+def monumentos_handler():
+    # Define la URL base de Overpass API
+    base_url = "https://overpass-api.de/api/interpreter"
+
+    # Define las coordenadas del bounding box
+    min_lat = -33.54912050860342  # Límite sur
+    min_lon = -70.79795837402345  # Límite oeste
+    max_lat = -33.35834837283271  # Límite norte
+    max_lon = -70.52639007568361  # Límite este
+
+    # Define la consulta con el bounding box y los filtros
+    query = f"""
+    [out:json][timeout:25];
+    nwr["historic"="monument"]({min_lat},{min_lon},{max_lat},{max_lon});
+    out geom;
+    """
+
+    # Haz la solicitud HTTP POST
+    response = requests.post(base_url, data={'data': query})
+
+    # Verifica si la respuesta fue exitosa
+    if response.status_code != 200:
+        return jsonify({"error": "Error en la solicitud a Overpass API"}), response.status_code
+
+    # Retorna la respuesta JSON de Overpass API
+    return jsonify(response.json())
+
+class ErrorResponse:
+    def __init__(self, error):
+        self.error = error
+
+@app.route('/parques', methods=['GET'])
+def parques_handler():
+    # Define la URL base de Overpass API
+    base_url = "https://overpass-api.de/api/interpreter"
+
+    # Define la consulta para los parques en las comunas específicas
+    query = """
+    [out:json];
+    area["name"="Santiago"]["admin_level"="8"]->.santiago;
+    area["name"="Providencia"]["admin_level"="8"]->.providencia;
+    area["name"="Las Condes"]["admin_level"="8"]->.lascondes;
+    area["name"="Ñuñoa"]["admin_level"="8"]->.nunoa;
+
+    (
+      node["leisure"="park"](area.santiago);
+      node["leisure"="park"](area.providencia);
+      node["leisure"="park"](area.lascondes);
+      node["leisure"="park"](area.nunoa);
+      way["leisure"="park"](area.santiago);
+      way["leisure"="park"](area.providencia);
+      way["leisure"="park"](area.lascondes);
+      way["leisure"="park"](area.nunoa);
+    );
+
+    out body;
+    >;
+    out skel qt;
+    """
+
+    # Haz la solicitud HTTP POST
+    response = requests.post(base_url, data={'data': query})
+
+    # Verifica si la respuesta fue exitosa
+    if response.status_code != 200:
+        return jsonify(ErrorResponse("Error en la solicitud a Overpass API").__dict__), response.status_code
+
+    # Lee el cuerpo de la respuesta
+    body = response.json()
+
+    # Configurar el tipo de contenido como JSON
+    return jsonify(body)
+
+@app.route('/museos', methods=['GET'])
+def museos_handler():
+    # Define la URL base de Overpass API
+    base_url = "https://overpass-api.de/api/interpreter"
+
+    # Define la consulta con el bounding box y los filtros
+    query = f"""
+    [out:json][timeout:25];
+    nwr["tourism"="museum"]({MIN_LAT},{MIN_LON},{MAX_LAT},{MAX_LON});
+    out geom;
+    """
+
+    # Haz la solicitud HTTP POST
+    response = requests.post(base_url, data={'data': query})
+
+    # Verifica si la respuesta fue exitosa
+    if response.status_code != 200:
+        return jsonify({"error": "Error en la solicitud a Overpass API"}), response.status_code
+
+    # Lee el cuerpo de la respuesta
+    body = response.json()
+
+    # Aquí puedes insertar el GeoJSON en la base de datos utilizando una función como save_geojson_to_postgis(body)
+    # err = save_geojson_to_postgis(body)
+    # if err is not None:
+    #     return jsonify({"error": "Error al insertar GeoJSON en PostGIS"}), 500
+
+    # Configurar el tipo de contenido como JSON
+    return jsonify(body)
+
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(host='0.0.0.0', port=5000, debug=True)  # Cambiado a 0.0.0.0
+
