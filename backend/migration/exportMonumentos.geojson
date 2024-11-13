@@ -1,0 +1,1240 @@
+{
+  "type": "FeatureCollection",
+  "generator": "overpass-turbo",
+  "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL.",
+  "timestamp": "2024-10-10T02:30:44Z",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "relation/17172819",
+        "addr:city": "Santiago",
+        "addr:housenumber": "498",
+        "addr:place": "Plaza de Armas",
+        "air_conditioning": "no",
+        "amenity": "place_of_worship",
+        "baby_feeding": "no",
+        "building": "church",
+        "check_date": "2024-02-08",
+        "denomination": "roman_catholic",
+        "email": "contacto@catedraldesantiago.cl",
+        "height": "16.8",
+        "historic": "monument",
+        "internet_access": "no",
+        "name": "Catedral Metropolitana de Santiago de Chile",
+        "name:en": "Metropolitan Cathedral of Santiago de Chile",
+        "name:es": "Catedral Metropolitana de Santiago de Chile",
+        "name:zh": "圣地亚哥主教堂",
+        "opening_hours": "Mo-Fr 10:00-19:00; Sa-Su 09:00-13:30",
+        "phone": "+56 2 2269 6277",
+        "religion": "christian",
+        "service_times": "Mo 12:30; Tu 12:30; We 12:30; Th 12:30; Fr 12:30; Sa 12:30; Su 09:45, 12:00",
+        "short_name": "Catedral de Santiago",
+        "type": "multipolygon",
+        "website": "https://www.catedraldesantiago.cl",
+        "wheelchair": "yes",
+        "wikimedia_commons": "Category:Catedral Metropolitana de Santiago"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -70.6515218,
+              -33.4377646
+            ],
+            [
+              -70.6514544,
+              -33.4377576
+            ],
+            [
+              -70.65131,
+              -33.4377427
+            ],
+            [
+              -70.6513257,
+              -33.437637
+            ],
+            [
+              -70.6513388,
+              -33.4375487
+            ],
+            [
+              -70.6513547,
+              -33.4374418
+            ],
+            [
+              -70.6513564,
+              -33.4374301
+            ],
+            [
+              -70.6524727,
+              -33.4375454
+            ],
+            [
+              -70.6524252,
+              -33.4378658
+            ],
+            [
+              -70.6524043,
+              -33.4378636
+            ],
+            [
+              -70.6523004,
+              -33.4378527
+            ],
+            [
+              -70.6522903,
+              -33.4379217
+            ],
+            [
+              -70.652284,
+              -33.4379644
+            ],
+            [
+              -70.6522741,
+              -33.4380293
+            ],
+            [
+              -70.6522676,
+              -33.4380724
+            ],
+            [
+              -70.6522541,
+              -33.438071
+            ],
+            [
+              -70.6521492,
+              -33.4380604
+            ],
+            [
+              -70.6521478,
+              -33.4380696
+            ],
+            [
+              -70.6520567,
+              -33.4380602
+            ],
+            [
+              -70.6520584,
+              -33.4380487
+            ],
+            [
+              -70.6518835,
+              -33.4380304
+            ],
+            [
+              -70.6517715,
+              -33.4380189
+            ],
+            [
+              -70.6517906,
+              -33.437891
+            ],
+            [
+              -70.6518385,
+              -33.4378958
+            ],
+            [
+              -70.6518529,
+              -33.4377987
+            ],
+            [
+              -70.6516778,
+              -33.4377808
+            ],
+            [
+              -70.6515218,
+              -33.4377646
+            ]
+          ],
+          [
+            [
+              -70.6521817,
+              -33.4378343
+            ],
+            [
+              -70.6520126,
+              -33.437817
+            ],
+            [
+              -70.651999,
+              -33.4379092
+            ],
+            [
+              -70.6521681,
+              -33.4379264
+            ],
+            [
+              -70.6521817,
+              -33.4378343
+            ]
+          ]
+        ]
+      },
+      "id": "relation/17172819"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/25018684",
+        "addr:city": "Santiago",
+        "addr:housenumber": "1058",
+        "addr:street": "Avenida Libertador Bernardo O'Higgins",
+        "amenity": "university",
+        "building": "yes",
+        "historic": "monument",
+        "name": "Casa Central Universidad de Chile",
+        "operator": "Universidad de Chile",
+        "operator:type": "university",
+        "wikidata": "Q5754119",
+        "wikimedia_commons": "Category:Casa Central de la Universidad de Chile",
+        "wikipedia": "es:Casa Central de la Universidad de Chile"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -70.6514443,
+              -33.4444331
+            ],
+            [
+              -70.6514236,
+              -33.4445594
+            ],
+            [
+              -70.6514039,
+              -33.4445543
+            ],
+            [
+              -70.6513506,
+              -33.4446963
+            ],
+            [
+              -70.651393,
+              -33.4447073
+            ],
+            [
+              -70.6513823,
+              -33.4447723
+            ],
+            [
+              -70.6513885,
+              -33.4447739
+            ],
+            [
+              -70.6513684,
+              -33.4448965
+            ],
+            [
+              -70.6512537,
+              -33.4448666
+            ],
+            [
+              -70.6512554,
+              -33.4448621
+            ],
+            [
+              -70.6505636,
+              -33.4446815
+            ],
+            [
+              -70.6505627,
+              -33.4446841
+            ],
+            [
+              -70.6504662,
+              -33.4446589
+            ],
+            [
+              -70.6505067,
+              -33.444551
+            ],
+            [
+              -70.6505091,
+              -33.4445517
+            ],
+            [
+              -70.6505892,
+              -33.4443382
+            ],
+            [
+              -70.6505864,
+              -33.4443375
+            ],
+            [
+              -70.65059,
+              -33.4443277
+            ],
+            [
+              -70.6506201,
+              -33.4442476
+            ],
+            [
+              -70.6506299,
+              -33.4442215
+            ],
+            [
+              -70.6507352,
+              -33.444249
+            ],
+            [
+              -70.6507342,
+              -33.4442516
+            ],
+            [
+              -70.6509784,
+              -33.4443154
+            ],
+            [
+              -70.6509794,
+              -33.4443127
+            ],
+            [
+              -70.6510992,
+              -33.444344
+            ],
+            [
+              -70.6510982,
+              -33.4443467
+            ],
+            [
+              -70.6513394,
+              -33.4444096
+            ],
+            [
+              -70.6513407,
+              -33.4444061
+            ],
+            [
+              -70.6514443,
+              -33.4444331
+            ]
+          ]
+        ]
+      },
+      "id": "way/25018684"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/112317702",
+        "addr:city": "Santiago",
+        "addr:housenumber": "794",
+        "addr:street": "Agustinas",
+        "amenity": "theatre",
+        "building": "yes",
+        "historic": "monument",
+        "name": "Teatro Municipal de Santiago",
+        "source": "Reconocimiento cartográfico 2016 por KG.",
+        "wikidata": "Q6936293",
+        "wikimedia_commons": "Category:Teatro Municipal de Santiago",
+        "wikipedia": "en:Municipal Theatre of Santiago"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -70.6477826,
+              -33.4406738
+            ],
+            [
+              -70.64791,
+              -33.4406868
+            ],
+            [
+              -70.6479052,
+              -33.4407192
+            ],
+            [
+              -70.6479357,
+              -33.4407503
+            ],
+            [
+              -70.6478255,
+              -33.4415023
+            ],
+            [
+              -70.6477877,
+              -33.4414985
+            ],
+            [
+              -70.6475994,
+              -33.4414799
+            ],
+            [
+              -70.647579,
+              -33.4416002
+            ],
+            [
+              -70.64738,
+              -33.4415826
+            ],
+            [
+              -70.6473785,
+              -33.4415929
+            ],
+            [
+              -70.6472498,
+              -33.4415797
+            ],
+            [
+              -70.6472509,
+              -33.4415722
+            ],
+            [
+              -70.6471734,
+              -33.4415643
+            ],
+            [
+              -70.6472223,
+              -33.4412705
+            ],
+            [
+              -70.6472453,
+              -33.441273
+            ],
+            [
+              -70.6472716,
+              -33.4410635
+            ],
+            [
+              -70.6472619,
+              -33.4410625
+            ],
+            [
+              -70.6472751,
+              -33.4409719
+            ],
+            [
+              -70.6472849,
+              -33.4409729
+            ],
+            [
+              -70.6473071,
+              -33.4408213
+            ],
+            [
+              -70.6472956,
+              -33.4408201
+            ],
+            [
+              -70.6473072,
+              -33.4407413
+            ],
+            [
+              -70.6473187,
+              -33.4407425
+            ],
+            [
+              -70.6473349,
+              -33.4406317
+            ],
+            [
+              -70.6474557,
+              -33.440644
+            ],
+            [
+              -70.6474621,
+              -33.4406002
+            ],
+            [
+              -70.6475269,
+              -33.4406068
+            ],
+            [
+              -70.6475295,
+              -33.4405891
+            ],
+            [
+              -70.6477266,
+              -33.4406092
+            ],
+            [
+              -70.6477241,
+              -33.4406269
+            ],
+            [
+              -70.6477886,
+              -33.4406335
+            ],
+            [
+              -70.6477826,
+              -33.4406738
+            ]
+          ]
+        ]
+      },
+      "id": "way/112317702"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/114621538",
+        "amenity": "place_of_worship",
+        "building": "church",
+        "denomination": "catholic",
+        "historic": "monument",
+        "name": "Iglesia de San Francisco",
+        "religion": "christian",
+        "wikidata": "Q7413975",
+        "wikimedia_commons": "Category:Iglesia de San Francisco, Santiago de Chile",
+        "wikipedia": "en:Iglesia de San Francisco, Santiago de Chile"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -70.6472295,
+              -33.4432586
+            ],
+            [
+              -70.6475103,
+              -33.4432901
+            ],
+            [
+              -70.6479243,
+              -33.4433502
+            ],
+            [
+              -70.6479048,
+              -33.4434769
+            ],
+            [
+              -70.6478959,
+              -33.4435346
+            ],
+            [
+              -70.6478839,
+              -33.4436178
+            ],
+            [
+              -70.6478087,
+              -33.443658
+            ],
+            [
+              -70.6473427,
+              -33.4436109
+            ],
+            [
+              -70.64724,
+              -33.443522
+            ],
+            [
+              -70.6471829,
+              -33.4435534
+            ],
+            [
+              -70.6472025,
+              -33.4434057
+            ],
+            [
+              -70.6472229,
+              -33.4432944
+            ],
+            [
+              -70.6472295,
+              -33.4432586
+            ]
+          ]
+        ]
+      },
+      "id": "way/114621538"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/216521289",
+        "access": "yes",
+        "addr:city": "Providencia",
+        "addr:housenumber": "963",
+        "addr:street": "Avenida Pedro de Valdivia",
+        "architect": "Guillermo Mancelli",
+        "building": "yes",
+        "building:levels": "2",
+        "historic": "monument",
+        "monument": "yes",
+        "name": "Palacio Falabella",
+        "operator": "Ilustre Municipalidad de Providencia",
+        "start_date": "1924",
+        "wikidata": "Q6057670",
+        "wikimedia_commons": "Category:Palacio Falabella",
+        "wikipedia": "es:Palacio Falabella"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -70.6100499,
+              -33.4322099
+            ],
+            [
+              -70.6100226,
+              -33.4322985
+            ],
+            [
+              -70.6100004,
+              -33.4322937
+            ],
+            [
+              -70.6099669,
+              -33.4323968
+            ],
+            [
+              -70.6098161,
+              -33.4323641
+            ],
+            [
+              -70.6098204,
+              -33.4323457
+            ],
+            [
+              -70.6097748,
+              -33.4323359
+            ],
+            [
+              -70.6097844,
+              -33.4323047
+            ],
+            [
+              -70.609793,
+              -33.4322768
+            ],
+            [
+              -70.6098273,
+              -33.4322839
+            ],
+            [
+              -70.6098397,
+              -33.4322399
+            ],
+            [
+              -70.6098615,
+              -33.4321696
+            ],
+            [
+              -70.6099428,
+              -33.4321872
+            ],
+            [
+              -70.6100499,
+              -33.4322099
+            ]
+          ]
+        ]
+      },
+      "id": "way/216521289"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/605509464",
+        "access": "yes",
+        "alt_name": "Monumento de la Colonia Francesa al Centenario de la Independencia",
+        "artist_name": "Henri Grossin y Guillermo Córdova",
+        "historic": "monument",
+        "loc_name": "Monumento Público Colonia Francesa",
+        "name": "Monumento a la Gloria",
+        "wikidata": "Q113694740",
+        "wikimedia_commons": "Category:Monumento a la Gloria, Santiago de Chile",
+        "wikipedia": "es:Monumento a la Gloria (Santiago de Chile)"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -70.6428366,
+              -33.435467
+            ],
+            [
+              -70.6428485,
+              -33.4355125
+            ],
+            [
+              -70.6427929,
+              -33.4355227
+            ],
+            [
+              -70.642781,
+              -33.4354772
+            ],
+            [
+              -70.6428366,
+              -33.435467
+            ]
+          ]
+        ]
+      },
+      "id": "way/605509464"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/733799186",
+        "historic": "monument",
+        "name": "Tren"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -70.7326499,
+              -33.4142868
+            ],
+            [
+              -70.7326067,
+              -33.4142804
+            ],
+            [
+              -70.7326528,
+              -33.4140607
+            ],
+            [
+              -70.732696,
+              -33.414067
+            ],
+            [
+              -70.7326499,
+              -33.4142868
+            ]
+          ]
+        ]
+      },
+      "id": "way/733799186"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/741798695",
+        "access": "yes",
+        "historic": "monument",
+        "inscription": "Contiene los restos de un soldado desconocido, muerto en 1881 durante la Guerra del Pacífico",
+        "name": "Ex Monumento al General Baquedano"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -70.6344764,
+              -33.4369184
+            ],
+            [
+              -70.6344743,
+              -33.4369265
+            ],
+            [
+              -70.6344889,
+              -33.4369292
+            ],
+            [
+              -70.6344859,
+              -33.4369402
+            ],
+            [
+              -70.6344951,
+              -33.4369419
+            ],
+            [
+              -70.6344944,
+              -33.4369445
+            ],
+            [
+              -70.6344995,
+              -33.4369454
+            ],
+            [
+              -70.6345043,
+              -33.4369471
+            ],
+            [
+              -70.6345083,
+              -33.43695
+            ],
+            [
+              -70.6345111,
+              -33.4369537
+            ],
+            [
+              -70.6345122,
+              -33.436958
+            ],
+            [
+              -70.6345118,
+              -33.4369624
+            ],
+            [
+              -70.6345096,
+              -33.4369664
+            ],
+            [
+              -70.6345061,
+              -33.4369697
+            ],
+            [
+              -70.6345015,
+              -33.4369719
+            ],
+            [
+              -70.6344964,
+              -33.4369727
+            ],
+            [
+              -70.6344911,
+              -33.4369722
+            ],
+            [
+              -70.6344872,
+              -33.4369715
+            ],
+            [
+              -70.6344861,
+              -33.4369754
+            ],
+            [
+              -70.6344769,
+              -33.4369737
+            ],
+            [
+              -70.634474,
+              -33.4369844
+            ],
+            [
+              -70.6344599,
+              -33.4369817
+            ],
+            [
+              -70.6344578,
+              -33.4369898
+            ],
+            [
+              -70.6344329,
+              -33.4369853
+            ],
+            [
+              -70.634408,
+              -33.4369808
+            ],
+            [
+              -70.6344102,
+              -33.4369724
+            ],
+            [
+              -70.6343953,
+              -33.4369696
+            ],
+            [
+              -70.6343981,
+              -33.436959
+            ],
+            [
+              -70.6343898,
+              -33.4369575
+            ],
+            [
+              -70.6343908,
+              -33.4369537
+            ],
+            [
+              -70.6343839,
+              -33.4369524
+            ],
+            [
+              -70.6343788,
+              -33.4369503
+            ],
+            [
+              -70.6343748,
+              -33.436947
+            ],
+            [
+              -70.6343725,
+              -33.4369427
+            ],
+            [
+              -70.634372,
+              -33.436938
+            ],
+            [
+              -70.6343734,
+              -33.4369334
+            ],
+            [
+              -70.6343766,
+              -33.4369295
+            ],
+            [
+              -70.6343812,
+              -33.4369267
+            ],
+            [
+              -70.6343866,
+              -33.4369254
+            ],
+            [
+              -70.6343922,
+              -33.4369257
+            ],
+            [
+              -70.634398,
+              -33.4369267
+            ],
+            [
+              -70.6343987,
+              -33.4369239
+            ],
+            [
+              -70.6344071,
+              -33.4369255
+            ],
+            [
+              -70.6344101,
+              -33.4369144
+            ],
+            [
+              -70.6344246,
+              -33.4369171
+            ],
+            [
+              -70.6344267,
+              -33.4369094
+            ],
+            [
+              -70.6344516,
+              -33.4369139
+            ],
+            [
+              -70.6344764,
+              -33.4369184
+            ]
+          ]
+        ]
+      },
+      "id": "way/741798695"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/917160394",
+        "access": "yes",
+        "artist_name": "Rebeca Matte",
+        "description": "Honra la memoria de los 77 soldados chilenos fallecidos en el batalla de La Concepción, entre el 9 y el 10 de julio de 1882, durante la Guerra del Pacífico.",
+        "historic": "monument",
+        "inscription": "El oficial que tuviere orden absoluta de conservar su puesto a toda costa lo hará. \nOrd. General del Ejer. Tit. 32 Art.21\n9-10 de Julio de 1882",
+        "name": "Monumento a los Héroes de La Concepción",
+        "start_date": "1920",
+        "wikimedia_commons": "File:2017 Santiago de Chile - Monumento Héroes de La Concepción - Avenida Alameda - Obra de Rebeca Matte.jpg"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -70.6592762,
+              -33.4458763
+            ],
+            [
+              -70.6592956,
+              -33.4458808
+            ],
+            [
+              -70.6593309,
+              -33.445889
+            ],
+            [
+              -70.6593524,
+              -33.445894
+            ],
+            [
+              -70.6593494,
+              -33.4459028
+            ],
+            [
+              -70.6593325,
+              -33.4459538
+            ],
+            [
+              -70.6593301,
+              -33.4459608
+            ],
+            [
+              -70.6593086,
+              -33.4459558
+            ],
+            [
+              -70.6592732,
+              -33.4459477
+            ],
+            [
+              -70.6592538,
+              -33.4459432
+            ],
+            [
+              -70.6592762,
+              -33.4458763
+            ]
+          ]
+        ]
+      },
+      "id": "way/917160394"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/936115817",
+        "access": "yes",
+        "description": "Alegoría greco-romana que simboliza la Repú-blica de Chile, coronando las artes y las industrias. Saludo de la ciudad de Santiago a la Exposición Internacional de 1875, obra autor desconocido.",
+        "historic": "monument",
+        "name": "Alegoría greco-romana que simboliza la República de Chile",
+        "start_date": "1875"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -70.6818148,
+          -33.4412714
+        ]
+      },
+      "id": "node/936115817"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1276923294",
+        "access": "yes",
+        "alt_name": "Monumento a los Héroes de la Esmeralda",
+        "architect": "Gustavo García Postigo",
+        "artist_name": "José Carocca Laflor y Moisés Busquets Montalva",
+        "height": "32",
+        "historic": "monument",
+        "inscription": "Muchachos la contienda es desigual. Nunca se ha arriado nuestra bandera ante el enemigo y espero que no sea esta la ocasión de hacerlo. Mientras yo viva, esa bandera flameará en su lugar. Y si yo muero mis oficiales sabrán cumplir con su deber.",
+        "name": "Monumento a los Héroes de Iquique",
+        "official_name": "Monumento de las Glorias Navales",
+        "start_date": "1962-05-28",
+        "wikidata": "Q27043790",
+        "wikimedia_commons": "File:Monumento a los Héroes de Iquique, Santiago 20230312.jpg",
+        "wikipedia": "es:Monumento a los Héroes de Iquique (Santiago de Chile)"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -70.6497415,
+          -33.433331
+        ]
+      },
+      "id": "node/1276923294"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5354820451",
+        "historic": "monument"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -70.7786277,
+          -33.5161646
+        ]
+      },
+      "id": "node/5354820451"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5923212592",
+        "access": "yes",
+        "artist_name": "Carlos Ortúzar",
+        "check_date": "2024-10-06",
+        "historic": "monument",
+        "material": "steel",
+        "memorial": "yes",
+        "name": "Monumento al General René Schneider Chereau",
+        "start_date": "1974",
+        "subject:wikidata": "Q5708145",
+        "subject:wikipedia": "es:Asesinato de René Schneider",
+        "wikidata": "Q123154757",
+        "wikimedia_commons": "File:Monumento a René Schneider 01.jpg",
+        "wikipedia": "es:Monumento a René Schneider"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -70.5856984,
+          -33.4046062
+        ]
+      },
+      "id": "node/5923212592"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6872633550",
+        "historic": "monument"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -70.6688236,
+          -33.4868059
+        ]
+      },
+      "id": "node/6872633550"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/7039464075",
+        "historic": "monument"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -70.6155588,
+          -33.3922136
+        ]
+      },
+      "id": "node/7039464075"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/7935581567",
+        "access": "yes",
+        "alt_name": "Monumento a la Victoria de Ayacucho",
+        "artist_name": "Francesco Orselino",
+        "check_date": "2023-05-09",
+        "description": "Representa la figura de una mujer que rompe las cadenas de esclavitud de una indígena americana, y en su pedestal presenta cuatro bajorrelieves que muestran escenas de la Expedición Libertadora del Perú, de la batalla de Ayacucho y de Simón Bolívar.",
+        "historic": "monument",
+        "inscription": "A los soldados de Ayacucho que sellaron con sangre la libertad y unión de nuestros pueblos hermanos venezolanos,peruanos,colombianos,ecuatorianos, panameños,argentinos, paraguayos y chilenos  9/XII/1824 - 1974 Homenaje de Instituciones Americanistas Chile",
+        "material": "marble",
+        "memorial": "sculpture",
+        "name": "Monumento a la Libertad Americana",
+        "start_date": "1836-04-25",
+        "wikidata": "Q26991400",
+        "wikimedia_commons": "File:Monumento a la Libertad Americana I.jpg",
+        "wikipedia": "es:Monumento a la Libertad Americana"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -70.6505028,
+          -33.4378262
+        ]
+      },
+      "id": "node/7935581567"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/8847089290",
+        "architect": "José Luis Coo",
+        "historic": "monument",
+        "name": "Quinta Las Rosas de Maipú",
+        "start_date": "1994"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -70.7579771,
+          -33.4932946
+        ]
+      },
+      "id": "node/8847089290"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/9361095699",
+        "historic": "monument",
+        "name": "Stgo."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -70.6108712,
+          -33.3952438
+        ]
+      },
+      "id": "node/9361095699"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/10970055978",
+        "historic": "monument"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -70.754953,
+          -33.4950329
+        ]
+      },
+      "id": "node/10970055978"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11170906081",
+        "access": "yes",
+        "historic": "monument",
+        "material": "steel",
+        "name": "Rieles",
+        "wikimedia_commons": "File:Parque por la Paz Villa Grimaldi - Santiago Chile - Peace Park (5277454343).jpg"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -70.5424378,
+          -33.4632021
+        ]
+      },
+      "id": "node/11170906081"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11308805312",
+        "access": "yes",
+        "historic": "monument",
+        "inscription": "El memorial rinde homenaje a 38 personas residentes de la Comuna de Lo Prado víctimas de la dictadura militar(12 Detenidos desaparecidos y 26 ejecutados políticos).",
+        "name": "Fuente Memorial del Detenido Desaparecido y Ejecutado Político de la Comuna de Lo Prado",
+        "source": "Coordinadora de Derechos Humanos de la Comuna de Lo Prado",
+        "wikimedia_commons": "File:Memorial DDHH Chile 206 Lo Prado.jpg"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -70.723298,
+          -33.4444666
+        ]
+      },
+      "id": "node/11308805312"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11942619734",
+        "access": "permit",
+        "historic": "monument",
+        "inscription": "Monumento Ecuestre al Libertador General Don Bernardo O'Higgins R. donado a la Esc. Militar por los club de leones de Chile\nStgo. 22-XII-1975",
+        "name": "Monumento Ecuestre al Libertador General"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -70.5842836,
+          -33.4129624
+        ]
+      },
+      "id": "node/11942619734"
+    }
+  ]
+}
