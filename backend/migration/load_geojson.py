@@ -2,7 +2,7 @@ import os
 import psycopg2
 import json
 from geoalchemy2 import Geometry, WKTElement
-from sqlalchemy import create_engine, Table, Column, Integer, MetaData, String, inspect
+from sqlalchemy import create_engine, Table, Column, Integer, MetaData, String, inspect, text
 from sqlalchemy.dialects.postgresql import JSON
 from sqlalchemy.orm import sessionmaker
 
@@ -10,7 +10,7 @@ from sqlalchemy.orm import sessionmaker
 DB_NAME = os.getenv("POSTGRES_DB", "geodata")
 DB_USER = os.getenv("POSTGRES_USER", "postgres")
 DB_PASS = os.getenv("POSTGRES_PASSWORD", "password")
-DB_HOST = os.getenv("POSTGRES_HOST", "postgres")
+DB_HOST = os.getenv("POSTGRES_HOST", "postgis")
 DB_PORT = os.getenv("POSTGRES_PORT", "5432")
 
 # Conexión usando SQLAlchemy
@@ -19,6 +19,14 @@ engine = create_engine(DATABASE_URL)
 Session = sessionmaker(bind=engine)
 session = Session()
 metadata = MetaData()
+
+# Habilitar PostGIS
+def enable_postgis():
+    with engine.connect() as conn:
+        conn.execute(text("CREATE EXTENSION IF NOT EXISTS postgis;"))
+
+# Llamada para habilitar PostGIS
+enable_postgis()
 
 # Función para convertir GeoJSON a WKT
 def geojson_to_wkt(geometry):
@@ -68,9 +76,14 @@ def load_geojson_to_db(geojson_path, table_name):
 
     # Insertar datos en la tabla
     for feature in data['features']:
+        print("FEATURES: ", feature);
         # Convertir la geometría a WKT
         geometry_wkt = geojson_to_wkt(feature['geometry'])
         geometry = WKTElement(geometry_wkt, srid=4326)
+
+        print("Geometry WKT:", geometry_wkt) 
+
+        
         properties = feature['properties']
         ins = table.insert().values(properties=properties, geometry=geometry)
         session.execute(ins)

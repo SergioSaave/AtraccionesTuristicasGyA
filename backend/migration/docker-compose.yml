@@ -1,19 +1,25 @@
 version: '3.7'
 
+networks:
+  my_network:
+    name: 'my_network'
+
 services:
-  postgres:
-    image: postgis-pgr
-    container_name: postgres
-    environment:
-      POSTGRES_DB: geodata
-      POSTGRES_USER: postgres
-      POSTGRES_PASSWORD: password
-    ports:
-      - "5432:5432"
-    volumes:
+  postgis:
+    container_name: 'postgis_container'
+    image: pgrouting/pgrouting:12-3.0-3.0.1
+    networks:
+      - my_network
+    volumes:      
+      - ./db/init.sql:/docker-entrypoint-initdb.d/init.sql
       - pgdata:/var/lib/postgresql/data
+      - ./db/:/db/
+    env_file:
+      - ./.env
+    ports:
+      - "25432:5432"
     healthcheck:
-      test: ["CMD-SHELL", "pg_isready -U postgres"]
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER}"]
       interval: 15s
       timeout: 5s
       retries: 3
@@ -22,32 +28,29 @@ services:
     image: python:3.9-slim
     container_name: load_data
     depends_on:
-      postgres:
+      postgis:
         condition: service_healthy
+    networks:
+      - my_network
     volumes:
       - .:/usr/src/app
     working_dir: /usr/src/app
     command: >
-      sh -c "pip install -r requirements.txt && python load_geojson.py"
-
-  load_calles:
-    image: python:3.9-slim
-    container_name: load_calles
-    depends_on:
-      postgres:
-        condition: service_healthy
-    volumes:
-      - .:/usr/src/app
-    working_dir: /usr/src/app
-    command: >
-      sh -c "pip install -r requirements.txt && python load_calles.py"
+      sh -c "sleep 10 && pip install -r requirements.txt && python load_geojson.py"
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER}"]
+      interval: 15s
+      timeout: 5s
+      retries: 3
 
   api:
     image: python:3.9-slim
     container_name: api
     depends_on:
-      postgres:
+      postgis:
         condition: service_healthy
+    networks:
+      - my_network
     volumes:
       - .:/usr/src/app
     working_dir: /usr/src/app

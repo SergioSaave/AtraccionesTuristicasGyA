@@ -3,13 +3,13 @@ import json
 from geoalchemy2 import Geometry, WKTElement
 from sqlalchemy import create_engine, Table, Column, Integer, MetaData, Float, Boolean, inspect, text
 from sqlalchemy.orm import sessionmaker
-from shapely.geometry import shape
+from shapely.geometry import shape, LineString, Polygon, mapping
 
 # Datos de conexión a la base de datos
 DB_NAME = os.getenv("POSTGRES_DB", "geodata")
 DB_USER = os.getenv("POSTGRES_USER", "postgres")
 DB_PASS = os.getenv("POSTGRES_PASSWORD", "password")
-DB_HOST = os.getenv("POSTGRES_HOST", "postgres")
+DB_HOST = os.getenv("POSTGRES_HOST", "postgis")
 DB_PORT = os.getenv("POSTGRES_PORT", "5432")
 
 # Conexión usando SQLAlchemy
@@ -22,7 +22,7 @@ metadata = MetaData()
 def enable_extensions():
     with engine.connect() as conn:
         conn.execute(text("CREATE EXTENSION IF NOT EXISTS postgis;"))
-        conn.execute(text("CREATE EXTENSION pgrouting;"))
+        conn.execute(text("CREATE EXTENSION IF NOT EXISTS pgrouting;"))
     
 def check_extensions():
     with engine.connect() as conn:
@@ -58,8 +58,8 @@ def load_calles_from_geojson(geojson_path):
     calles_table = Table(
         'calles', metadata,
         Column('id', Integer, primary_key=True, autoincrement=True),
-        Column('source', Integer, nullable=False),  # Nodo de origen (Placeholder)
-        Column('target', Integer, nullable=False),  # Nodo de destino (Placeholder)
+        Column('source', Integer, nullable=False),  # Nodo de origen
+        Column('target', Integer, nullable=False),  # Nodo de destino
         Column('cost', Float, nullable=False),      # Costo (distancia euclidiana)
         Column('oneway', Boolean, default=False),   # Si es unidireccional
         Column('geometry', Geometry('GEOMETRY', srid=4326)),  # Cambiado a GEOMETRY para aceptar ambos tipos
@@ -71,39 +71,58 @@ def load_calles_from_geojson(geojson_path):
     with open(geojson_path) as f:
         geojson_data = json.load(f)
 
-    # Insertar calles en la tabla
+    # Generar IDs únicos para nodos y segmentos
+    node_id_counter = 1
+    node_mapping = {}  # Almacenar coordenadas de nodos y asignarles un ID único
+
+    # Procesar cada feature
     for feature in geojson_data['features']:
-        geometry = shape(feature['geometry'])  # Convertir a objeto shapely
-        geometry_wkt = geometry.wkt  # Obtener WKT
-        geometry_element = WKTElement(geometry_wkt, srid=4326)
-
-        properties = feature['properties']
-        nodes = properties.get('nodes', [])  # Ajusta según cómo se almacenen los nodos
-
-        # Calcular el costo como distancia euclidiana entre el primer y último nodo
-        if len(nodes) >= 2:
-            cost = euclidean_distance(nodes[0], nodes[-1])
+        geometry = shape(feature['geometry'])
+        
+        # Si la geometría es un polígono, extraer los bordes y convertirlos en LineStrings
+        if isinstance(geometry, Polygon):
+            line_segments = [LineString([geometry.exterior.coords[i], geometry.exterior.coords[i+1]])
+                             for i in range(len(geometry.exterior.coords) - 1)]
+        elif isinstance(geometry, LineString):
+            line_segments = [geometry]  # Si es LineString, usarlo directamente
         else:
-            cost = 0  # O un valor por defecto
+            continue  # Omitir otros tipos de geometría
 
-        # Verificar si la calle es unidireccional
-        oneway = properties.get('oneway', 'no') == 'yes'
+        # Insertar cada segmento como calle en la base de datos
+        for segment in line_segments:
+            start, end = segment.coords[0], segment.coords[-1]
 
-        # Insertar la calle en la tabla
-        ins = calles_table.insert().values(
-            source=1,  # Placeholder, se debe ajustar según tu modelo de nodos
-            target=2,  # Placeholder, igual que el anterior
-            cost=cost,
-            oneway=oneway,
-            geometry=geometry_element
-        )
-        session.execute(ins)
+            # Verificar si los puntos de inicio y fin ya tienen un ID asignado
+            if start not in node_mapping:
+                node_mapping[start] = node_id_counter
+                node_id_counter += 1
+            if end not in node_mapping:
+                node_mapping[end] = node_id_counter
+                node_id_counter += 1
+
+            source = node_mapping[start]
+            target = node_mapping[end]
+            cost = euclidean_distance(start, end)
+
+            # Convertir a WKT para almacenar en la base de datos
+            geometry_wkt = segment.wkt
+            geometry_element = WKTElement(geometry_wkt, srid=4326)
+
+            # Insertar en la tabla
+            ins = calles_table.insert().values(
+                source=source,
+                target=target,
+                cost=cost,
+                oneway=feature['properties'].get('oneway', 'no') == 'yes',
+                geometry=geometry_element
+            )
+            session.execute(ins)
 
     session.commit()
     print("Datos insertados en la tabla 'calles'.")
 
 # Ruta al archivo GeoJSON de calles
-calles_geojson_path = 'roads_santiago.geojson'  # Cambia la extensión a .geojson
+calles_geojson_path = 'export.geojson'  # Cambia la extensión a .geojson
 
 # Cargar las calles en la base de datos
 enable_extensions()
