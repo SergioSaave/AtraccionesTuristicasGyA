@@ -11,10 +11,12 @@ const App = () => {
   const showMuseos = useUserStore((state) => state.showMuseos);
   const showMonumentos = useUserStore((state) => state.showMonumentos);
   const showIglesias = useUserStore((state) => state.showIglesias);
+  const showParques = useUserStore((state) => state.showParques);
   const showAmenazas = useUserStore((state) => state.showAmenazas);
   const setShowMuseos = useUserStore((state) => state.setShowMuseos);
   const setShowMonumentos = useUserStore((state) => state.setShowMonumentos);
   const setShowIglesias = useUserStore((state) => state.setShowIglesias);
+  const setShowParques = useUserStore((state) => state.setShowParques);
   const setShowAmenazas = useUserStore((state) => state.setShowAmenazas);
 
   useEffect(() => {
@@ -84,6 +86,8 @@ const App = () => {
             <FormControlLabel
               control={<Checkbox />}
               label="Mostrar Parques"
+              onChange={() => setShowParques(!showParques)}
+              checked={showParques}
             />
           </FormGroup>
           <Button onClick={closeModal} variant="contained" color="primary" sx={{ mt: 3 }}>

@@ -79,6 +79,15 @@ def load_image_from_url(url):
     image = cv2.imdecode(image_array, cv2.IMREAD_COLOR)
     return image
 
+def load_image_from_path(path):
+    try:
+        # Cargar imagen usando OpenCV
+        img = cv2.imread(path)
+        return img
+    except Exception as e:
+        print(f"Error al cargar la imagen: {e}")
+        return None
+
 @app.route('/')
 def index():
     # URL de la imagen que deseas cargar
@@ -105,11 +114,14 @@ def index():
 
 @app.route('/api/hexagons', methods=['GET'])
 def get_hexagon_coordinates():
-    # URL de la imagen que deseas cargar
-    url = "https://stop.carabineros.cl/geoserver/stop/wms/?service=WMS&request=GetMap&version=1.1.1&layers=stop%3ADelitosMayorConnotacionSocial&styles=&format=image%2Fpng&transparent=true&info_format=application%2Fjson&width=3750&height=2904&srs=EPSG%3A3857&bbox=-7884785.215729073%2C-3969088.2399931327%2C-7848955.358720397%2C-3941341.5987256127"
+    # url = "https://stop.carabineros.cl/geoserver/stop/wms/?service=WMS&request=GetMap&version=1.1.1&layers=stop%3ADelitosMayorConnotacionSocial&styles=&format=image%2Fpng&transparent=true&info_format=application%2Fjson&width=3750&height=2904&srs=EPSG%3A3857&bbox=-7884785.215729073%2C-3969088.2399931327%2C-7848955.358720397%2C-3941341.5987256127"
+    image_path = "./amenaza.png"  # Asegúrate de poner el nombre correcto de la imagen
+    
+    # Carga la imagen desde la ruta local
+    img = load_image_from_path(image_path)
     
     # Carga la imagen desde la URL
-    img = load_image_from_url(url)
+    # img = load_image_from_url(url)
     
     # Verifica si la imagen se cargó correctamente
     if img is None:
@@ -364,6 +376,46 @@ def buscar_y_analizar_museo():
             })
 
     return jsonify(resultados_analizados)
+
+@app.route('/calcular-tiempo-ruta', methods=['POST'])
+def calcular_tiempo_ruta_optima():
+    activities = request.json.get('activities', [])
+    
+    if not activities or len(activities) < 2:
+        return jsonify({"error": "Se requieren al menos dos actividades con coordenadas"}), 400
+
+    total_time = 0
+    rutas = []
+
+    # Calcular rutas entre actividades utilizando OSRM
+    for i in range(len(activities) - 1):
+        coord1 = activities[i].split(',')
+        coord2 = activities[i + 1].split(',')
+
+        # Llamada a la API de OSRM para calcular el tiempo de viaje
+        url = f"http://router.project-osrm.org/route/v1/driving/{coord1[1]},{coord1[0]};{coord2[1]},{coord2[0]}?overview=false"
+        response = requests.get(url)
+        
+        if response.status_code == 200:
+            data = response.json()
+            travel_time = data['routes'][0]['duration'] / 60  # Convertir a minutos
+            total_time += travel_time
+
+            # Obtener la ruta en formato GeoJSON o como lista de coordenadas
+            ruta = data['routes'][0]['geometry']
+            rutas.append({
+                "desde": activities[i],
+                "hasta": activities[i + 1],
+                "tiempo": round(travel_time, 2),
+                "ruta": ruta
+            })
+        else:
+            return jsonify({"error": "Error al calcular la ruta"}, status=500)
+
+    return jsonify({
+        "total_time": round(total_time, 2),
+        "rutas": rutas
+    })
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5000, debug=True)  # Cambiado a 0.0.0.0

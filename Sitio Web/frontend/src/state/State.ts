@@ -1,6 +1,14 @@
 import { create } from "zustand";
 import { immer } from "zustand/middleware/immer";
 
+export interface Node {
+    type: string;
+    id: number;
+    lat: number;
+    lon: number;
+    tags: { [key: string]: string | undefined };
+}
+
 export interface UserSlice {
     showMuseos: boolean;
     showMonumentos: boolean;
@@ -8,6 +16,13 @@ export interface UserSlice {
     showParques: boolean;
     showAmenazas: boolean;
     isModalOpen: boolean;
+    nodes: {
+        museos: Node[];
+        monumentos: Node[];
+        iglesias: Node[];
+        parques: Node[];
+        amenazas: any[]; // Puedes especificar el tipo si es necesario
+    };
 }
 
 export interface UserActions {
@@ -18,6 +33,7 @@ export interface UserActions {
     setShowAmenazas: (state: boolean) => void;
     openModal: () => void;
     closeModal: () => void;
+    setNodes: (category: keyof UserSlice['nodes'], nodes: Node[]) => void;
 }
 
 export type UserState = UserSlice & UserActions;
@@ -30,6 +46,13 @@ export const useUserStore = create<UserState>()(
         showParques: false,
         showAmenazas: false,
         isModalOpen: false,
+        nodes: {
+            museos: [],
+            monumentos: [],
+            iglesias: [],
+            parques: [],
+            amenazas: [],
+        },
         setShowMuseos: (showMuseos: boolean) => set({ showMuseos }),
         setShowMonumentos: (showMonumentos: boolean) => set({ showMonumentos }),
         setShowIglesias: (showIglesias: boolean) => set({ showIglesias }),
@@ -37,5 +60,9 @@ export const useUserStore = create<UserState>()(
         setShowAmenazas: (showAmenazas: boolean) => set({ showAmenazas }),
         openModal: () => set((state) => { state.isModalOpen = true; }),
         closeModal: () => set((state) => { state.isModalOpen = false; }),
+        setNodes: (category, nodes) =>
+            set((state) => {
+                state.nodes[category] = nodes;
+            }),
     }))
 );

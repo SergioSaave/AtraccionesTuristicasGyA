@@ -2,7 +2,7 @@
     "version": 0.6,
     "generator": "Overpass API 0.7.62.1 084b4234",
     "osm3s": {
-        "timestamp_osm_base": "2024-10-17T03:53:03Z",
+        "timestamp_osm_base": "2024-11-14T03:40:36Z",
         "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL."
     },
     "elements": [
@@ -299,6 +299,7 @@
                 "addr:housenumber": "2201",
                 "addr:street": "Avenida Santa Mar\u00eda",
                 "architect": "Germ\u00e1n Bannen y Jorge Oyarz\u00fan",
+                "check_date": "2024-11-04",
                 "museum": "open_air",
                 "name": "Museo al Aire Libre Parque de Las Esculturas",
                 "operator": "Corporaci\u00f3n Cultural de Providencia",
@@ -692,6 +693,23 @@
                 "name": "Museo Ocean Pacific's",
                 "tourism": "museum",
                 "website": "https://oceanpacifics.cl/museo/"
+            }
+        },
+        {
+            "type": "node",
+            "id": 12313446862,
+            "lat": -33.4260837,
+            "lon": -70.633299,
+            "tags": {
+                "addr:city": "Providencia",
+                "addr:street": "Monse\u00f1or Mariano Casanova",
+                "museum": "religious",
+                "name": "Santuario Inmaculada Concepci\u00f3n",
+                "operator": "Arquidi\u00f3cesis de Santiago de Chile",
+                "operator:type": "religious",
+                "tourism": "museum",
+                "wikidata": "Q251353",
+                "wikipedia": "es:Santuario del Cerro San Crist\u00f3bal"
             }
         },
         {

@@ -71,7 +71,7 @@ services:
     command: >
       sh -c "apt-get update && apt-get install -y libgl1-mesa-glx && \
       pip install -r requirements.txt && \
-      python metadataOverpass.py && python metadataSTOP.py && python metadataGPT.py"
+      python metadataOverpass.py && python metadataSTOP.py && python metadataOSRM.py && python metadataGPT.py"
 
 volumes:
   pgdata:

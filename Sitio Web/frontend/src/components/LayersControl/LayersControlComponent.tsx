@@ -1,47 +1,70 @@
-import { Circle, FeatureGroup, LayerGroup, LayersControl, Marker, Popup, Rectangle } from "react-leaflet"
+import * as turf from "@turf/turf";
+import { LayerGroup, LayersControl, Marker, Polygon, Popup } from "react-leaflet";
+import { useUserStore } from "../../state/State";
+import comunasData from "./comunas.json";
+import { MarcadorIcon } from "../MarcadorIcon/MarcadorIcon";
 
 export const LayersControlComponent = () => {
+    const { nodes, showMuseos, showMonumentos, showIglesias, showParques } = useUserStore();
+
     return (
         <LayersControl position="topright">
-            <LayersControl.Overlay name="Marker with popup">
-                <Marker position={[-33.447487, -70.673676]}>
-                    <Popup>
-                        A pretty CSS3 popup. <br /> Easily customizable.
-                    </Popup>
-                </Marker>
-            </LayersControl.Overlay>
-            <LayersControl.Overlay checked name="Layer group with circles">
-                <LayerGroup>
-                    <Circle
-                        center={[-33.447487, -70.673676]}
-                        pathOptions={{ fillColor: 'blue' }}
-                        radius={200}
-                    />
-                    <Circle
-                        center={[-33.447487, -70.673676]}
-                        pathOptions={{ fillColor: 'red' }}
-                        radius={100}
-                        stroke={false}
-                    />
-                    <LayerGroup>
-                        <Circle
-                            center={[51.51, -0.08]}
-                            pathOptions={{ color: 'green', fillColor: 'green' }}
-                            radius={100}
-                        />
-                    </LayerGroup>
-                </LayerGroup>
-            </LayersControl.Overlay>
-            <LayersControl.Overlay name="Feature group">
-                <FeatureGroup pathOptions={{ color: 'purple' }}>
-                    <Popup>Popup in FeatureGroup</Popup>
-                    <Circle center={[51.51, -0.06]} radius={200} />
-                    <Rectangle bounds={[
-                        [-33.447487, -70.6],
-                        [-33.5, -70.673676],
-                    ]} />
-                </FeatureGroup>
-            </LayersControl.Overlay>
+            {comunasData.features.map((feature: any, comunaIndex: any) => {
+                // Crear el polígono usando las coordenadas de la comuna
+                const polygonCoords = feature.geometry.coordinates.map((polygon: any) =>
+                    polygon.map((coord: any) => [coord[1], coord[0]])
+                );
+
+                const turfPolygon = turf.polygon(polygonCoords);
+
+                const pointsInPolygon = [
+                    ...(showMuseos ? nodes.museos : []),
+                    ...(showMonumentos ? nodes.monumentos : []),
+                    ...(showIglesias ? nodes.iglesias : []),
+                    ...(showParques ? nodes.parques : []),
+                ].filter((point: any) => {
+                    const turfPoint = turf.point([point.lat, point.lon]);
+                    const isInPolygon = turf.booleanPointInPolygon(turfPoint, turfPolygon);
+                    console.log(`Punto: [${point.lon}, ${point.lat}], En polígono: ${isInPolygon}`);
+                    return isInPolygon;
+                });
+                
+
+                const icon = MarcadorIcon({ color: "red" });
+
+                return (
+                    <LayersControl.Overlay key={comunaIndex} name={feature.properties.Comuna}>
+                        <LayerGroup>
+                            {/* Dibujar el perímetro de la comuna */}
+                            {polygonCoords.map((polygon: any, polygonIndex: any) => (
+                                <Polygon
+                                    key={polygonIndex}
+                                    positions={polygon}
+                                    pathOptions={{ color: "blue" }}
+                                >
+                                    <Popup>
+                                        <strong>{feature.properties.Comuna}</strong>
+                                        <br />
+                                        Región: {feature.properties.Region}
+                                        <br />
+                                        Provincia: {feature.properties.Provincia}
+                                    </Popup>
+                                </Polygon>
+                            ))}
+
+                            {pointsInPolygon.map((point, pointIndex) => (
+                                
+                                <Marker key={pointIndex} position={[point.lat, point.lon]} icon={icon}>
+                                    <Popup>
+                                        {point.type.charAt(0).toUpperCase() + point.type.slice(1)}
+                                        dentro de {feature.properties.Comuna}
+                                    </Popup>
+                                </Marker>
+                            ))}
+                        </LayerGroup>
+                    </LayersControl.Overlay>
+                );
+            })}
         </LayersControl>
-    )
-}
+    );
+};

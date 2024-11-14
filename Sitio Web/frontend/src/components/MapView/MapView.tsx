@@ -1,6 +1,6 @@
 import L from 'leaflet';
 import { useCallback, useEffect, useState } from 'react';
-import { MapContainer, TileLayer } from 'react-leaflet';
+import { MapContainer, Marker, Popup, TileLayer, useMapEvents } from 'react-leaflet';
 import { Marcador } from '../Marcador/Marcador';
 import { calculateBBox } from '../../helper/calculateBbox';
 import { useUserStore } from '../../state/State';
@@ -52,18 +52,48 @@ function DisplayPosition({ map }: any) {
     );
 }
 
+function LocationMarker() {
+    const [position, setPosition] = useState<L.LatLng | null>(null);
+    const [hasFlown, setHasFlown] = useState(false); // Nuevo estado para controlar el vuelo inicial
+
+    const map = useMapEvents({
+        click() {
+            // Solo localiza y vuela si no se ha hecho antes
+            if (!hasFlown) {
+                map.locate();
+            }
+        },
+        locationfound(e) {
+            setPosition(e.latlng);
+            if (!hasFlown) {
+                map.flyTo(e.latlng, map.getZoom());
+                setHasFlown(true); // Marca que el vuelo inicial ya ocurrió
+            }
+        },
+    });
+
+    return position === null ? null : (
+        <Marker position={position}>
+            <Popup>You are here</Popup>
+        </Marker>
+    );
+}
+
 export const MapView = () => {
     const [map, setMap] = useState<L.Map | null>(null);
     const [nodesMuseos, setNodesMuseos] = useState<Node[]>([]);
     const [nodesMonumentos, setNodesMonumentos] = useState<Node[]>([]);
     const [nodesIglesias, setNodesIglesias] = useState<Node[]>([]);
     const [nodesAmenazas, setNodesAmenazas] = useState<any>([]);
-    // const [nodesParques, setNodesParques] = useState<Node[]>([]);
+    const [nodesParques, setNodesParques] = useState<Node[]>([]);
 
     const showMuseos = useUserStore((state) => state.showMuseos);
     const showMonumentos = useUserStore((state) => state.showMonumentos);
     const showIglesias = useUserStore((state) => state.showIglesias);
     const showAmenazas = useUserStore((state) => state.showAmenazas);
+    const showParques = useUserStore((state) => state.showParques);
+
+    const setNodes = useUserStore((state) => state.setNodes);
 
     const getMuseos = async () => {
         const response = await fetch('http://127.0.0.1:5000/museos');
@@ -71,6 +101,7 @@ export const MapView = () => {
         console.log(data);
         const nodesData = data.elements.filter((element: { type: string; }) => element.type === 'node') as Node[];
         setNodesMuseos(nodesData);
+        setNodes('museos', nodesData);
     }
 
     const getMonumentos = async () => {
@@ -79,6 +110,7 @@ export const MapView = () => {
         console.log(data);
         const nodesData = data.elements.filter((element: { type: string; }) => element.type === 'node') as Node[];
         setNodesMonumentos(nodesData);
+        setNodes('monumentos', nodesData);
     }
 
     const getIglesias = async () => {
@@ -87,28 +119,31 @@ export const MapView = () => {
         console.log(data);
         const nodesData = data.elements.filter((element: { type: string; }) => element.type === 'node') as Node[];
         setNodesIglesias(nodesData);
+        setNodes('iglesias', nodesData);
     }
 
-    // const getParques = async () => {
-    //     const response = await fetch('http://127.0.0.1:5000/parques/');
-    //     const data = await response.json();
-    //     console.log(data);
-    //     // const nodesData = data.elements.filter((element: { type: string; }) => element.type === 'node') as Node[];
-    //     // setNodesParques(nodesData);
-    // }
+    const getParques = async () => {
+        const response = await fetch('http://127.0.0.1:5000/parques');
+        const data = await response.json();
+        console.log(data);
+        const nodesData = data.elements.filter((element: { type: string; }) => element.type === 'node') as Node[];
+        setNodesParques(nodesData);
+        setNodes('parques', nodesData);
+    }
 
     const getAmenazas = async () => {
         const response = await fetch('http://127.0.0.1:5000/api/hexagons');
         const data = await response.json();
         console.log(data);
         setNodesAmenazas(data);
+        setNodes('amenazas', data);
     }
 
     useEffect(() => {
         getMuseos();
         getMonumentos();
         getIglesias();
-        // getParques();
+        getParques();
         getAmenazas();
     }, []);
 
@@ -149,11 +184,13 @@ export const MapView = () => {
                     showIglesias ? <Marcador nodes={nodesIglesias} color={'grey'} /> : null
                 }
                 {
-                    // showAmenazas ? <Marcador nodes={nodesIglesias} color={'grey'} /> : null
+                    showParques ? <Marcador nodes={nodesParques} color={'green'} /> : null
+                }
+                {
                     showAmenazas ? <Circulos coordinates={nodesAmenazas} color={'red'} radius={300} /> : null
                 }
-                {/* <Marcador nodes={nodesParques} color={'green'} /> */}
                 <LayersControlComponent />
+                <LocationMarker />
             </MapContainer>
         </>
     );

@@ -2,7 +2,7 @@
     "version": 0.6,
     "generator": "Overpass API 0.7.62.1 084b4234",
     "osm3s": {
-        "timestamp_osm_base": "2024-10-17T03:53:03Z",
+        "timestamp_osm_base": "2024-11-14T03:40:36Z",
         "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL."
     },
     "elements": [
@@ -2500,9 +2500,15 @@
                 }
             ],
             "tags": {
+                "addr:city": "Santiago",
+                "addr:housenumber": "160",
+                "addr:street": "Carabineros de Chile",
                 "amenity": "place_of_worship",
                 "name": "Parroquia San Francisco de Borja",
-                "religion": "christian"
+                "religion": "christian",
+                "wikidata": "Q30907221",
+                "wikimedia_commons": "Category:Iglesia de San Francisco de Borja, Santiago de Chile",
+                "wikipedia": "es:Iglesia de San Francisco de Borja (Santiago de Chile)"
             }
         },
         {
@@ -5788,6 +5794,9 @@
                 }
             ],
             "tags": {
+                "addr:city": "Providencia",
+                "addr:housenumber": "71",
+                "addr:street": "Avenida Los Leones",
                 "amenity": "place_of_worship",
                 "building": "cathedral",
                 "denomination": "catholic",
@@ -6464,10 +6473,11 @@
             "tags": {
                 "addr:city": "Providencia",
                 "addr:street": "Monse\u00f1or Mariano Casanova",
+                "alt_name": "Capilla Maternidad de Mar\u00eda",
                 "amenity": "place_of_worship",
                 "building": "church",
                 "denomination": "roman_catholic",
-                "name": "Capilla La Maternidad de Mar\u00eda",
+                "name": "Iglesia Maternidad Divina de Mar\u00eda",
                 "religion": "christian",
                 "start_date": "1931",
                 "wheelchair": "yes",
@@ -9560,12 +9570,15 @@
             "tags": {
                 "addr:street": "Avenida Pocuro",
                 "amenity": "place_of_worship",
-                "building": "yes",
+                "building": "temple",
                 "building:levels": "1",
                 "denomination": "mormon",
                 "name": "Templo de Santiago, Chile",
+                "operator": "The Church of Jesus Christ of Latter-day Saints",
+                "operator:wikidata": "Q42504",
                 "religion": "christian",
                 "source": "Reconocimiento cortogr\u00e1fico de campo 2016 por KG",
+                "website": "https://www.churchofjesuschrist.org/temples/details/santiago-chile-temple",
                 "wikidata": "Q7420251",
                 "wikimedia_commons": "Category:Templo de Santiago, Chile",
                 "wikipedia": "en:Santiago Chile Temple"
@@ -9995,6 +10008,7 @@
                 "ele": "4",
                 "name": "Iglesia San Lazaro",
                 "religion": "christian",
+                "wheelchair": "yes",
                 "wikidata": "Q16911666",
                 "wikimedia_commons": "Category:Iglesia de San L\u00e1zaro, Santiago de Chile",
                 "wikipedia": "es:Iglesia de San L\u00e1zaro (Santiago de Chile)"
@@ -10561,9 +10575,119 @@
             ],
             "tags": {
                 "addr:city": "Providencia",
+                "addr:housenumber": "431",
+                "addr:street": "Avenida Rancagua",
                 "amenity": "place_of_worship",
                 "building": "yes",
                 "denomination": "catholic",
+                "name": "Iglesia Hermanas de San Jos\u00e9",
+                "religion": "christian"
+            }
+        },
+        {
+            "type": "way",
+            "id": 332309569,
+            "bounds": {
+                "minlat": -33.399651,
+                "minlon": -70.6026016,
+                "maxlat": -33.3995222,
+                "maxlon": -70.6024888
+            },
+            "nodes": [
+                3394231088,
+                3394231089,
+                3394231090,
+                3394231091,
+                3394231076,
+                3394231077,
+                3394231081,
+                3394231082,
+                3394231083,
+                3394231084,
+                3394231085,
+                3394231086,
+                3394231087,
+                3394231078,
+                3394231079,
+                3394231080,
+                3394231088
+            ],
+            "geometry": [
+                {
+                    "lat": -33.3995391,
+                    "lon": -70.6024888
+                },
+                {
+                    "lat": -33.3995276,
+                    "lon": -70.6025098
+                },
+                {
+                    "lat": -33.3995222,
+                    "lon": -70.6025341
+                },
+                {
+                    "lat": -33.3995667,
+                    "lon": -70.602569
+                },
+                {
+                    "lat": -33.3995786,
+                    "lon": -70.6025792
+                },
+                {
+                    "lat": -33.3995922,
+                    "lon": -70.6025934
+                },
+                {
+                    "lat": -33.3996143,
+                    "lon": -70.6026016
+                },
+                {
+                    "lat": -33.3996312,
+                    "lon": -70.6025934
+                },
+                {
+                    "lat": -33.3996493,
+                    "lon": -70.6025679
+                },
+                {
+                    "lat": -33.399651,
+                    "lon": -70.6025353
+                },
+                {
+                    "lat": -33.399639,
+                    "lon": -70.6025171
+                },
+                {
+                    "lat": -33.3996275,
+                    "lon": -70.6025048
+                },
+                {
+                    "lat": -33.3996082,
+                    "lon": -70.6025002
+                },
+                {
+                    "lat": -33.3995876,
+                    "lon": -70.6025032
+                },
+                {
+                    "lat": -33.3995696,
+                    "lon": -70.6024971
+                },
+                {
+                    "lat": -33.3995542,
+                    "lon": -70.6024925
+                },
+                {
+                    "lat": -33.3995391,
+                    "lon": -70.6024888
+                }
+            ],
+            "tags": {
+                "addr:city": "Vitacura",
+                "amenity": "place_of_worship",
+                "building": "no",
+                "denomination": "roman_catholic",
+                "name": "Oratorio Virgen del Parque",
                 "religion": "christian"
             }
         },
@@ -11279,38 +11403,53 @@
             "type": "way",
             "id": 385056354,
             "bounds": {
-                "minlat": -33.4369558,
-                "minlon": -70.7526104,
-                "maxlat": -33.4366491,
-                "maxlon": -70.7522188
+                "minlat": -33.4368797,
+                "minlon": -70.7525276,
+                "maxlat": -33.4367253,
+                "maxlon": -70.7522488
             },
             "nodes": [
                 3884124608,
-                3884124609,
-                3884124610,
-                3884124611,
+                12264997891,
+                12264997890,
+                12264997887,
+                12264997888,
+                12264997889,
+                12264997892,
                 3884124608
             ],
             "geometry": [
                 {
-                    "lat": -33.4366827,
-                    "lon": -70.7522188
+                    "lat": -33.4367548,
+                    "lon": -70.7522488
                 },
                 {
-                    "lat": -33.4369558,
-                    "lon": -70.7522859
+                    "lat": -33.4368649,
+                    "lon": -70.7522645
                 },
                 {
-                    "lat": -33.436911,
-                    "lon": -70.7526104
+                    "lat": -33.4368788,
+                    "lon": -70.7523363
                 },
                 {
-                    "lat": -33.4366491,
-                    "lon": -70.7525648
+                    "lat": -33.4368797,
+                    "lon": -70.7524107
                 },
                 {
-                    "lat": -33.4366827,
-                    "lon": -70.7522188
+                    "lat": -33.4368289,
+                    "lon": -70.7525276
+                },
+                {
+                    "lat": -33.4367493,
+                    "lon": -70.7525132
+                },
+                {
+                    "lat": -33.4367253,
+                    "lon": -70.7523487
+                },
+                {
+                    "lat": -33.4367548,
+                    "lon": -70.7522488
                 }
             ],
             "tags": {
@@ -20991,13 +21130,14 @@
             "type": "way",
             "id": 448837214,
             "bounds": {
-                "minlat": -33.5060081,
-                "minlon": -70.7759596,
-                "maxlat": -33.5059006,
-                "maxlon": -70.7758173
+                "minlat": -33.5059895,
+                "minlon": -70.7760022,
+                "maxlat": -33.5058819,
+                "maxlon": -70.7758599
             },
             "nodes": [
                 4458124732,
+                12273309209,
                 4458124733,
                 4458124734,
                 4458124735,
@@ -21005,24 +21145,28 @@
             ],
             "geometry": [
                 {
-                    "lat": -33.5059525,
-                    "lon": -70.7759596
+                    "lat": -33.5059339,
+                    "lon": -70.7760022
                 },
                 {
-                    "lat": -33.5060081,
-                    "lon": -70.7758583
+                    "lat": -33.5059482,
+                    "lon": -70.7759761
                 },
                 {
-                    "lat": -33.5059561,
-                    "lon": -70.7758173
+                    "lat": -33.5059895,
+                    "lon": -70.7759009
                 },
                 {
-                    "lat": -33.5059006,
-                    "lon": -70.7759186
+                    "lat": -33.5059375,
+                    "lon": -70.7758599
                 },
                 {
-                    "lat": -33.5059525,
-                    "lon": -70.7759596
+                    "lat": -33.5058819,
+                    "lon": -70.7759611
+                },
+                {
+                    "lat": -33.5059339,
+                    "lon": -70.7760022
                 }
             ],
             "tags": {
@@ -29516,6 +29660,7 @@
             ],
             "tags": {
                 "addr:city": "Santiago",
+                "addr:housenumber": "124",
                 "addr:street": "Jos\u00e9 Victorino Lastarria",
                 "amenity": "place_of_worship",
                 "building": "yes",
@@ -30519,52 +30664,6 @@
                 "building": "yes",
                 "denomination": "protestant",
                 "name": "Iglesia de Cristo Iberoamericana",
-                "religion": "christian"
-            }
-        },
-        {
-            "type": "way",
-            "id": 624232436,
-            "bounds": {
-                "minlat": -33.4260715,
-                "minlon": -70.6334612,
-                "maxlat": -33.4259781,
-                "maxlon": -70.6332868
-            },
-            "nodes": [
-                8649598002,
-                8649393359,
-                8649393347,
-                5894634484,
-                8649598002
-            ],
-            "geometry": [
-                {
-                    "lat": -33.4260189,
-                    "lon": -70.6332868
-                },
-                {
-                    "lat": -33.4260715,
-                    "lon": -70.6333067
-                },
-                {
-                    "lat": -33.4260307,
-                    "lon": -70.6334612
-                },
-                {
-                    "lat": -33.4259781,
-                    "lon": -70.6334413
-                },
-                {
-                    "lat": -33.4260189,
-                    "lon": -70.6332868
-                }
-            ],
-            "tags": {
-                "amenity": "place_of_worship",
-                "building": "yes",
-                "denomination": "roman_catholic",
-                "name": "Campus Eucar\u00edstico del Santuario",
                 "religion": "christian"
             }
         },
@@ -36682,7 +36781,9 @@
                 "building": "yes",
                 "denomination": "roman_catholic",
                 "name": "Iglesia Sagrado Coraz\u00f3n",
-                "religion": "christian"
+                "religion": "christian",
+                "wikidata": "Q110605771",
+                "wikimedia_commons": "File:Iglesia del Sagrado Coraz\u00f3n de Jes\u00fas de la Alameda.jpg"
             }
         },
         {

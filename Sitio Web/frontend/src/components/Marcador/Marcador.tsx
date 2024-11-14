@@ -9,7 +9,7 @@ interface Node {
 }
 
 interface MarcadorProps {
-    nodes: Node[];
+    nodes: any;
     // getColor: (tags: { [key: string]: string | undefined }) => string;
     color: string;
 }
@@ -17,7 +17,7 @@ interface MarcadorProps {
 export const Marcador = ({ nodes, color }: MarcadorProps) => {
     return (
         <>
-            {nodes.map((node) => {
+            {nodes.map((node: any) => {
                 // const color = getColor(node.tags);
                 const icon = MarcadorIcon({ color });
 
