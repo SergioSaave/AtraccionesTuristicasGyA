@@ -1,6 +1,6 @@
 import L from 'leaflet';
 import { useCallback, useEffect, useState } from 'react';
-import { MapContainer, Marker, Popup, TileLayer, useMapEvents } from 'react-leaflet';
+import { MapContainer, Marker, Polyline, Popup, TileLayer, useMapEvents } from 'react-leaflet';
 import { Marcador } from '../Marcador/Marcador';
 import { calculateBBox } from '../../helper/calculateBbox';
 import { useUserStore } from '../../state/State';
@@ -9,6 +9,46 @@ import { Circulos } from '../Circulos/Circulos';
 
 const center = [-33.447487, -70.673676]; // Santiago
 const zoom = 12;
+
+const routeCoordinates = [
+    { lat: -33.4369052, lng: -70.6368676 },
+    { lat: -33.4374994, lng: -70.6365692 },
+    { lat: -33.4376332, lng: -70.6364854 },
+    { lat: -33.4372991, lng: -70.6352693 },
+    { lat: -33.4372689, lng: -70.6351382 },
+    { lat: -33.4370971, lng: -70.6352106 },
+    { lat: -33.4368263, lng: -70.635324 },
+    { lat: -33.4363944, lng: -70.6354179 },
+    { lat: -33.4360606, lng: -70.6369504 },
+    { lat: -33.4355916, lng: -70.6389665 },
+    { lat: -33.4346947, lng: -70.6428396 },
+    { lat: -33.4346185, lng: -70.6431936 },
+    { lat: -33.4340793, lng: -70.6454862 },
+    { lat: -33.4334748, lng: -70.6480418 },
+    { lat: -33.4332674, lng: -70.648782 },
+    { lat: -33.4330994, lng: -70.6494706 },
+    { lat: -33.4328733, lng: -70.6504441 },
+    { lat: -33.4327178, lng: -70.6511349 },
+    { lat: -33.4326569, lng: -70.6517216 },
+    { lat: -33.4324156, lng: -70.6516803 },
+    { lat: -33.432392, lng: -70.6516763 },
+    { lat: -33.4320136, lng: -70.6515999 },
+    { lat: -33.4319521, lng: -70.6515982 },
+    { lat: -33.4316775, lng: -70.6516398 },
+    { lat: -33.4311646, lng: -70.651728 },
+    { lat: -33.4249469, lng: -70.6511993 },
+    { lat: -33.42511, lng: -70.6533697 },
+    { lat: -33.4252507, lng: -70.6546553 },
+    { lat: -33.4207593, lng: -70.6556612 },
+    { lat: -33.4206014, lng: -70.655695 },
+    { lat: -33.4176521, lng: -70.6563592 },
+    { lat: -33.4155969, lng: -70.657143 },
+    { lat: -33.4156069, lng: -70.6573704 },
+    { lat: -33.4155991, lng: -70.6642851 },
+    { lat: -33.4148827, lng: -70.6646023 },
+    { lat: -33.4137063, lng: -70.6650593 },
+    { lat: -33.4135588, lng: -70.6632573 }
+];
 
 interface Node {
     type: string;
@@ -174,6 +214,7 @@ export const MapView = () => {
                     attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
                     url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
                 />
+                <Polyline positions={routeCoordinates} color="blue" weight={4} />
                 {
                     showMuseos ? <Marcador nodes={nodesMuseos} color={'blue'} /> : null
                 }
