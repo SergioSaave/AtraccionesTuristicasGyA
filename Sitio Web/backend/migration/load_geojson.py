@@ -2,11 +2,7 @@ import os
 import psycopg2
 import json
 from geoalchemy2 import Geometry, WKTElement
-<<<<<<< HEAD:Sitio Web/backend/migration/load_geojson.py
-from sqlalchemy import create_engine, Table, Column, Integer, MetaData, String, inspect
-=======
 from sqlalchemy import create_engine, Table, Column, Integer, MetaData, String, inspect, text
->>>>>>> rama-jassi:backend/migration/load_geojson.py
 from sqlalchemy.dialects.postgresql import JSON
 from sqlalchemy.orm import sessionmaker
 
@@ -14,11 +10,7 @@ from sqlalchemy.orm import sessionmaker
 DB_NAME = os.getenv("POSTGRES_DB", "geodata")
 DB_USER = os.getenv("POSTGRES_USER", "postgres")
 DB_PASS = os.getenv("POSTGRES_PASSWORD", "password")
-<<<<<<< HEAD:Sitio Web/backend/migration/load_geojson.py
-DB_HOST = os.getenv("POSTGRES_HOST", "postgres")
-=======
 DB_HOST = os.getenv("POSTGRES_HOST", "postgis")
->>>>>>> rama-jassi:backend/migration/load_geojson.py
 DB_PORT = os.getenv("POSTGRES_PORT", "5432")
 
 # Conexión usando SQLAlchemy
@@ -28,8 +20,6 @@ Session = sessionmaker(bind=engine)
 session = Session()
 metadata = MetaData()
 
-<<<<<<< HEAD:Sitio Web/backend/migration/load_geojson.py
-=======
 # Habilitar PostGIS
 def enable_postgis():
     with engine.connect() as conn:
@@ -38,7 +28,6 @@ def enable_postgis():
 # Llamada para habilitar PostGIS
 enable_postgis()
 
->>>>>>> rama-jassi:backend/migration/load_geojson.py
 # Función para convertir GeoJSON a WKT
 def geojson_to_wkt(geometry):
     if geometry['type'] == 'Polygon':
@@ -87,11 +76,6 @@ def load_geojson_to_db(geojson_path, table_name):
 
     # Insertar datos en la tabla
     for feature in data['features']:
-<<<<<<< HEAD:Sitio Web/backend/migration/load_geojson.py
-        # Convertir la geometría a WKT
-        geometry_wkt = geojson_to_wkt(feature['geometry'])
-        geometry = WKTElement(geometry_wkt, srid=4326)
-=======
         print("FEATURES: ", feature);
         # Convertir la geometría a WKT
         geometry_wkt = geojson_to_wkt(feature['geometry'])
@@ -100,13 +84,53 @@ def load_geojson_to_db(geojson_path, table_name):
         print("Geometry WKT:", geometry_wkt) 
 
         
->>>>>>> rama-jassi:backend/migration/load_geojson.py
         properties = feature['properties']
         ins = table.insert().values(properties=properties, geometry=geometry)
         session.execute(ins)
 
     session.commit()
     print(f"Datos insertados en la tabla '{table_name}'.")
+
+# Modificar la función para insertar en las tablas nodos y aristas
+def load_vial_data_to_db(geojson_path):
+    with open(geojson_path) as f:
+        data = json.load(f)
+
+    # Insertar nodos y aristas en la base de datos
+    for feature in data['features']:
+        geometry_type = feature['geometry']['type']
+        if geometry_type == 'LineString':
+            # Convertir geometría a WKT
+            geometry_wkt = geojson_to_wkt(feature['geometry'])
+            geometry = WKTElement(geometry_wkt, srid=4326)
+            
+            # Crear nodos fuente y destino
+            coordinates = feature['geometry']['coordinates']
+            source_coords = coordinates[0]
+            target_coords = coordinates[-1]
+
+            # Insertar nodos fuente y destino
+            source = session.execute(
+                text("INSERT INTO nodos (geom) VALUES (ST_SetSRID(ST_MakePoint(:lon, :lat), 4326)) RETURNING id"),
+                {"lon": source_coords[0], "lat": source_coords[1]}
+            ).fetchone()[0]
+
+            target = session.execute(
+                text("INSERT INTO nodos (geom) VALUES (ST_SetSRID(ST_MakePoint(:lon, :lat), 4326)) RETURNING id"),
+                {"lon": target_coords[0], "lat": target_coords[1]}
+            ).fetchone()[0]
+
+            # Insertar arista
+            session.execute(
+                text("""
+                INSERT INTO aristas (source, target, cost, reverse_cost, geom)
+                VALUES (:source, :target, ST_Length(ST_GeographyFromText(:geom)), ST_Length(ST_GeographyFromText(:geom)), ST_GeomFromText(:geom, 4326))
+                """),
+                {"source": source, "target": target, "geom": geometry_wkt}
+            )
+
+    session.commit()
+    print("Red vial cargada correctamente.")
 
 # Lista de archivos GeoJSON y sus tablas correspondientes
 geojson_files = [
@@ -119,10 +143,11 @@ geojson_files = [
 # Cargar cada archivo GeoJSON en la base de datos
 for geojson_path, table_name in geojson_files:
     load_geojson_to_db(geojson_path, table_name)
-<<<<<<< HEAD:Sitio Web/backend/migration/load_geojson.py
-
-=======
     
->>>>>>> rama-jassi:backend/migration/load_geojson.py
+# Archivo GeoJSON para red vial y carga red vial
+road_network_geojson = 'export.geojson'
+load_vial_data_to_db(road_network_geojson)
+
+
 # Cerrar sesión
 session.close()

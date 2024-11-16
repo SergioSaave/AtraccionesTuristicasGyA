@@ -36,7 +36,7 @@ services:
       - .:/usr/src/app
     working_dir: /usr/src/app
     command: >
-      sh -c "sleep 10 && pip install -r requirements.txt && python load_geojson.py"
+      sh -c "sleep 10 && pip install -r requirements.txt && python load_prueba.py"
     healthcheck:
       test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER}"]
       interval: 15s
