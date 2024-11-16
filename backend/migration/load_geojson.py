@@ -91,6 +91,47 @@ def load_geojson_to_db(geojson_path, table_name):
     session.commit()
     print(f"Datos insertados en la tabla '{table_name}'.")
 
+# Modificar la función para insertar en las tablas nodos y aristas
+def load_vial_data_to_db(geojson_path):
+    with open(geojson_path) as f:
+        data = json.load(f)
+
+    # Insertar nodos y aristas en la base de datos
+    for feature in data['features']:
+        geometry_type = feature['geometry']['type']
+        if geometry_type == 'LineString':
+            # Convertir geometría a WKT
+            geometry_wkt = geojson_to_wkt(feature['geometry'])
+            geometry = WKTElement(geometry_wkt, srid=4326)
+            
+            # Crear nodos fuente y destino
+            coordinates = feature['geometry']['coordinates']
+            source_coords = coordinates[0]
+            target_coords = coordinates[-1]
+
+            # Insertar nodos fuente y destino
+            source = session.execute(
+                text("INSERT INTO nodos (geom) VALUES (ST_SetSRID(ST_MakePoint(:lon, :lat), 4326)) RETURNING id"),
+                {"lon": source_coords[0], "lat": source_coords[1]}
+            ).fetchone()[0]
+
+            target = session.execute(
+                text("INSERT INTO nodos (geom) VALUES (ST_SetSRID(ST_MakePoint(:lon, :lat), 4326)) RETURNING id"),
+                {"lon": target_coords[0], "lat": target_coords[1]}
+            ).fetchone()[0]
+
+            # Insertar arista
+            session.execute(
+                text("""
+                INSERT INTO aristas (source, target, cost, reverse_cost, geom)
+                VALUES (:source, :target, ST_Length(ST_GeographyFromText(:geom)), ST_Length(ST_GeographyFromText(:geom)), ST_GeomFromText(:geom, 4326))
+                """),
+                {"source": source, "target": target, "geom": geometry_wkt}
+            )
+
+    session.commit()
+    print("Red vial cargada correctamente.")
+
 # Lista de archivos GeoJSON y sus tablas correspondientes
 geojson_files = [
     ('exportMuseos.geojson', 'museos'),
@@ -103,5 +144,10 @@ geojson_files = [
 for geojson_path, table_name in geojson_files:
     load_geojson_to_db(geojson_path, table_name)
     
+# Archivo GeoJSON para red vial y carga red vial
+road_network_geojson = 'export.geojson'
+load_vial_data_to_db(road_network_geojson)
+
+
 # Cerrar sesión
 session.close()
