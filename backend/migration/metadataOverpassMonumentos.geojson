@@ -1,0 +1,1340 @@
+{
+    "version": 0.6,
+    "generator": "Overpass API 0.7.62.1 084b4234",
+    "osm3s": {
+        "timestamp_osm_base": "2024-11-14T03:40:36Z",
+        "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL."
+    },
+    "elements": [
+        {
+            "type": "node",
+            "id": 936115817,
+            "lat": -33.4412714,
+            "lon": -70.6818148,
+            "tags": {
+                "access": "yes",
+                "description": "Alegor\u00eda greco-romana que simboliza la Rep\u00fa-blica de Chile, coronando las artes y las industrias. Saludo de la ciudad de Santiago a la Exposici\u00f3n Internacional de 1875, obra autor desconocido.",
+                "historic": "monument",
+                "name": "Alegor\u00eda greco-romana que simboliza la Rep\u00fablica de Chile",
+                "start_date": "1875"
+            }
+        },
+        {
+            "type": "node",
+            "id": 1276923294,
+            "lat": -33.433331,
+            "lon": -70.6497415,
+            "tags": {
+                "access": "yes",
+                "alt_name": "Monumento a los H\u00e9roes de la Esmeralda",
+                "architect": "Gustavo Garc\u00eda Postigo",
+                "artist_name": "Jos\u00e9 Carocca Laflor y Mois\u00e9s Busquets Montalva",
+                "height": "32",
+                "historic": "monument",
+                "inscription": "Muchachos la contienda es desigual. Nunca se ha arriado nuestra bandera ante el enemigo y espero que no sea esta la ocasi\u00f3n de hacerlo. Mientras yo viva, esa bandera flamear\u00e1 en su lugar. Y si yo muero mis oficiales sabr\u00e1n cumplir con su deber.",
+                "name": "Monumento a los H\u00e9roes de Iquique",
+                "official_name": "Monumento de las Glorias Navales",
+                "start_date": "1962-05-28",
+                "wikidata": "Q27043790",
+                "wikimedia_commons": "File:Monumento a los H\u00e9roes de Iquique, Santiago 20230312.jpg",
+                "wikipedia": "es:Monumento a los H\u00e9roes de Iquique (Santiago de Chile)"
+            }
+        },
+        {
+            "type": "node",
+            "id": 5354820451,
+            "lat": -33.5161646,
+            "lon": -70.7786277,
+            "tags": {
+                "historic": "monument"
+            }
+        },
+        {
+            "type": "node",
+            "id": 5923212592,
+            "lat": -33.4046062,
+            "lon": -70.5856984,
+            "tags": {
+                "access": "yes",
+                "artist_name": "Carlos Ort\u00fazar",
+                "check_date": "2024-10-06",
+                "historic": "monument",
+                "material": "steel",
+                "memorial": "yes",
+                "name": "Monumento al General Ren\u00e9 Schneider Chereau",
+                "start_date": "1974",
+                "subject:wikidata": "Q5708145",
+                "subject:wikipedia": "es:Asesinato de Ren\u00e9 Schneider",
+                "wikidata": "Q123154757",
+                "wikimedia_commons": "File:Monumento a Ren\u00e9 Schneider 01.jpg",
+                "wikipedia": "es:Monumento a Ren\u00e9 Schneider"
+            }
+        },
+        {
+            "type": "node",
+            "id": 6872633550,
+            "lat": -33.4868059,
+            "lon": -70.6688236,
+            "tags": {
+                "historic": "monument"
+            }
+        },
+        {
+            "type": "node",
+            "id": 7935581567,
+            "lat": -33.4378262,
+            "lon": -70.6505028,
+            "tags": {
+                "access": "yes",
+                "alt_name": "Monumento a la Victoria de Ayacucho",
+                "artist_name": "Francesco Orselino",
+                "check_date": "2023-05-09",
+                "description": "Representa la figura de una mujer que rompe las cadenas de esclavitud de una ind\u00edgena americana, y en su pedestal presenta cuatro bajorrelieves que muestran escenas de la Expedici\u00f3n Libertadora del Per\u00fa, de la batalla de Ayacucho y de Sim\u00f3n Bol\u00edvar.",
+                "historic": "monument",
+                "inscription": "A los soldados de Ayacucho que sellaron con sangre la libertad y uni\u00f3n de nuestros pueblos hermanos venezolanos,peruanos,colombianos,ecuatorianos, paname\u00f1os,argentinos, paraguayos y chilenos  9/XII/1824 - 1974 Homenaje de Instituciones Americanistas Chile",
+                "material": "marble",
+                "memorial": "sculpture",
+                "name": "Monumento a la Libertad Americana",
+                "start_date": "1836-04-25",
+                "wikidata": "Q26991400",
+                "wikimedia_commons": "File:Monumento a la Libertad Americana I.jpg",
+                "wikipedia": "es:Monumento a la Libertad Americana"
+            }
+        },
+        {
+            "type": "node",
+            "id": 8847089290,
+            "lat": -33.4932946,
+            "lon": -70.7579771,
+            "tags": {
+                "architect": "Jos\u00e9 Luis Coo",
+                "historic": "monument",
+                "name": "Quinta Las Rosas de Maip\u00fa",
+                "start_date": "1994"
+            }
+        },
+        {
+            "type": "node",
+            "id": 9361095699,
+            "lat": -33.3952438,
+            "lon": -70.6108712,
+            "tags": {
+                "historic": "monument",
+                "name": "Stgo."
+            }
+        },
+        {
+            "type": "node",
+            "id": 10970055978,
+            "lat": -33.4950329,
+            "lon": -70.754953,
+            "tags": {
+                "historic": "monument"
+            }
+        },
+        {
+            "type": "node",
+            "id": 11170906081,
+            "lat": -33.4632021,
+            "lon": -70.5424378,
+            "tags": {
+                "access": "yes",
+                "historic": "monument",
+                "material": "steel",
+                "name": "Rieles",
+                "wikimedia_commons": "File:Parque por la Paz Villa Grimaldi - Santiago Chile - Peace Park (5277454343).jpg"
+            }
+        },
+        {
+            "type": "node",
+            "id": 11308805312,
+            "lat": -33.4444666,
+            "lon": -70.723298,
+            "tags": {
+                "access": "yes",
+                "historic": "monument",
+                "inscription": "El memorial rinde homenaje a 38 personas residentes de la Comuna de Lo Prado v\u00edctimas de la dictadura militar(12 Detenidos desaparecidos y 26 ejecutados pol\u00edticos).",
+                "name": "Fuente Memorial del Detenido Desaparecido y Ejecutado Pol\u00edtico de la Comuna de Lo Prado",
+                "source": "Coordinadora de Derechos Humanos de la Comuna de Lo Prado",
+                "wikimedia_commons": "File:Memorial DDHH Chile 206 Lo Prado.jpg"
+            }
+        },
+        {
+            "type": "node",
+            "id": 11942619734,
+            "lat": -33.4129624,
+            "lon": -70.5842836,
+            "tags": {
+                "access": "permit",
+                "historic": "monument",
+                "inscription": "Monumento Ecuestre al Libertador General Don Bernardo O'Higgins R. donado a la Esc. Militar por los club de leones de Chile\nStgo. 22-XII-1975",
+                "name": "Monumento Ecuestre al Libertador General"
+            }
+        },
+        {
+            "type": "way",
+            "id": 25018684,
+            "bounds": {
+                "minlat": -33.4448965,
+                "minlon": -70.6514443,
+                "maxlat": -33.4442215,
+                "maxlon": -70.6504662
+            },
+            "nodes": [
+                10723175828,
+                10723175842,
+                10723175843,
+                10723175840,
+                10723175838,
+                10723175837,
+                10723175839,
+                10723175836,
+                10723175835,
+                271980230,
+                10723175822,
+                10723175821,
+                10723175833,
+                10723175834,
+                10723175832,
+                10723175831,
+                271980231,
+                10723175829,
+                10723175830,
+                10723175846,
+                10723175845,
+                10723175827,
+                10723175824,
+                10723175823,
+                10723175826,
+                10723175844,
+                10723175841,
+                10723175825,
+                10723175828
+            ],
+            "geometry": [
+                {
+                    "lat": -33.4444331,
+                    "lon": -70.6514443
+                },
+                {
+                    "lat": -33.4444061,
+                    "lon": -70.6513407
+                },
+                {
+                    "lat": -33.4444096,
+                    "lon": -70.6513394
+                },
+                {
+                    "lat": -33.4443467,
+                    "lon": -70.6510982
+                },
+                {
+                    "lat": -33.444344,
+                    "lon": -70.6510992
+                },
+                {
+                    "lat": -33.4443127,
+                    "lon": -70.6509794
+                },
+                {
+                    "lat": -33.4443154,
+                    "lon": -70.6509784
+                },
+                {
+                    "lat": -33.4442516,
+                    "lon": -70.6507342
+                },
+                {
+                    "lat": -33.444249,
+                    "lon": -70.6507352
+                },
+                {
+                    "lat": -33.4442215,
+                    "lon": -70.6506299
+                },
+                {
+                    "lat": -33.4442476,
+                    "lon": -70.6506201
+                },
+                {
+                    "lat": -33.4443277,
+                    "lon": -70.65059
+                },
+                {
+                    "lat": -33.4443375,
+                    "lon": -70.6505864
+                },
+                {
+                    "lat": -33.4443382,
+                    "lon": -70.6505892
+                },
+                {
+                    "lat": -33.4445517,
+                    "lon": -70.6505091
+                },
+                {
+                    "lat": -33.444551,
+                    "lon": -70.6505067
+                },
+                {
+                    "lat": -33.4446589,
+                    "lon": -70.6504662
+                },
+                {
+                    "lat": -33.4446841,
+                    "lon": -70.6505627
+                },
+                {
+                    "lat": -33.4446815,
+                    "lon": -70.6505636
+                },
+                {
+                    "lat": -33.4448621,
+                    "lon": -70.6512554
+                },
+                {
+                    "lat": -33.4448666,
+                    "lon": -70.6512537
+                },
+                {
+                    "lat": -33.4448965,
+                    "lon": -70.6513684
+                },
+                {
+                    "lat": -33.4447739,
+                    "lon": -70.6513885
+                },
+                {
+                    "lat": -33.4447723,
+                    "lon": -70.6513823
+                },
+                {
+                    "lat": -33.4447073,
+                    "lon": -70.651393
+                },
+                {
+                    "lat": -33.4446963,
+                    "lon": -70.6513506
+                },
+                {
+                    "lat": -33.4445543,
+                    "lon": -70.6514039
+                },
+                {
+                    "lat": -33.4445594,
+                    "lon": -70.6514236
+                },
+                {
+                    "lat": -33.4444331,
+                    "lon": -70.6514443
+                }
+            ],
+            "tags": {
+                "addr:city": "Santiago",
+                "addr:housenumber": "1058",
+                "addr:street": "Avenida Libertador Bernardo O'Higgins",
+                "amenity": "university",
+                "building": "yes",
+                "historic": "monument",
+                "name": "Casa Central Universidad de Chile",
+                "operator": "Universidad de Chile",
+                "operator:type": "university",
+                "wikidata": "Q5754119",
+                "wikimedia_commons": "Category:Casa Central de la Universidad de Chile",
+                "wikipedia": "es:Casa Central de la Universidad de Chile"
+            }
+        },
+        {
+            "type": "way",
+            "id": 112317702,
+            "bounds": {
+                "minlat": -33.4416002,
+                "minlon": -70.6479357,
+                "maxlat": -33.4405891,
+                "maxlon": -70.6471734
+            },
+            "nodes": [
+                1276939850,
+                1983396308,
+                7566790042,
+                7566790041,
+                1276939852,
+                10688190727,
+                1276939846,
+                1276939851,
+                10688190723,
+                10688190721,
+                10688190720,
+                10688190722,
+                1276939849,
+                7566790039,
+                7566790040,
+                10688190718,
+                10688190716,
+                10688190715,
+                10688190717,
+                10688190713,
+                10688190712,
+                10688190711,
+                10688190714,
+                1276939847,
+                1983396285,
+                1983396284,
+                10688190709,
+                10688190708,
+                10688190707,
+                10688190710,
+                1983396287,
+                1276939850
+            ],
+            "geometry": [
+                {
+                    "lat": -33.4406738,
+                    "lon": -70.6477826
+                },
+                {
+                    "lat": -33.4406868,
+                    "lon": -70.64791
+                },
+                {
+                    "lat": -33.4407192,
+                    "lon": -70.6479052
+                },
+                {
+                    "lat": -33.4407503,
+                    "lon": -70.6479357
+                },
+                {
+                    "lat": -33.4415023,
+                    "lon": -70.6478255
+                },
+                {
+                    "lat": -33.4414985,
+                    "lon": -70.6477877
+                },
+                {
+                    "lat": -33.4414799,
+                    "lon": -70.6475994
+                },
+                {
+                    "lat": -33.4416002,
+                    "lon": -70.647579
+                },
+                {
+                    "lat": -33.4415826,
+                    "lon": -70.64738
+                },
+                {
+                    "lat": -33.4415929,
+                    "lon": -70.6473785
+                },
+                {
+                    "lat": -33.4415797,
+                    "lon": -70.6472498
+                },
+                {
+                    "lat": -33.4415722,
+                    "lon": -70.6472509
+                },
+                {
+                    "lat": -33.4415643,
+                    "lon": -70.6471734
+                },
+                {
+                    "lat": -33.4412705,
+                    "lon": -70.6472223
+                },
+                {
+                    "lat": -33.441273,
+                    "lon": -70.6472453
+                },
+                {
+                    "lat": -33.4410635,
+                    "lon": -70.6472716
+                },
+                {
+                    "lat": -33.4410625,
+                    "lon": -70.6472619
+                },
+                {
+                    "lat": -33.4409719,
+                    "lon": -70.6472751
+                },
+                {
+                    "lat": -33.4409729,
+                    "lon": -70.6472849
+                },
+                {
+                    "lat": -33.4408213,
+                    "lon": -70.6473071
+                },
+                {
+                    "lat": -33.4408201,
+                    "lon": -70.6472956
+                },
+                {
+                    "lat": -33.4407413,
+                    "lon": -70.6473072
+                },
+                {
+                    "lat": -33.4407425,
+                    "lon": -70.6473187
+                },
+                {
+                    "lat": -33.4406317,
+                    "lon": -70.6473349
+                },
+                {
+                    "lat": -33.440644,
+                    "lon": -70.6474557
+                },
+                {
+                    "lat": -33.4406002,
+                    "lon": -70.6474621
+                },
+                {
+                    "lat": -33.4406068,
+                    "lon": -70.6475269
+                },
+                {
+                    "lat": -33.4405891,
+                    "lon": -70.6475295
+                },
+                {
+                    "lat": -33.4406092,
+                    "lon": -70.6477266
+                },
+                {
+                    "lat": -33.4406269,
+                    "lon": -70.6477241
+                },
+                {
+                    "lat": -33.4406335,
+                    "lon": -70.6477886
+                },
+                {
+                    "lat": -33.4406738,
+                    "lon": -70.6477826
+                }
+            ],
+            "tags": {
+                "addr:city": "Santiago",
+                "addr:housenumber": "794",
+                "addr:street": "Agustinas",
+                "amenity": "theatre",
+                "building": "yes",
+                "historic": "monument",
+                "name": "Teatro Municipal de Santiago",
+                "source": "Reconocimiento cartogr\u00e1fico 2016 por KG.",
+                "wikidata": "Q6936293",
+                "wikimedia_commons": "Category:Teatro Municipal de Santiago",
+                "wikipedia": "en:Municipal Theatre of Santiago"
+            }
+        },
+        {
+            "type": "way",
+            "id": 114621538,
+            "bounds": {
+                "minlat": -33.443658,
+                "minlon": -70.6479243,
+                "maxlat": -33.4432586,
+                "maxlon": -70.6471829
+            },
+            "nodes": [
+                1297908103,
+                10723166934,
+                6624786339,
+                10723166936,
+                1297908111,
+                1297908106,
+                2084992964,
+                2084992962,
+                6624786342,
+                1699088519,
+                10723175704,
+                10723166935,
+                1297908103
+            ],
+            "geometry": [
+                {
+                    "lat": -33.4432586,
+                    "lon": -70.6472295
+                },
+                {
+                    "lat": -33.4432901,
+                    "lon": -70.6475103
+                },
+                {
+                    "lat": -33.4433502,
+                    "lon": -70.6479243
+                },
+                {
+                    "lat": -33.4434769,
+                    "lon": -70.6479048
+                },
+                {
+                    "lat": -33.4435346,
+                    "lon": -70.6478959
+                },
+                {
+                    "lat": -33.4436178,
+                    "lon": -70.6478839
+                },
+                {
+                    "lat": -33.443658,
+                    "lon": -70.6478087
+                },
+                {
+                    "lat": -33.4436109,
+                    "lon": -70.6473427
+                },
+                {
+                    "lat": -33.443522,
+                    "lon": -70.64724
+                },
+                {
+                    "lat": -33.4435534,
+                    "lon": -70.6471829
+                },
+                {
+                    "lat": -33.4434057,
+                    "lon": -70.6472025
+                },
+                {
+                    "lat": -33.4432944,
+                    "lon": -70.6472229
+                },
+                {
+                    "lat": -33.4432586,
+                    "lon": -70.6472295
+                }
+            ],
+            "tags": {
+                "amenity": "place_of_worship",
+                "building": "church",
+                "denomination": "catholic",
+                "historic": "monument",
+                "name": "Iglesia de San Francisco",
+                "religion": "christian",
+                "wikidata": "Q7413975",
+                "wikimedia_commons": "Category:Iglesia de San Francisco, Santiago de Chile",
+                "wikipedia": "en:Iglesia de San Francisco, Santiago de Chile"
+            }
+        },
+        {
+            "type": "way",
+            "id": 216521289,
+            "bounds": {
+                "minlat": -33.4323968,
+                "minlon": -70.6100499,
+                "maxlat": -33.4321696,
+                "maxlon": -70.6097748
+            },
+            "nodes": [
+                2258606748,
+                2258607168,
+                2258607217,
+                2258607202,
+                2258606912,
+                2258606809,
+                2258606952,
+                11942595487,
+                2258607225,
+                2258607067,
+                11942595482,
+                2258606732,
+                11942595481,
+                2258606748
+            ],
+            "geometry": [
+                {
+                    "lat": -33.4322099,
+                    "lon": -70.6100499
+                },
+                {
+                    "lat": -33.4322985,
+                    "lon": -70.6100226
+                },
+                {
+                    "lat": -33.4322937,
+                    "lon": -70.6100004
+                },
+                {
+                    "lat": -33.4323968,
+                    "lon": -70.6099669
+                },
+                {
+                    "lat": -33.4323641,
+                    "lon": -70.6098161
+                },
+                {
+                    "lat": -33.4323457,
+                    "lon": -70.6098204
+                },
+                {
+                    "lat": -33.4323359,
+                    "lon": -70.6097748
+                },
+                {
+                    "lat": -33.4323047,
+                    "lon": -70.6097844
+                },
+                {
+                    "lat": -33.4322768,
+                    "lon": -70.609793
+                },
+                {
+                    "lat": -33.4322839,
+                    "lon": -70.6098273
+                },
+                {
+                    "lat": -33.4322399,
+                    "lon": -70.6098397
+                },
+                {
+                    "lat": -33.4321696,
+                    "lon": -70.6098615
+                },
+                {
+                    "lat": -33.4321872,
+                    "lon": -70.6099428
+                },
+                {
+                    "lat": -33.4322099,
+                    "lon": -70.6100499
+                }
+            ],
+            "tags": {
+                "access": "yes",
+                "addr:city": "Providencia",
+                "addr:housenumber": "963",
+                "addr:street": "Avenida Pedro de Valdivia",
+                "architect": "Guillermo Mancelli",
+                "building": "yes",
+                "building:levels": "2",
+                "historic": "monument",
+                "monument": "yes",
+                "name": "Palacio Falabella",
+                "operator": "Ilustre Municipalidad de Providencia",
+                "start_date": "1924",
+                "wikidata": "Q6057670",
+                "wikimedia_commons": "Category:Palacio Falabella",
+                "wikipedia": "es:Palacio Falabella"
+            }
+        },
+        {
+            "type": "way",
+            "id": 605509464,
+            "bounds": {
+                "minlat": -33.4355227,
+                "minlon": -70.6428485,
+                "maxlat": -33.435467,
+                "maxlon": -70.642781
+            },
+            "nodes": [
+                5742922170,
+                5742922171,
+                5742922172,
+                5742922173,
+                5742922170
+            ],
+            "geometry": [
+                {
+                    "lat": -33.435467,
+                    "lon": -70.6428366
+                },
+                {
+                    "lat": -33.4354772,
+                    "lon": -70.642781
+                },
+                {
+                    "lat": -33.4355227,
+                    "lon": -70.6427929
+                },
+                {
+                    "lat": -33.4355125,
+                    "lon": -70.6428485
+                },
+                {
+                    "lat": -33.435467,
+                    "lon": -70.6428366
+                }
+            ],
+            "tags": {
+                "access": "yes",
+                "alt_name": "Monumento de la Colonia Francesa al Centenario de la Independencia",
+                "artist_name": "Henri Grossin y Guillermo C\u00f3rdova",
+                "historic": "monument",
+                "loc_name": "Monumento P\u00fablico Colonia Francesa",
+                "name": "Monumento a la Gloria",
+                "wikidata": "Q113694740",
+                "wikimedia_commons": "Category:Monumento a la Gloria, Santiago de Chile",
+                "wikipedia": "es:Monumento a la Gloria (Santiago de Chile)"
+            }
+        },
+        {
+            "type": "way",
+            "id": 733799186,
+            "bounds": {
+                "minlat": -33.4142868,
+                "minlon": -70.732696,
+                "maxlat": -33.4140607,
+                "maxlon": -70.7326067
+            },
+            "nodes": [
+                6872594269,
+                6872594270,
+                6872594271,
+                6872594272,
+                6872594269
+            ],
+            "geometry": [
+                {
+                    "lat": -33.4142868,
+                    "lon": -70.7326499
+                },
+                {
+                    "lat": -33.4142804,
+                    "lon": -70.7326067
+                },
+                {
+                    "lat": -33.4140607,
+                    "lon": -70.7326528
+                },
+                {
+                    "lat": -33.414067,
+                    "lon": -70.732696
+                },
+                {
+                    "lat": -33.4142868,
+                    "lon": -70.7326499
+                }
+            ],
+            "tags": {
+                "historic": "monument",
+                "name": "Tren"
+            }
+        },
+        {
+            "type": "way",
+            "id": 741798695,
+            "bounds": {
+                "minlat": -33.4369898,
+                "minlon": -70.6345122,
+                "maxlat": -33.4369094,
+                "maxlon": -70.634372
+            },
+            "nodes": [
+                6944223655,
+                6944223659,
+                6944223651,
+                6944223667,
+                6944223664,
+                6944223671,
+                6944223630,
+                6944223631,
+                6944223633,
+                6944223634,
+                6944223635,
+                6944223636,
+                6944223637,
+                6944223638,
+                6944223639,
+                6944223640,
+                6944223632,
+                6944223672,
+                6944223663,
+                6944223669,
+                6944223652,
+                6944223661,
+                6944223656,
+                6944223676,
+                6944223657,
+                6944223662,
+                6944223653,
+                6944223670,
+                6944223666,
+                6944223673,
+                6944223649,
+                6944223650,
+                6944223641,
+                6944223642,
+                6944223643,
+                6944223644,
+                6944223645,
+                6944223646,
+                6944223647,
+                6944223648,
+                6944223674,
+                6944223665,
+                6944223668,
+                6944223654,
+                6944223660,
+                6944223658,
+                6944223675,
+                6944223655
+            ],
+            "geometry": [
+                {
+                    "lat": -33.4369184,
+                    "lon": -70.6344764
+                },
+                {
+                    "lat": -33.4369265,
+                    "lon": -70.6344743
+                },
+                {
+                    "lat": -33.4369292,
+                    "lon": -70.6344889
+                },
+                {
+                    "lat": -33.4369402,
+                    "lon": -70.6344859
+                },
+                {
+                    "lat": -33.4369419,
+                    "lon": -70.6344951
+                },
+                {
+                    "lat": -33.4369445,
+                    "lon": -70.6344944
+                },
+                {
+                    "lat": -33.4369454,
+                    "lon": -70.6344995
+                },
+                {
+                    "lat": -33.4369471,
+                    "lon": -70.6345043
+                },
+                {
+                    "lat": -33.43695,
+                    "lon": -70.6345083
+                },
+                {
+                    "lat": -33.4369537,
+                    "lon": -70.6345111
+                },
+                {
+                    "lat": -33.436958,
+                    "lon": -70.6345122
+                },
+                {
+                    "lat": -33.4369624,
+                    "lon": -70.6345118
+                },
+                {
+                    "lat": -33.4369664,
+                    "lon": -70.6345096
+                },
+                {
+                    "lat": -33.4369697,
+                    "lon": -70.6345061
+                },
+                {
+                    "lat": -33.4369719,
+                    "lon": -70.6345015
+                },
+                {
+                    "lat": -33.4369727,
+                    "lon": -70.6344964
+                },
+                {
+                    "lat": -33.4369722,
+                    "lon": -70.6344911
+                },
+                {
+                    "lat": -33.4369715,
+                    "lon": -70.6344872
+                },
+                {
+                    "lat": -33.4369754,
+                    "lon": -70.6344861
+                },
+                {
+                    "lat": -33.4369737,
+                    "lon": -70.6344769
+                },
+                {
+                    "lat": -33.4369844,
+                    "lon": -70.634474
+                },
+                {
+                    "lat": -33.4369817,
+                    "lon": -70.6344599
+                },
+                {
+                    "lat": -33.4369898,
+                    "lon": -70.6344578
+                },
+                {
+                    "lat": -33.4369853,
+                    "lon": -70.6344329
+                },
+                {
+                    "lat": -33.4369808,
+                    "lon": -70.634408
+                },
+                {
+                    "lat": -33.4369724,
+                    "lon": -70.6344102
+                },
+                {
+                    "lat": -33.4369696,
+                    "lon": -70.6343953
+                },
+                {
+                    "lat": -33.436959,
+                    "lon": -70.6343981
+                },
+                {
+                    "lat": -33.4369575,
+                    "lon": -70.6343898
+                },
+                {
+                    "lat": -33.4369537,
+                    "lon": -70.6343908
+                },
+                {
+                    "lat": -33.4369524,
+                    "lon": -70.6343839
+                },
+                {
+                    "lat": -33.4369503,
+                    "lon": -70.6343788
+                },
+                {
+                    "lat": -33.436947,
+                    "lon": -70.6343748
+                },
+                {
+                    "lat": -33.4369427,
+                    "lon": -70.6343725
+                },
+                {
+                    "lat": -33.436938,
+                    "lon": -70.634372
+                },
+                {
+                    "lat": -33.4369334,
+                    "lon": -70.6343734
+                },
+                {
+                    "lat": -33.4369295,
+                    "lon": -70.6343766
+                },
+                {
+                    "lat": -33.4369267,
+                    "lon": -70.6343812
+                },
+                {
+                    "lat": -33.4369254,
+                    "lon": -70.6343866
+                },
+                {
+                    "lat": -33.4369257,
+                    "lon": -70.6343922
+                },
+                {
+                    "lat": -33.4369267,
+                    "lon": -70.634398
+                },
+                {
+                    "lat": -33.4369239,
+                    "lon": -70.6343987
+                },
+                {
+                    "lat": -33.4369255,
+                    "lon": -70.6344071
+                },
+                {
+                    "lat": -33.4369144,
+                    "lon": -70.6344101
+                },
+                {
+                    "lat": -33.4369171,
+                    "lon": -70.6344246
+                },
+                {
+                    "lat": -33.4369094,
+                    "lon": -70.6344267
+                },
+                {
+                    "lat": -33.4369139,
+                    "lon": -70.6344516
+                },
+                {
+                    "lat": -33.4369184,
+                    "lon": -70.6344764
+                }
+            ],
+            "tags": {
+                "access": "yes",
+                "historic": "monument",
+                "inscription": "Contiene los restos de un soldado desconocido, muerto en 1881 durante la Guerra del Pac\u00edfico",
+                "name": "Ex Monumento al General Baquedano"
+            }
+        },
+        {
+            "type": "way",
+            "id": 917160394,
+            "bounds": {
+                "minlat": -33.4459608,
+                "minlon": -70.6593524,
+                "maxlat": -33.4458763,
+                "maxlon": -70.6592538
+            },
+            "nodes": [
+                8518678008,
+                10722237272,
+                10722237275,
+                8518678009,
+                10722237276,
+                10722237274,
+                8518678010,
+                10722237273,
+                10722237271,
+                8518678011,
+                8518678008
+            ],
+            "geometry": [
+                {
+                    "lat": -33.4458763,
+                    "lon": -70.6592762
+                },
+                {
+                    "lat": -33.4458808,
+                    "lon": -70.6592956
+                },
+                {
+                    "lat": -33.445889,
+                    "lon": -70.6593309
+                },
+                {
+                    "lat": -33.445894,
+                    "lon": -70.6593524
+                },
+                {
+                    "lat": -33.4459028,
+                    "lon": -70.6593494
+                },
+                {
+                    "lat": -33.4459538,
+                    "lon": -70.6593325
+                },
+                {
+                    "lat": -33.4459608,
+                    "lon": -70.6593301
+                },
+                {
+                    "lat": -33.4459558,
+                    "lon": -70.6593086
+                },
+                {
+                    "lat": -33.4459477,
+                    "lon": -70.6592732
+                },
+                {
+                    "lat": -33.4459432,
+                    "lon": -70.6592538
+                },
+                {
+                    "lat": -33.4458763,
+                    "lon": -70.6592762
+                }
+            ],
+            "tags": {
+                "access": "yes",
+                "artist_name": "Rebeca Matte",
+                "description": "Honra la memoria de los 77 soldados chilenos fallecidos en el batalla de La Concepci\u00f3n, entre el 9 y el 10 de julio de 1882, durante la Guerra del Pac\u00edfico.",
+                "historic": "monument",
+                "inscription": "El oficial que tuviere orden absoluta de conservar su puesto a toda costa lo har\u00e1. \nOrd. General del Ejer. Tit. 32 Art.21\n9-10 de Julio de 1882",
+                "name": "Monumento a los H\u00e9roes de La Concepci\u00f3n",
+                "start_date": "1920",
+                "wikimedia_commons": "File:2017 Santiago de Chile - Monumento H\u00e9roes de La Concepci\u00f3n - Avenida Alameda - Obra de Rebeca Matte.jpg"
+            }
+        },
+        {
+            "type": "relation",
+            "id": 17172819,
+            "bounds": {
+                "minlat": -33.4380724,
+                "minlon": -70.6524727,
+                "maxlat": -33.4374301,
+                "maxlon": -70.65131
+            },
+            "members": [
+                {
+                    "type": "way",
+                    "ref": 24964120,
+                    "role": "outer",
+                    "geometry": [
+                        {
+                            "lat": -33.4377646,
+                            "lon": -70.6515218
+                        },
+                        {
+                            "lat": -33.4377808,
+                            "lon": -70.6516778
+                        },
+                        {
+                            "lat": -33.4377987,
+                            "lon": -70.6518529
+                        },
+                        {
+                            "lat": -33.4378958,
+                            "lon": -70.6518385
+                        },
+                        {
+                            "lat": -33.437891,
+                            "lon": -70.6517906
+                        },
+                        {
+                            "lat": -33.4380189,
+                            "lon": -70.6517715
+                        },
+                        {
+                            "lat": -33.4380304,
+                            "lon": -70.6518835
+                        },
+                        {
+                            "lat": -33.4380487,
+                            "lon": -70.6520584
+                        },
+                        {
+                            "lat": -33.4380602,
+                            "lon": -70.6520567
+                        },
+                        {
+                            "lat": -33.4380696,
+                            "lon": -70.6521478
+                        },
+                        {
+                            "lat": -33.4380604,
+                            "lon": -70.6521492
+                        },
+                        {
+                            "lat": -33.438071,
+                            "lon": -70.6522541
+                        },
+                        {
+                            "lat": -33.4380724,
+                            "lon": -70.6522676
+                        },
+                        {
+                            "lat": -33.4380293,
+                            "lon": -70.6522741
+                        },
+                        {
+                            "lat": -33.4379644,
+                            "lon": -70.652284
+                        },
+                        {
+                            "lat": -33.4379217,
+                            "lon": -70.6522903
+                        },
+                        {
+                            "lat": -33.4378527,
+                            "lon": -70.6523004
+                        },
+                        {
+                            "lat": -33.4378636,
+                            "lon": -70.6524043
+                        },
+                        {
+                            "lat": -33.4378658,
+                            "lon": -70.6524252
+                        },
+                        {
+                            "lat": -33.4375454,
+                            "lon": -70.6524727
+                        },
+                        {
+                            "lat": -33.4374301,
+                            "lon": -70.6513564
+                        },
+                        {
+                            "lat": -33.4374418,
+                            "lon": -70.6513547
+                        },
+                        {
+                            "lat": -33.4375487,
+                            "lon": -70.6513388
+                        },
+                        {
+                            "lat": -33.437637,
+                            "lon": -70.6513257
+                        },
+                        {
+                            "lat": -33.4377427,
+                            "lon": -70.65131
+                        },
+                        {
+                            "lat": -33.4377576,
+                            "lon": -70.6514544
+                        },
+                        {
+                            "lat": -33.4377646,
+                            "lon": -70.6515218
+                        }
+                    ]
+                },
+                {
+                    "type": "way",
+                    "ref": 1247622271,
+                    "role": "inner",
+                    "geometry": [
+                        {
+                            "lat": -33.4378343,
+                            "lon": -70.6521817
+                        },
+                        {
+                            "lat": -33.4379264,
+                            "lon": -70.6521681
+                        },
+                        {
+                            "lat": -33.4379092,
+                            "lon": -70.651999
+                        },
+                        {
+                            "lat": -33.437817,
+                            "lon": -70.6520126
+                        },
+                        {
+                            "lat": -33.4378343,
+                            "lon": -70.6521817
+                        }
+                    ]
+                }
+            ],
+            "tags": {
+                "addr:city": "Santiago",
+                "addr:housenumber": "498",
+                "addr:place": "Plaza de Armas",
+                "air_conditioning": "no",
+                "amenity": "place_of_worship",
+                "baby_feeding": "no",
+                "building": "church",
+                "check_date": "2024-02-08",
+                "denomination": "roman_catholic",
+                "email": "contacto@catedraldesantiago.cl",
+                "height": "16.8",
+                "historic": "monument",
+                "internet_access": "no",
+                "name": "Catedral Metropolitana de Santiago de Chile",
+                "name:en": "Metropolitan Cathedral of Santiago de Chile",
+                "name:es": "Catedral Metropolitana de Santiago de Chile",
+                "name:zh": "\u5723\u5730\u4e9a\u54e5\u4e3b\u6559\u5802",
+                "opening_hours": "Mo-Fr 10:00-19:00; Sa-Su 09:00-13:30",
+                "phone": "+56 2 2269 6277",
+                "religion": "christian",
+                "service_times": "Mo 12:30; Tu 12:30; We 12:30; Th 12:30; Fr 12:30; Sa 12:30; Su 09:45, 12:00",
+                "short_name": "Catedral de Santiago",
+                "type": "multipolygon",
+                "website": "https://www.catedraldesantiago.cl",
+                "wheelchair": "yes",
+                "wikimedia_commons": "Category:Catedral Metropolitana de Santiago"
+            }
+        }
+    ]
+}
