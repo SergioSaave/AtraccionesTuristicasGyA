@@ -8,6 +8,9 @@ from dotenv import load_dotenv
 import json
 import openai
 from bs4 import BeautifulSoup
+import psycopg2
+from psycopg2.extras import RealDictCursor  # Asegúrate de importar RealDictCursor
+
 
 app = Flask(__name__)
 CORS(app)  # Habilita CORS para toda la aplicación
@@ -416,6 +419,124 @@ def calcular_tiempo_ruta_optima():
         "total_time": round(total_time, 2),
         "rutas": rutas
     })
+    
+def get_db_connection():
+    connection = psycopg2.connect(
+        host='postgis',  # Puede ser el nombre del contenedor de PostgreSQL o el alias de red
+        database='geodata',
+        user='postgres',
+        password='password',
+        port=5432  # El puerto por defecto de PostgreSQL
+    )
+    return connection
+
+# Nuevo endpoint para consultar la base de datos
+from flask import request
+
+@app.route('/consultar-datos', methods=['GET'])
+def consultar_datos():
+    # Obtener latitud y longitud de los parámetros de la solicitud
+    lat_inicio = float(request.args.get('lat_inicio'))
+    lon_inicio = float(request.args.get('lon_inicio'))
+    lat_fin = float(request.args.get('lat_fin'))
+    lon_fin = float(request.args.get('lon_fin'))
+
+    # Conectar a la base de datos
+    connection = get_db_connection()
+    cursor = connection.cursor()
+    
+    # Buscar el ID del nodo más cercano a la coordenada de inicio
+    cursor.execute("""
+        SELECT id
+        FROM nodos
+        ORDER BY ST_Distance(geom, ST_SetSRID(ST_Point(%s, %s), 4326)) 
+        LIMIT 1;
+    """, (lon_inicio, lat_inicio))
+    nodo_inicio = cursor.fetchone()[0]
+    
+    # Buscar el ID del nodo más cercano a la coordenada de fin
+    cursor.execute("""
+        SELECT id
+        FROM nodos
+        ORDER BY ST_Distance(geom, ST_SetSRID(ST_Point(%s, %s), 4326)) 
+        LIMIT 1;
+    """, (lon_fin, lat_fin))
+    nodo_fin = cursor.fetchone()[0]
+    
+    # Nueva consulta SQL con los nodos calculados
+    query = """
+        SELECT 
+            dijkstra.seq,
+            dijkstra.node,
+            ST_Y(nodos.geom) AS latitude,
+            ST_X(nodos.geom) AS longitude
+        FROM 
+            pgr_dijkstra(
+                'SELECT id, source, target, cost FROM aristas',
+                %s,  -- Nodo inicial
+                %s, -- Nodo final
+                TRUE
+            ) AS dijkstra
+        JOIN 
+            nodos
+        ON 
+            dijkstra.node = nodos.id
+        ORDER BY 
+            dijkstra.seq;
+    """
+    
+    # Ejecutar la consulta con los nodos de inicio y fin
+    cursor.execute(query, (nodo_inicio, nodo_fin))
+    
+    # Obtener los resultados
+    resultados = cursor.fetchall()
+    
+    # Cerrar la conexión
+    cursor.close()
+    connection.close()
+    
+    # Retornar los resultados como JSON
+    return jsonify(resultados)
+
+@app.route('/nodo-mas-cercano', methods=['GET'])
+def nodo_mas_cercano():
+    # Obtener latitud y longitud de los parámetros de consulta
+    latitud = float(request.args.get('latitud'))
+    longitud = float(request.args.get('longitud'))
+    
+    # Conectar a la base de datos
+    connection = get_db_connection()
+    cursor = connection.cursor(cursor_factory=RealDictCursor)
+    
+    # Consulta SQL para encontrar el nodo más cercano
+    query = """
+        SELECT 
+          id,
+          ST_AsText(geom) AS geom,
+          ST_Distance(geom, ST_SetSRID(ST_MakePoint(%s, %s), 4326)) AS distance
+        FROM 
+          nodos
+        ORDER BY 
+          distance
+        LIMIT 1;
+    """
+    
+    # Ejecutar la consulta con los parámetros latitud y longitud
+    cursor.execute(query, (longitud, latitud))
+    
+    # Obtener el nodo más cercano
+    resultado = cursor.fetchone()
+    
+    # Cerrar la conexión
+    cursor.close()
+    connection.close()
+    
+    # Retornar el nodo más cercano como JSON
+    if resultado:
+        return jsonify(resultado)
+    else:
+        return jsonify({'error': 'No se encontró un nodo cercano'}), 404
+
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5000, debug=True)  # Cambiado a 0.0.0.0

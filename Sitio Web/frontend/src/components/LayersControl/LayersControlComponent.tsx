@@ -36,25 +36,46 @@ export const LayersControlComponent = () => {
 
     const { nodes, showMuseos, showMonumentos, showIglesias, showParques } = useUserStore();
     const [openDialog, setOpenDialog] = useState(false);
-    const [dialogContent, setDialogContent] = useState({ title: "", description: "" });
+    const [dialogContent, setDialogContent] = useState({
+        title: "", description: {
+            braile: false,
+            abierto: false,
+            silla_ruedas: false,
+            pet_friendly: false,
+            open_festivos: false,
+        }
+    });
 
     const fetchMuseoData = async (nombreMuseo: any) => {
-        const loadingToast = toast("Cargando...", { duration: Infinity });
+        const loadingToast = toast.loading("Cargando...", { duration: Infinity });
 
         try {
             const response = await fetch(`http://127.0.0.1:5000/buscar-museo?nombre_museo=${encodeURIComponent(nombreMuseo)}`);
             const data = await response.json();
+            console.log(data)
 
             // Asignamos los datos recibidos al contenido del diálogo
             setDialogContent({
-                title: data.nombre || nombreMuseo,
-                description: data.descripcion || "Información no disponible",
+                title: nombreMuseo,
+                description: {
+                    braile: data[0].resultado.Braille,
+                    abierto: data[0].resultado.abierto,
+                    silla_ruedas: data[0].resultado.silla_ruedas,
+                    pet_friendly: data[0].resultado.pet_friendly,
+                    open_festivos: data[0].resultado.open_festivos,
+                }
             });
         } catch (error) {
             console.error("Error al buscar la información del museo:", error);
             setDialogContent({
                 title: nombreMuseo,
-                description: "Error al cargar la información del museo.",
+                description: {
+                    braile: false,
+                    abierto: false,
+                    silla_ruedas: false,
+                    pet_friendly: false,
+                    open_festivos: false
+                },
             });
         } finally {
             toast.dismiss(loadingToast);  // Cerrar el toast de "Cargando..."
@@ -147,7 +168,11 @@ export const LayersControlComponent = () => {
             <Dialog open={openDialog} onClose={() => setOpenDialog(false)}>
                 <DialogTitle>{dialogContent.title}</DialogTitle>
                 <DialogContent>
-                    <Typography>{dialogContent.description}</Typography>
+                    <Typography>Abierto: {dialogContent.description.abierto ? 'Si' : 'No'}</Typography>
+                    <Typography>Braile: {dialogContent.description.braile ? 'Si' : 'No'} </Typography>
+                    <Typography>Apto para silla de ruedas: {dialogContent.description.silla_ruedas ? 'Si' : 'No'}</Typography>
+                    <Typography>Pet Friendly: {dialogContent.description.pet_friendly ? 'Si' : 'No'}</Typography>
+                    <Typography>Abre dias festivos: {dialogContent.description.open_festivos ? 'Si' : 'No'}</Typography>
                 </DialogContent>
                 <DialogActions>
                     <Button onClick={() => setOpenDialog(false)} color="primary">

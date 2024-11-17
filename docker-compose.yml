@@ -20,7 +20,7 @@ services:
 
   load_data:
     image: python:3.9-slim
-    container_name: load_data
+    container_name: load_dataa
     depends_on:
       postgres:
         condition: service_healthy
@@ -40,6 +40,8 @@ services:
     
   flask_app:
     image: python:3.9
+    networks:
+      - my_network
     working_dir: /app
     volumes:
       - ./Sitio Web/backend:/app
@@ -76,3 +78,7 @@ services:
 volumes:
   pgdata:
     driver: local
+
+networks:
+  my_network:
+    name: 'my_network'

@@ -134,6 +134,11 @@ export const MapView = () => {
     const [address, setAddress] = useState<string>(''); // Dirección ingresada
     const [position, setPosition] = useState<L.LatLng | null>(null); // Para manejar la ubicación actual
 
+    const [nodesMuseos, setNodesMuseos] = useState<Node[]>([]);
+    const [nodesMonumentos, setNodesMonumentos] = useState<Node[]>([]);
+    const [nodesIglesias, setNodesIglesias] = useState<Node[]>([]);
+    const [nodesAmenazas, setNodesAmenazas] = useState<any>([]);
+
     const showMuseos = useUserStore((state) => state.showMuseos);
     const showMonumentos = useUserStore((state) => state.showMonumentos);
     const showIglesias = useUserStore((state) => state.showIglesias);
@@ -150,6 +155,7 @@ export const MapView = () => {
         console.log(data);
         const nodesData = data.elements.filter((element: { type: string; }) => element.type === 'node') as Node[];
         setNodes('museos', nodesData);
+        setNodesMuseos(nodesData);
     }
 
     // Función para manejar el cambio de la dirección
@@ -225,9 +231,11 @@ export const MapView = () => {
                     attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
                     url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
                 />
+                <Marker position={[-33.6112285, -70.626491]}>
+                </Marker>
                 <Polyline positions={routeCoordinates} color="blue" weight={4} />
                 {
-                    showMuseos ? <Marcador nodes={[]} color={'blue'} /> : null
+                    showMuseos ? <Marcador nodes={nodesMuseos} color={'blue'} /> : null
                 }
                 <LayersControlComponent />
                 <LocationMarker />
