@@ -25,7 +25,9 @@ services:
       retries: 3
 
   load_data:
-    image: python:3.9-slim
+    build:
+      context: .
+      dockerfile: Dockerfile
     container_name: load_data
     depends_on:
       postgis:
@@ -36,7 +38,7 @@ services:
       - .:/usr/src/app
     working_dir: /usr/src/app
     command: >
-      sh -c "sleep 10 && pip install -r requirements.txt && python load_prueba.py"
+      sh -c "sleep 10 && pip install -r requirements.txt && python main.py"
     healthcheck:
       test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER}"]
       interval: 15s
