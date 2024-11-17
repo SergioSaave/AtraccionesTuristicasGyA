@@ -16,7 +16,7 @@ conn = psycopg2.connect(**db_params)
 cur = conn.cursor()
 
 
-with open('export2.geojson', 'r', encoding='utf-8') as f:
+with open('export.geojson', 'r', encoding='utf-8') as f:
     geojson_data = json.load(f)
 
 

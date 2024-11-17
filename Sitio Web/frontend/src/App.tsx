@@ -2,11 +2,9 @@ import 'leaflet/dist/leaflet.css';
 import { MapView } from './components/MapView/MapView';
 import { Modal, Box, Button, Typography, FormGroup, FormControlLabel, Checkbox } from '@mui/material';
 import { useUserStore } from './state/State';
-import { useEffect } from 'react';
 
 const App = () => {
   const isModalOpen = useUserStore((state) => state.isModalOpen);
-  const openModal = useUserStore((state) => state.openModal);
   const closeModal = useUserStore((state) => state.closeModal);
   const showMuseos = useUserStore((state) => state.showMuseos);
   const showMonumentos = useUserStore((state) => state.showMonumentos);
@@ -19,20 +17,8 @@ const App = () => {
   const setShowParques = useUserStore((state) => state.setShowParques);
   const setShowAmenazas = useUserStore((state) => state.setShowAmenazas);
 
-  useEffect(() => {
-    openModal();
-  }, [openModal]);
-
   return (
     <div style={{ height: "100vh" }}>
-      <Button
-        variant="contained"
-        color="primary"
-        onClick={openModal}
-        style={{ position: 'absolute', zIndex: 1000 }}
-      >
-        Abrir Modal
-      </Button>
 
       <MapView />
 
@@ -51,7 +37,7 @@ const App = () => {
             width: 400,
             bgcolor: 'background.paper',
             boxShadow: 24,
-            p: 4,
+            p: 2,
             borderRadius: 2,
           }}
         >
@@ -90,7 +76,7 @@ const App = () => {
               checked={showParques}
             />
           </FormGroup>
-          <Button onClick={closeModal} variant="contained" color="primary" sx={{ mt: 3 }}>
+          <Button onClick={closeModal} fullWidth variant="contained" color="primary" sx={{ mt: 3 }}>
             Cerrar
           </Button>
         </Box>
