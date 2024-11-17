@@ -380,45 +380,72 @@ def buscar_y_analizar_museo():
 
     return jsonify(resultados_analizados)
 
-@app.route('/calcular-tiempo-ruta', methods=['POST'])
-def calcular_tiempo_ruta_optima():
-    activities = request.json.get('activities', [])
+@app.route('/consultar-datos', methods=['GET'])
+def consultar_datos():
+    # Obtener latitud y longitud de los parámetros de la solicitud
+    lat_inicio = float(request.args.get('lat_inicio'))
+    lon_inicio = float(request.args.get('lon_inicio'))
+    lat_fin = float(request.args.get('lat_fin'))
+    lon_fin = float(request.args.get('lon_fin'))
+
+    # Conectar a la base de datos
+    connection = get_db_connection()
+    cursor = connection.cursor()
     
-    if not activities or len(activities) < 2:
-        return jsonify({"error": "Se requieren al menos dos actividades con coordenadas"}), 400
+    # Buscar el ID del nodo más cercano a la coordenada de inicio
+    cursor.execute("""
+        SELECT id
+        FROM nodos
+        ORDER BY ST_Distance(geom, ST_SetSRID(ST_Point(%s, %s), 4326)) 
+        LIMIT 1;
+    """, (lon_inicio, lat_inicio))
+    nodo_inicio = cursor.fetchone()[0]
+    
+    # Buscar el ID del nodo más cercano a la coordenada de fin
+    cursor.execute("""
+        SELECT id
+        FROM nodos
+        ORDER BY ST_Distance(geom, ST_SetSRID(ST_Point(%s, %s), 4326)) 
+        LIMIT 1;
+    """, (lon_fin, lat_fin))
+    nodo_fin = cursor.fetchone()[0]
+    
+    # Nueva consulta SQL con los nodos calculados
+    query = """
+        SELECT 
+            dijkstra.seq,
+            dijkstra.node,
+            ST_Y(nodos.geom) AS latitude,
+            ST_X(nodos.geom) AS longitude
+        FROM 
+            pgr_dijkstra(
+                'SELECT id, source, target, cost FROM aristas',
+                %s,  -- Nodo inicial
+                %s, -- Nodo final
+                TRUE
+            ) AS dijkstra
+        JOIN 
+            nodos
+        ON 
+            dijkstra.node = nodos.id
+        ORDER BY 
+            dijkstra.seq;
+    """
+    
+    # Ejecutar la consulta con los nodos de inicio y fin
+    cursor.execute(query, (nodo_inicio, nodo_fin))
+    
+    # Obtener los resultados y transformarlos al formato solicitado
+    resultados = cursor.fetchall()
+    ruta_formateada = [{"lat": row[2], "lng": row[3]} for row in resultados]
+    
+    # Cerrar la conexión
+    cursor.close()
+    connection.close()
+    
+    # Retornar los resultados en el formato solicitado
+    return jsonify(ruta_formateada)
 
-    total_time = 0
-    rutas = []
-
-    # Calcular rutas entre actividades utilizando OSRM
-    for i in range(len(activities) - 1):
-        coord1 = activities[i].split(',')
-        coord2 = activities[i + 1].split(',')
-
-        # Llamada a la API de OSRM para calcular el tiempo de viaje
-        url = f"http://router.project-osrm.org/route/v1/driving/{coord1[1]},{coord1[0]};{coord2[1]},{coord2[0]}?overview=false"
-        response = requests.get(url)
-        
-        if response.status_code == 200:
-            data = response.json()
-            travel_time = data['routes'][0]['duration'] / 60  # Convertir a minutos
-            total_time += travel_time
-
-            # Obtener la ruta en formato GeoJSON o como lista de coordenadas
-            ruta = data['routes'][0]['geometry']
-            rutas.append({
-                "desde": activities[i],
-                "hasta": activities[i + 1],
-                "tiempo": round(travel_time, 2),
-                "ruta": ruta
-            })
-        else:
-            return jsonify({"error": "Error al calcular la ruta"}, status=500)
-
-    return jsonify({
-        "total_time": round(total_time, 2),
-        "rutas": rutas
-    })
     
 def get_db_connection():
     connection = psycopg2.connect(

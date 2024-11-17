@@ -4,242 +4,242 @@
         {
             "code": "SCIE",
             "city": "Concepci\u00f3n",
-            "updated_at": "16:00:00",
-            "temperature": 19,
-            "condition": "Despejado",
-            "humidity": 52
-        },
-        {
-            "code": "SCON",
-            "city": "Quell\u00f3n",
-            "updated_at": "16:00:00",
-            "temperature": 14,
+            "updated_at": "20:00:00",
+            "temperature": 17,
             "condition": "Despejado",
             "humidity": 63
         },
         {
+            "code": "SCON",
+            "city": "Quell\u00f3n",
+            "updated_at": "19:00:00",
+            "temperature": 13,
+            "condition": "Despejado",
+            "humidity": 67
+        },
+        {
             "code": "SCCH",
             "city": "Chill\u00e1n",
-            "updated_at": "16:00:00",
-            "temperature": 24,
-            "condition": "Despejado",
-            "humidity": 31
+            "updated_at": "20:00:00",
+            "temperature": 23,
+            "condition": "Escasa nubosidad",
+            "humidity": 36
         },
         {
             "code": "SCJO",
             "city": "Osorno",
-            "updated_at": "16:00:00",
-            "temperature": 18,
+            "updated_at": "19:00:00",
+            "temperature": 17,
             "condition": "Despejado",
-            "humidity": 56
+            "humidity": 52
         },
         {
             "code": "SCRM",
             "city": "Ant\u00e1rtica",
-            "updated_at": "16:00:00",
+            "updated_at": "20:00:00",
             "temperature": -1,
-            "condition": "Nubosidad parcial",
+            "condition": "Nublado",
             "humidity": 80
         },
         {
             "code": "SCAT",
             "city": "Caldera",
-            "updated_at": "16:00:00",
-            "temperature": 20,
-            "condition": "Despejado",
-            "humidity": 60
+            "updated_at": "20:00:00",
+            "temperature": 16,
+            "condition": "Nublado",
+            "humidity": 77
         },
         {
             "code": "SCEL",
             "city": "Santiago Poniente",
-            "updated_at": "16:00:00",
-            "temperature": 25,
+            "updated_at": "20:00:00",
+            "temperature": 21,
             "condition": "Despejado",
-            "humidity": 30
+            "humidity": 33
         },
         {
             "code": "SCDA",
             "city": "Iquique",
-            "updated_at": "16:00:00",
-            "temperature": 22,
-            "condition": "Nubosidad parcial",
-            "humidity": 60
+            "updated_at": "20:00:00",
+            "temperature": 20,
+            "condition": "Nublado",
+            "humidity": 68
         },
         {
             "code": "SCHR",
             "city": "Cochrane",
-            "updated_at": "15:00:00",
-            "temperature": 16,
-            "condition": "Despejado",
-            "humidity": 36
+            "updated_at": "19:00:00",
+            "temperature": 12,
+            "condition": "Escasa nubosidad",
+            "humidity": 50
         },
         {
             "code": "SCIC",
             "city": "Curic\u00f3",
-            "updated_at": "16:00:00",
-            "temperature": 24,
+            "updated_at": "20:00:00",
+            "temperature": 23,
             "condition": "Despejado",
             "humidity": 27
         },
         {
             "code": "SCSE",
             "city": "La Serena/Coquimbo",
-            "updated_at": "16:00:00",
-            "temperature": 17,
+            "updated_at": "20:00:00",
+            "temperature": 15,
             "condition": "Despejado",
-            "humidity": 68
+            "humidity": 82
         },
         {
             "code": "SCIP",
             "city": "Isla de Pascua",
-            "updated_at": "14:00:00",
-            "temperature": 25,
+            "updated_at": "18:00:00",
+            "temperature": 24,
             "condition": "Nublado",
-            "humidity": 65
+            "humidity": 69
         },
         {
             "code": "SCTE",
             "city": "Puerto Montt",
-            "updated_at": "16:00:00",
-            "temperature": 14,
+            "updated_at": "20:00:00",
+            "temperature": 13,
             "condition": "Despejado",
-            "humidity": 51
+            "humidity": 62
         },
         {
             "code": "SCAR",
             "city": "Arica",
-            "updated_at": "16:00:00",
-            "temperature": 22,
+            "updated_at": "20:00:00",
+            "temperature": 20,
             "condition": "Despejado",
-            "humidity": 57
+            "humidity": 68
         },
         {
             "code": "SCTN",
             "city": "Chait\u00e9n",
-            "updated_at": "16:00:00",
-            "temperature": 13,
+            "updated_at": "19:00:00",
+            "temperature": 12,
             "condition": "Despejado",
-            "humidity": 72
+            "humidity": 71
         },
         {
             "code": "SCMK",
             "city": "Melinka",
-            "updated_at": "16:00:00",
-            "temperature": 15,
+            "updated_at": "18:53:00",
+            "temperature": 14,
             "condition": "Despejado",
-            "humidity": 55
+            "humidity": 59
         },
         {
             "code": "SCQN",
             "city": "Santiago Centro",
-            "updated_at": "16:10:00",
-            "temperature": 25.8,
+            "updated_at": "19:50:00",
+            "temperature": 22,
             "condition": "Nubosidad parcial",
-            "humidity": 25
+            "humidity": 32
         },
         {
             "code": "SCCY",
             "city": "Coyhaique",
-            "updated_at": "16:00:00",
-            "temperature": 15,
+            "updated_at": "20:00:00",
+            "temperature": 13,
             "condition": "Nublado",
-            "humidity": 39
+            "humidity": 51
         },
         {
             "code": "SCCF",
             "city": "Calama",
-            "updated_at": "16:00:00",
-            "temperature": 23,
+            "updated_at": "20:00:00",
+            "temperature": 20,
             "condition": "Despejado",
-            "humidity": 12
+            "humidity": 21
         },
         {
             "code": "SCQP",
             "city": "Temuco",
-            "updated_at": "16:00:00",
-            "temperature": 22,
+            "updated_at": "20:00:00",
+            "temperature": 18,
             "condition": "Despejado",
-            "humidity": 53
+            "humidity": 68
         },
         {
             "code": "SCBA",
             "city": "Balmaceda",
-            "updated_at": "16:00:00",
+            "updated_at": "18:00:00",
             "temperature": 13,
             "condition": "Despejado",
-            "humidity": 41
+            "humidity": 44
         },
         {
             "code": "SCCI",
             "city": "Punta Arenas",
-            "updated_at": "16:00:00",
-            "temperature": 12,
-            "condition": "Nubosidad parcial",
-            "humidity": 54
+            "updated_at": "20:00:00",
+            "temperature": 9,
+            "condition": "Despejado",
+            "humidity": 66
         },
         {
             "code": "SCFA",
             "city": "Antofagasta",
-            "updated_at": "16:00:00",
-            "temperature": 19,
-            "condition": "Escasa nubosidad",
-            "humidity": 64
+            "updated_at": "20:00:00",
+            "temperature": 17,
+            "condition": "Nublado",
+            "humidity": 83
         },
         {
             "code": "SCVM",
             "city": "Vi\u00f1a del Mar/Valpara\u00edso",
-            "updated_at": "16:00:00",
-            "temperature": 24,
+            "updated_at": "19:00:00",
+            "temperature": 21,
             "condition": "Despejado",
-            "humidity": 31
+            "humidity": 38
         },
         {
             "code": "SCSN",
             "city": "San Antonio/Cartagena",
-            "updated_at": "16:00:00",
-            "temperature": 18,
+            "updated_at": "19:00:00",
+            "temperature": 16,
             "condition": "Despejado",
-            "humidity": 56
+            "humidity": 59
         },
         {
             "code": "SCVD",
             "city": "Valdivia",
-            "updated_at": "16:00:00",
+            "updated_at": "19:00:00",
             "temperature": 21,
             "condition": "Despejado",
-            "humidity": 49
+            "humidity": 46
         },
         {
             "code": "SCFT",
             "city": "Futaleuf\u00fa",
-            "updated_at": "16:00:00",
-            "temperature": 21,
+            "updated_at": "19:00:00",
+            "temperature": 20,
             "condition": "Despejado",
-            "humidity": 35
+            "humidity": 30
         },
         {
             "code": "SCRG",
             "city": "Rancagua",
-            "updated_at": "16:00:00",
-            "temperature": 23,
+            "updated_at": "20:00:00",
+            "temperature": 22,
             "condition": "Despejado",
-            "humidity": 41
+            "humidity": 35
         },
         {
             "code": "SCNT",
             "city": "Puerto Natales",
-            "updated_at": "16:00:00",
+            "updated_at": "19:00:00",
             "temperature": 12,
-            "condition": "Nublado",
+            "condition": "Nubosidad parcial",
             "humidity": 47
         },
         {
             "code": "SCGE",
             "city": "Loas Angeles",
-            "updated_at": "16:00:00",
+            "updated_at": "19:00:00",
             "temperature": 23,
             "condition": "Escasa nubosidad",
-            "humidity": 38
+            "humidity": 36
         },
         {
             "code": "SCGZ",
