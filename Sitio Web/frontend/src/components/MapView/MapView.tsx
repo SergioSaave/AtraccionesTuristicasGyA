@@ -75,7 +75,19 @@ export const MapView = () => {
             const response = await fetch(
                 `http://127.0.0.1:5000/consultar-datos?lat_inicio=${selectedOptions[0].lat}&lon_inicio=${selectedOptions[0].lon}&lat_fin=${selectedOptions[1].lat}&lon_fin=${selectedOptions[1].lon}`
             );
+
+            // Verifica si la respuesta fue exitosa
+            if (!response.ok) {
+                const errorText = await response.text();
+                console.error('Error en la respuesta de la API:', errorText);
+                toast.error('Error al comunicarse con el servidor.');
+                return;
+            }
+
             const data: { lat: number; lng: number }[] = await response.json();
+
+            // Log para depuración
+            console.log('Respuesta de la API:', data);
 
             if (data && data.length > 0) {
                 const coordinates = data.map((point) => [point.lat, point.lng] as [number, number]); // Convertir al formato [[lat, lng], ...]
@@ -83,13 +95,15 @@ export const MapView = () => {
                 toast.success('Ruta creada exitosamente.');
                 map?.fitBounds(coordinates); // Ajustar el mapa a las coordenadas de la ruta
             } else {
+                console.error('Respuesta inesperada de la API:', data);
                 toast.error('No se pudo crear la ruta.');
             }
         } catch (error) {
+            console.error('Error al crear la ruta:', error);
             toast.error('Error al crear la ruta.');
-            console.error(error);
         }
     };
+
 
 
     const handleUseCurrentLocation = () => {
