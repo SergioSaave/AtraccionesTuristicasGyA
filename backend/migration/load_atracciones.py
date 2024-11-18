@@ -16,7 +16,7 @@ db_params = {
 conn = psycopg2.connect(**db_params)
 cur = conn.cursor()
 
-# Tabla para metadatos de atracciones
+# Crear/verificar la tabla 'atracciones'
 cur.execute("""
     CREATE TABLE IF NOT EXISTS atracciones (
         id SERIAL PRIMARY KEY,
@@ -26,6 +26,11 @@ cur.execute("""
         geom GEOMETRY(Point, 4326)
     );
 """)
+print("Tabla 'atracciones' creada/verificada.")
+
+# Limpiar la tabla 'atracciones'
+cur.execute("DELETE FROM atracciones;")
+print("Tabla 'atracciones' limpiada antes de la inserción.")
 
 # Consultas SQL
 insert_node_query = sql.SQL("""
@@ -59,6 +64,9 @@ geojson_files = [
     {"path": "metadataOverpassMonumentos.geojson", "type": "Monumento"},
     {"path": "metadataOverpassIglesias.geojson", "type": "Iglesia"},
 ]
+
+# Contador de atracciones añadidas
+counter = 0
 
 for file_info in geojson_files:
     print(f"Procesando archivo: {file_info['path']} de tipo {file_info['type']}")
@@ -107,6 +115,11 @@ for file_info in geojson_files:
                     # Insertar en la tabla de atracciones
                     cur.execute(insert_attraction_query, (nombre, file_info["type"], attraction_node_id, geom.wkt))
                     print(f"Atracción '{nombre}' insertada como nodo {attraction_node_id} con una arista hacia {nearest_node_id}.")
+
+                    # Incrementar el contador y mostrar un mensaje cada 100 inserciones
+                    counter += 1
+                    if counter % 100 == 0:
+                        print(f"{counter} atracciones añadidas hasta ahora.")
     except FileNotFoundError as e:
         print(f"Error: No se pudo encontrar el archivo {file_info['path']}. {e}")
     except json.JSONDecodeError as e:
@@ -123,5 +136,6 @@ print("Índices actualizados.")
 # Confirmar los cambios
 conn.commit()
 print("Atracciones insertadas correctamente.")
+print(f"Total de atracciones añadidas: {counter}")
 cur.close()
 conn.close()
